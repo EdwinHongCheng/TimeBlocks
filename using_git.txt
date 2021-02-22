@@ -4,12 +4,12 @@ In terminal:
     -Switches to new branch
 2. git add -A
 3. git commit -m"<message>"
-4. git checkout master
-    -Switches to master branch
-5. git pull origin master
-    -Updates master branch
+4. git checkout main
+    -Switches to main branch
+5. git pull origin main
+    -Updates main branch
 6. git checkout <name-of-branch>
-7. git merge master
+7. git merge main
 8. git push origin <name-of-branch>
 
 On github:
@@ -17,7 +17,19 @@ On github:
 1. Make sure the commit is on github
 2. Button: "Compare and make pull request"
 3. Button: "Create pull request"
+4. Go to "pull requests"
+5. Merge pull requests
+6. Delete branch
+
+In terminal:
+
+1. git branch
+
+
+-----------------
 
 Branch protection rules:
 
-1. 
+1. Settings
+2. Branches -> Branch protection rules
+3. Require pull request reviews before merging
