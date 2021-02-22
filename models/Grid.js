@@ -15,3 +15,5 @@ const GridSchema = new Schema({
         ref: 'users'
     },
 })
+
+module.exports = Grid = mongoose.model('Grid', GridSchema);
