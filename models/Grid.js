@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const TaskSchema = new Schema({
+const GridSchema = new Schema({
     hours: {
         1: null, 2: null, 3: null, 4: null,
         5: null, 6: null, 7: null, 8: null,
