@@ -4,6 +4,7 @@ const app = express();
 const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
 const tasks = require("./routes/api/tasks");
+const categories = require("./routes/api/categories");
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => res.send("Wassup World"));
 app.use("/api/users", users);
 app.use("/api/tasks", tasks);
+app.use("/api/categories", categories);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
