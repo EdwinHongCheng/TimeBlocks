@@ -10,7 +10,7 @@ In terminal:
     -Updates main branch
 6. git checkout <name-of-branch>
 7. git merge main
-8. git push origin <name-of-branch>
+8. git push -u origin <name-of-branch>
 
 On github:
 
@@ -23,8 +23,16 @@ On github:
 
 In terminal:
 
-1. git branch
+1. git checkout main
+2. git pull origin main
+3. git branch -d <name-of-branch>
 
+-----------------
+
+Merge conflicts:
+
+1. accept current change = keep what you just made
+2. accept both changes = keep old/new changes
 
 -----------------
 
