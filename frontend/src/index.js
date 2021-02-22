@@ -13,7 +13,7 @@ import { logout } from "./actions/session_actions";
 document.addEventListener("DOMContentLoaded", () => {
   let store;
 
-  if (localStores.jwtToken) {
+  if (localStorage.jwtToken) {
     setAuthToken(localStorage.jwtToken);
     const decodedUser = jwt_decode(localStorage.jwtToken);
 
