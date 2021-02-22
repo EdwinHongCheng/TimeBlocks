@@ -1,0 +1,23 @@
+In terminal:
+
+1. git checkout -b <name-of-branch>
+    -Switches to new branch
+2. git add -A
+3. git commit -m"<message>"
+4. git checkout master
+    -Switches to master branch
+5. git pull origin master
+    -Updates master branch
+6. git checkout <name-of-branch>
+7. git merge master
+8. git push origin <name-of-branch>
+
+On github:
+
+1. Make sure the commit is on github
+2. Button: "Compare and make pull request"
+3. Button: "Create pull request"
+
+Branch protection rules:
+
+1. 
