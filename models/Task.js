@@ -11,3 +11,5 @@ const TaskSchema = new Schema({
         ref: 'users'
     },
 })
+
+module.exports = Task = mongoose.model('Task', TaskSchema);
