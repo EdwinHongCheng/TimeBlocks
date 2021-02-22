@@ -7,7 +7,6 @@ const _nullErrors = [];
 
 const SessionErrorsReducer = (prevState=_nullErrors, action) => {
   Object.freeze(prevState);
-
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
       return action.errors;
