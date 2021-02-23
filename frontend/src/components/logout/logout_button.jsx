@@ -1,20 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css";
+import { Link, Redirect } from "react-router-dom";
 
-class NavBar extends React.Component {
+class LogoutButton extends React.Component {
   constructor(props) {
     super(props);
     this.logoutUser = this.logoutUser.bind(this);
-    this.getLinks = this.getLinks.bind(this);
+    this.logoutButton = this.logoutButton.bind(this);
   }
 
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
+    return (<Link to={"/"}/>)
   }
 
-  getLinks() {
+  logoutButton() {
     if (this.props.loggedIn) {
       return (
         <div>
@@ -22,23 +22,17 @@ class NavBar extends React.Component {
         </div>
       );
     } else {
-      return (
-        <div>
-          <Link to={"/signup"}>Signup</Link>
-          <Link to={"/login"}>Login</Link>
-        </div>
-      );
+      return null;
     }
   }
 
   render() {
     return (
       <div>
-        <h1>TimeBlocks</h1>
-        {this.getLinks()}
+        {this.logoutButton()}
       </div>
     );
   }
 }
 
-export default NavBar;
+export default LogoutButton;
