@@ -25,6 +25,24 @@ router.post('/',
     }
 );
 
+
+router.put('/editTitle/:id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        const { errors, isValid } = validateTaskInput(req.body);
+
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
+
+        Category.updateOne(
+            { _id: req.body.catId, "tasks._id": req.params.id},
+            { $set : {"tasks.$.title": req.body.title }})
+                .then(response => res.json({update: "successful"}))
+
+    }
+);
+
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
