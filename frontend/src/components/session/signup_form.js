@@ -43,16 +43,6 @@ class SignupForm extends React.Component {
     this.props.signup(user, this.props.history);
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
-    );
-  }
-
   render() {
     return (
       <div className="login-signup-background">
@@ -67,6 +57,9 @@ class SignupForm extends React.Component {
                 onChange={this.update("email")}
                 placeholder="Email"
               />
+              <p>
+                {this.props.errors.email}
+              </p>
               <br />
               <input
                 type="text"
@@ -74,6 +67,9 @@ class SignupForm extends React.Component {
                 onChange={this.update("name")}
                 placeholder="Name"
               />
+              <p>
+                {this.props.errors.name}
+              </p>
               <br />
               <input
                 type="password"
@@ -81,6 +77,9 @@ class SignupForm extends React.Component {
                 onChange={this.update("password")}
                 placeholder="Password"
               />
+              <p>
+                {this.props.errors.password}
+              </p>
               <br />
               <input
                 type="password"
@@ -88,14 +87,16 @@ class SignupForm extends React.Component {
                 onChange={this.update("password2")}
                 placeholder="Confirm Password"
               />
+              <p>
+                {this.props.errors.password2}
+              </p>
               <br />
               <input type="submit" value="Submit" />
-              {this.renderErrors()}
             </div>
           </form>
         </div>
 
-        <Link to={"/"}>Back</Link>
+        <Link className="back-to-splash-button" to={"/"}>Back</Link>
       </div>
     );
   }

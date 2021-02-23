@@ -9,21 +9,42 @@
 }
 
 .logo-image {
-    display: flex;
+    display: block;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    border: 1px solid black;
+
+    height: 100px;
 }
 
 .first-buttons {
     display: flex;    
-    /* take "flex-direction: column;" out -> buttons are now side by side */
-    flex-direction: column;
+    /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
     justify-content: center;
-    text-align: center;
 }
 
-.signup-button, .login-button {
+
+/* iPad width: 481px to 768px */
+@media (max-width: 768px) {
+    .first-buttons {
+        display: flex;    
+        /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.signup-button, .login-button, .back-to-splash-button {
+    /* box-sizing: border-box; */
+
+    width: 50px;
+
     font-family: "Helvetica Neue";
     border-radius: 4px;
 
@@ -35,15 +56,21 @@
     display: inline-block;
     padding: 10px;
     margin: 10px;
+    text-align: center;
 }
 
-.signup-button:hover, .login-button:hover {
+.signup-button:hover, .login-button:hover, .back-to-splash-button:hover {
     background-color: rgb(207, 118, 177); 
 }
 
 .login-signup-background {
     background-color: rgb(255, 244, 183);
+    height: 100vh; /* viewport height */
 
     /* Gradient (looks okay) */
     /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
+}
+
+.login-signup-errors {
+    height: 100px;
 }

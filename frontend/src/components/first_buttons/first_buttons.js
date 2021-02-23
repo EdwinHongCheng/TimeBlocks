@@ -9,32 +9,17 @@ class FirstButtons extends React.Component {
     this.getLinks = this.getLinks.bind(this);
   }
 
-  // logoutUser(e) {
-  //   e.preventDefault();
-  //   this.props.logout();
-  // }
-
   getLinks() {
-    // if (this.props.loggedIn) {
-    //   return (
-    //     <div>
-    //       <button onClick={this.logoutUser}>Logout</button>
-    //     </div>
-    //   );
-    // } else {
-      return (
+    return (
+      <div className="first-buttons">
         <div>
-          <div className="first-buttons">
-            <div>
-              <Link className="login-button" to={"/login"}>Login</Link>
-            </div>
-            <div>
-              <Link className="signup-button" to={"/signup"}>Signup</Link>
-            </div>
-          </div>
+          <Link className="login-button" to={"/login"}>Login</Link>
         </div>
-      );
-    // }
+        <div>
+          <Link className="signup-button" to={"/signup"}>Signup</Link>
+        </div>
+      </div>
+    );
   }
 
   render() {

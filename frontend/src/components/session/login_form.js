@@ -12,7 +12,7 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
+    // this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -43,21 +43,25 @@ class LoginForm extends React.Component {
   }
 
   // Render the session errors if there are any
-  renderErrors() {
-    return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return (
+  //     <ul>
+  //       {Object.keys(this.state.errors).map((error, i) => (
+  //         <li key={`error-${i}`}>{this.state.errors[error]}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
 
   render() {
     return (
       <div className="login-signup-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
+        
         <form onSubmit={this.handleSubmit}>
+          <div className="login-signup-errors">
+            {/* {this.renderErrors()} */}
+          </div>
           <div>
             <input
               type="text"
@@ -65,6 +69,9 @@ class LoginForm extends React.Component {
               onChange={this.update("email")}
               placeholder="Email"
             />
+            <p>
+              {this.props.errors.email}
+            </p>
             <br />
             <input
               type="password"
@@ -72,13 +79,15 @@ class LoginForm extends React.Component {
               onChange={this.update("password")}
               placeholder="Password"
             />
+            <p>
+              {this.props.errors.password}
+            </p>
             <br />
             <input type="submit" value="Submit" />
-            {this.renderErrors()}
           </div>
         </form>
 
-        <Link to={"/"}>Back</Link>
+        <Link className="back-to-splash-button" to={"/"}>Back</Link>
       </div>
     );
   }
