@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const CategorySchema = require('./Category');
 
 const UserSchema = new Schema({
     name: {
@@ -13,7 +14,8 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    categories: [CategorySchema]
 }, {
     timestamps: true
 })
