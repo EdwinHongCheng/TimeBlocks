@@ -10,10 +10,3 @@
     border-radius: 5px;
     overflow: hidden;
 }
-
-.item {
-    width: 5em;
-    height: 5em;
-    margin: 1em;
-    background-color: hotpink;
-}
