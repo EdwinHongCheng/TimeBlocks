@@ -98,3 +98,5 @@ router.post('/login', (req, res) => {
 })
 
 module.exports = router;
+
+//user authorization code: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzU1MWFkZjQ3MjVjMTFmMTdiMDg0OCIsIm5hbWUiOiJ1c2VyMiIsImlhdCI6MTYxNDExNjIwMiwiZXhwIjoxNjE0MTE5ODAyfQ.7nb2oCQrrO7hFuVfVPaqGMEOpTWDzR-Wb3EFIgDzQc0"
