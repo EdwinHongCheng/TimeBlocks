@@ -11,14 +11,14 @@
 .logo-image {
     display: block;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     margin-left: 40px;
     margin-right: 40px;
 
     border: 1px solid black;
 
-    height: 100px;
+    height: 160px;
 }
 
 .first-buttons {
@@ -40,7 +40,7 @@
 
 
 
-.signup-button, .login-button, .back-to-splash-button {
+.signup-button, .login-button, .back-to-splash-button, .submit-button {
     /* box-sizing: border-box; */
 
     width: 50px;
@@ -67,7 +67,7 @@
     background-color: rgb(255, 244, 183);
     height: 100vh; /* viewport height */
 
-    /* Gradient (looks okay) */
+    /* Gradient (doesn't look great) */
     /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
 }
 

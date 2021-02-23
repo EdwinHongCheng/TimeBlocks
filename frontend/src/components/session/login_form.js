@@ -83,11 +83,14 @@ class LoginForm extends React.Component {
               {this.props.errors.password}
             </p>
             <br />
-            <input type="submit" value="Submit" />
+            {/* <input className="submit-button" type="submit" value="Submit" /> */}
           </div>
         </form>
 
-        <Link className="back-to-splash-button" to={"/"}>Back</Link>
+        <div className="first-buttons">
+          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <Link className="back-to-splash-button" to={"/"}>Back</Link>
+        </div>
       </div>
     );
   }
