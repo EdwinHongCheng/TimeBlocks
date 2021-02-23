@@ -1,2 +1,5 @@
 @import "reset.css";
-@import "components/login_signup_page.css";
+
+@import "./components/grid.css";
+@import "./components/home_page.css";
+@import "./components/login_signup_page.css";
