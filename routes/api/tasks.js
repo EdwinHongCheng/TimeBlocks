@@ -26,19 +26,18 @@ router.post('/',
     }
 );
 
-// router.delete('/:id',
-//     passport.authenticate('jwt', { session: false }),
-//     (req, res) => {
-//         User.findById(req.user.id).then(user => {
-//             user.categories.map((category) => {
-//                 if (category.id === req.params.id) {
-//                     category.remove();
-//                 }
-//             });
-//             user.save().then(() => res.end());
-//         })
-//         return;
-// });
+router.delete('/:id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        Category.findById(req.body.catId).then(category => {
+            category.tasks.map((task) => {
+                if (task.id === req.params.id) {
+                    task.remove();
+                }
+            });
+            category.save().then((cat) => res.json(cat));
+        });
+});
 
 
 module.exports = router;
