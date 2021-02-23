@@ -4,11 +4,8 @@ const app = express();
 const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
 const tasks = require("./routes/api/tasks");
-<<<<<<< HEAD
 const categories = require("./routes/api/categories");
-=======
 const grids = require('./routes/api/grids');
->>>>>>> main
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
