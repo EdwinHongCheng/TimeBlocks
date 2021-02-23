@@ -18,8 +18,6 @@ class NavBar extends React.Component {
     if (this.props.loggedIn) {
       return (
         <div>
-          {/* <Link to={"/tweets"}>All Tweets</Link>
-          <Link to={"/profile"}>Profile</Link> */}
           <button onClick={this.logoutUser}>Logout</button>
         </div>
       );
@@ -36,7 +34,6 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <h1>TimeBlocks</h1>
         {this.getLinks()}
       </div>
     );
