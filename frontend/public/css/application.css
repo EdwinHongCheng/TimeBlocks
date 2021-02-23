@@ -1,3 +1,4 @@
 @import "reset.css";
 
-@import "./components/grid.css"
+@import "./components/grid.css";
+@import "./components/home_page.css";

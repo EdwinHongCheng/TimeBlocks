@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-const Grid = (props) => (
-    <div className="grid-container">
-
-    </div>
-)
+const Grid = (props) => {
+    return (
+      <div className="grid">
+        <div></div>
+      </div>
+    );
+}
 
 export default Grid;
