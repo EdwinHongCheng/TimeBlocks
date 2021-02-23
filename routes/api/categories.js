@@ -66,17 +66,12 @@ router.post('/',
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        User.findById(req.user.id).then(user => {
-            user.categories.map((category) => {
-                if (category.id === req.params.id) {
-                    category.remove();
-                }
-            });
-            user.save().then(() => res.end());
+        Category.findById(req.params.id).then(category => {
+            category.remove()
+                .then(() => res.json({removed: true}))
+                .catch((err) => res.status(404).json({removed: false}))
         })
-        return;
 });
-
 
 //Edit categories un-needed?
 
