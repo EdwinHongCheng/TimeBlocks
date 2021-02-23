@@ -14,7 +14,7 @@ const CategorySchema = new Schema({
     type: Date,
     default: Date.now
   },
-  task: [Task]
+  // task: [TaskSchema]
 });
 
 module.exports = Category = mongoose.model('category', CategorySchema);
