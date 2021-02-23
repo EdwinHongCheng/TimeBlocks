@@ -4,7 +4,11 @@ const app = express();
 const db = require('./config/keys').mongoURI;
 const users = require("./routes/api/users");
 const tasks = require("./routes/api/tasks");
+<<<<<<< HEAD
 const categories = require("./routes/api/categories");
+=======
+const grids = require('./routes/api/grids');
+>>>>>>> main
 const bodyParser = require('body-parser');
 const passport = require('passport');
 
@@ -16,13 +20,17 @@ mongoose
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false, useUnifiedTopology: true }));
 app.use(bodyParser.json());
 //Backend Routes
 app.get("/", (req, res) => res.send("Wassup World"));
 app.use("/api/users", users);
 app.use("/api/tasks", tasks);
+<<<<<<< HEAD
 app.use("/api/categories", categories);
+=======
+app.use("/api/grids", grids);
+>>>>>>> main
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
