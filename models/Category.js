@@ -13,7 +13,8 @@ const CategorySchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  task: [Task]
 });
 
 module.exports = Category = mongoose.model('category', CategorySchema);

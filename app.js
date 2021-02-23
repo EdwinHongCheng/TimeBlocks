@@ -26,11 +26,8 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => res.send("Wassup World"));
 app.use("/api/users", users);
 app.use("/api/tasks", tasks);
-<<<<<<< HEAD
 app.use("/api/categories", categories);
-=======
 app.use("/api/grids", grids);
->>>>>>> main
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
