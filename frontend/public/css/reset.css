@@ -46,3 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* remove underlines from links */
+a:link {
+    text-decoration: none;
+}
