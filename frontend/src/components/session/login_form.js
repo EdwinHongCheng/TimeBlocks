@@ -57,30 +57,29 @@ class LoginForm extends React.Component {
     return (
       <div className="login-signup-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
-        
-        <form onSubmit={this.handleSubmit}>
-          <div className="login-signup-errors">
-            {/* {this.renderErrors()} */}
-          </div>
+        <br />
+        <form className="login-form" onSubmit={this.handleSubmit}>
           <div>
             <input
+              className="first-input-field"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
-            <p>
-              {this.props.errors.email}
+            <p className="rendered-error">
+              {this.props.errors.email || "placeholder"}
             </p>
             <br />
             <input
+              className="first-input-field"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
-            <p>
-              {this.props.errors.password}
+            <p className="rendered-error">
+              {this.props.errors.password || "placeholder"}
             </p>
             <br />
             {/* <input className="submit-button" type="submit" value="Submit" /> */}

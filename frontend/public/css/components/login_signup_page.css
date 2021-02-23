@@ -21,6 +21,11 @@
     height: 160px;
 }
 
+.login-form, .signup-form {
+    display: flex;
+    justify-content: center; 
+}
+
 .first-buttons {
     display: flex;    
     /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
@@ -71,6 +76,14 @@
     /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
 }
 
-.login-signup-errors {
-    height: 100px;
+.first-input-field {
+    margin-bottom: 6px;
 }
+
+.rendered-error {
+    color: red;
+}
+
+/* .login-signup-errors {
+    height: 100px;
+} */

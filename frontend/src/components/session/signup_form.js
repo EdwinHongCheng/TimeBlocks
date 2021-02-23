@@ -47,54 +47,55 @@ class SignupForm extends React.Component {
     return (
       <div className="login-signup-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
-        <div className="signup-form-container">
-          <form onSubmit={this.handleSubmit}>
-            <div className="signup-form">
-              <br />
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-              />
-              <p>
-                {this.props.errors.email}
-              </p>
-              <br />
-              <input
-                type="text"
-                value={this.state.name}
-                onChange={this.update("name")}
-                placeholder="Name"
-              />
-              <p>
-                {this.props.errors.name}
-              </p>
-              <br />
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-              />
-              <p>
-                {this.props.errors.password}
-              </p>
-              <br />
-              <input
-                type="password"
-                value={this.state.password2}
-                onChange={this.update("password2")}
-                placeholder="Confirm Password"
-              />
-              <p>
-                {this.props.errors.password2}
-              </p>
-              <br />
-              {/* <input className="submit-button" type="submit" value="Submit" /> */}
-            </div>
-          </form>
-        </div>
+        <br />
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <div>
+            <input
+              className="first-input-field"
+              type="text"
+              value={this.state.email}
+              onChange={this.update("email")}
+              placeholder="Email"
+            />
+            <p className="rendered-error">
+              {this.props.errors.email || "placeholder"}
+            </p>
+            <br />
+            <input
+              className="first-input-field"
+              type="text"
+              value={this.state.name}
+              onChange={this.update("name")}
+              placeholder="Name"
+            />
+            <p className="rendered-error">
+              {this.props.errors.name || "placeholder"}
+            </p>
+            <br />
+            <input
+              className="first-input-field"
+              type="password"
+              value={this.state.password}
+              onChange={this.update("password")}
+              placeholder="Password"
+            />
+            <p className="rendered-error">
+              {this.props.errors.password || "placeholder"}
+            </p>
+            <br />
+            <input
+              className="first-input-field"
+              type="password"
+              value={this.state.password2}
+              onChange={this.update("password2")}
+              placeholder="Confirm Password"
+            />
+            <p className="rendered-error">
+              {this.props.errors.password2 || "placeholder"}
+            </p>   
+          </div>
+
+        </form>
 
         <div className="first-buttons">
           <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
