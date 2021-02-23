@@ -49,60 +49,61 @@ class SignupForm extends React.Component {
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
         <br />
         <form className="signup-form" onSubmit={this.handleSubmit}>
-          <div>
+        
 
-            <div className="first-input-field">
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.email || "placeholder"}
-            </p>
-            <br />
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
 
-            <div className="first-input-field">
-              <input
-                type="text"
-                value={this.state.name}
-                onChange={this.update("name")}
-                placeholder="Name"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.name || "placeholder"}
-            </p>
-            <br />
+          <p className="rendered-error">
+            {this.props.errors.email || "placeholder"}
+          </p>
+          <br />
 
-            <div className="first-input-field">
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.password || "placeholder"}
-            </p>
-            <br />
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.update("name")}
+            placeholder="Name"
+          />
 
-            <div className="first-input-field">
-              <input
-                type="password"
-                value={this.state.password2}
-                onChange={this.update("password2")}
-                placeholder="Confirm Password"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.password2 || "placeholder"}
-            </p>
 
-          </div>
+          <p className="rendered-error">
+            {this.props.errors.name || "placeholder"}
+          </p>
+
+          <br />
+
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+
+
+          <p className="rendered-error">
+            {this.props.errors.password}
+          </p>
+
+
+          <br />
+
+          <input
+            type="password"
+            value={this.state.password2}
+            onChange={this.update("password2")}
+            placeholder="Confirm Password"
+          />
+
+
+          <p className="rendered-error">
+            {this.props.errors.password2}
+          </p>
+
         </form>
 
         <div className="first-buttons">

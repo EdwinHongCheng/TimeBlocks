@@ -22,7 +22,21 @@
 }
 
 .login-form, .signup-form {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form input[type=text],
+.signup-form input[type=password] {
+    width: 200px;
+}
+
+.signup-form p {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+    height: 25px;
 }
 
 .first-buttons {
@@ -84,7 +98,7 @@
 
 .rendered-error {
     color: red;
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
