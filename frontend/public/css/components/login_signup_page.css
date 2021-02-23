@@ -22,8 +22,7 @@
 }
 
 .login-form, .signup-form {
-    display: flex;
-    justify-content: center; 
+    
 }
 
 .first-buttons {
@@ -78,10 +77,15 @@
 
 .first-input-field {
     margin-bottom: 6px;
+
+    display:flex;
+    justify-content: center;
 }
 
 .rendered-error {
     color: red;
+    display:flex;
+    justify-content: center;
 }
 
 /* .login-signup-errors {
