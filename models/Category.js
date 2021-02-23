@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 const TaskSchema = require('./Task')
 
 const CategorySchema = new Schema({
-  // user: { 
-  //   type: Schema.Types.ObjectId,
-  //   ref: 'users'
-  // },
+  userId: { 
+    type: Schema.Types.ObjectId,
+    ref: 'users'
+  },
   text: {
     type: String,
     required: true
@@ -18,5 +18,5 @@ const CategorySchema = new Schema({
   tasks: [TaskSchema]
 });
 
-// module.exports = Category = mongoose.model('category', CategorySchema);
-module.exports = CategorySchema;
+module.exports = Category = mongoose.model('category', CategorySchema);
+// module.exports = CategorySchema;

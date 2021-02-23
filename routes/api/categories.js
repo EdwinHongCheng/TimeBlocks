@@ -42,15 +42,23 @@ router.post('/',
       if (!isValid) {
         return res.status(400).json(errors);
       }
-      User.findById(req.user.id).then(user => {
-        const newCategory = {
-            text: req.body.text,
-            // user: req.user.id
-        };
-        user.categories.push(newCategory);
-        user.save().then(() => res.end());
-      })
-      return;
+
+    const newCategory = new Category({
+        text: req.body.text,
+        userId: req.user.id
+    })
+
+    newCategory.save()
+        .then((cat) => res.json(cat));
+
+    //   User.findById(req.user.id).then(user => {
+    //     const newCategory = {
+    //         text: req.body.text,
+    //         // user: req.user.id
+    //     };
+    //     user.categories.push(newCategory);
+    //     user.save().then(() => res.end());
+    //   })
     }
 );
 

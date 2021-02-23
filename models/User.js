@@ -15,7 +15,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    categories: [CategorySchema]
+    // categories: [CategorySchema]
 }, {
     timestamps: true
 })
