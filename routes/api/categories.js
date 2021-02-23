@@ -58,9 +58,15 @@ router.post('/',
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Category.findById(req.params.id) 
-            .then(category => category.remove().then(() => res.json({success: true})))
-            .catch(err => res.status(404).json({sucess: false}))
+        User.findById(req.user.id).then(user => {
+            user.categories.map((category) => {
+                if (category.id === req.params.id) {
+                    category.remove();
+                }
+            });
+            user.save().then(() => res.end());
+        })
+        return;
 });
 
 
