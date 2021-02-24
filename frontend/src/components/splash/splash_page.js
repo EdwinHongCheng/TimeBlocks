@@ -9,7 +9,7 @@ class SplashPage extends React.Component {
         <Link className="app-name" to={"/"}>
           TimeBlocks
         </Link>
-        <h1 className="logo-image">LOGO</h1>
+        <p className="logo-image">TimeBlocks: short description</p>
         <FirstButtonsContainer />
       </div>
     );
