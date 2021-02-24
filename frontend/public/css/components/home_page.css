@@ -1,7 +1,9 @@
-/* .home-container {
+.home-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
-    background: rgb(91,84,207);
-    background: linear-gradient(32deg, rgba(91,84,207,1) 0%, rgba(237,217,145,1) 72%); 
-} */
+
+    align-items: center;
+    background-color: #fff4b7;
+    height: 100vh;
+}

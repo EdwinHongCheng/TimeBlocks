@@ -1,5 +1,7 @@
+/* css reset */
 @import "reset.css";
-@import "./components//splash_page.css";
+/* components css */
+@import "./components/splash_page.css";
 @import "./components/login_signup_page.css";
 @import "./components/home_page.css";
 @import "./components/grid.css";
