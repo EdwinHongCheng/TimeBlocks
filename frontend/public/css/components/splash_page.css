@@ -23,8 +23,12 @@
 }
 
 .splash-blurb p {
+    display: flex;
+    justify-content: center;
+
     font-family: "Helvetica Neue";
     font-size: 22px;
+    padding-bottom: 16px;
 }
 
 .splash-image {
@@ -61,7 +65,7 @@
         width: 90px;
         height: 90px;
 
-        margin-top: 46px;
+        margin-top: 20px;
         margin-bottom: 60px;
     }   
 }
