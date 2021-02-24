@@ -5,6 +5,7 @@ const passport = require('passport');
 const Category = require('../../models/Category')
 const validateTaskInput = require('../../validation/task');
 
+//New Task
 router.post('/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -25,7 +26,7 @@ router.post('/',
     }
 );
 
-
+//edit task info
 router.put('/editTitle/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -43,16 +44,24 @@ router.put('/editTitle/:id',
     }
 );
 
+
+//delete task
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Category.findById(req.body.catId).then(category => {
-            const task = category.tasks.id(req.params.id);
-            task.remove();
-            category.save().then((cat) => res.json(cat));
-        });
+        Category.find({'tasks._id': req.params.id}, 
+        {"tasks.$": true})
+            .then( catArr => {
+                Category.findById(catArr[0].id).then(cat => {
+                    const task = cat.tasks.id(req.params.id);
+                    task.remove();
+                    cat.save().then(category => res.json(category));
+                })
+            })
+            .catch((errors) => res.json(errors));
 });
 
+//Update tasks category
 router.post('/updateCategory/:id',
     // passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -71,7 +80,6 @@ router.post('/updateCategory/:id',
             category.save().then((cat) => res.json(cat));
         });
         Category.findById(req.body.catId2).then(category => {
-            debugger
             category.tasks.push(newTask);
             category.save()
                 .then((category) => res.json(category))

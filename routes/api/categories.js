@@ -15,14 +15,14 @@ const validateCategoryInput = require('../../validation/categories');
 // });
 
 // //Get all categories from a specific user
-// router.get('/user/:user_id', (req, res) => {
-//     Category.find({user: req.params.user_id})
-//         .then(categories => res.json(categories))
-//         .catch(err =>
-//             res.status(404).json({ nocategoriesfound: 'No categories found from that user' }
-//         )
-//     );
-// });
+router.get('/user/:user_id', (req, res) => {
+    Category.find({userId: req.params.user_id})
+        .then(categories => res.json(categories))
+        .catch(err =>
+            res.status(404).json({ nocategoriesfound: 'No categories found from that user' }
+        )
+    );
+});
 
 // //Get a specific category (needed?)
 // router.get('/:id', (req, res) => {
