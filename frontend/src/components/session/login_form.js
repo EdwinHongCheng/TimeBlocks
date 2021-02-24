@@ -12,7 +12,11 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  // [WORKS] clears errors
+  componentWillUnmount() {
+    this.props.clearErrors()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -41,17 +45,6 @@ class LoginForm extends React.Component {
 
     this.props.login(user);
   }
-
-  // Render the session errors if there are any
-  // renderErrors() {
-  //   return (
-  //     <ul>
-  //       {Object.keys(this.state.errors).map((error, i) => (
-  //         <li key={`error-${i}`}>{this.state.errors[error]}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
 
   render() {
     return (

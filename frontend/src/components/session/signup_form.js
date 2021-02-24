@@ -16,6 +16,11 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
+  // [WORKS] clears errors
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
       this.props.history.push("/login");

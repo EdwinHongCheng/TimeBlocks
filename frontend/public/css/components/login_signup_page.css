@@ -48,7 +48,6 @@
 
 .first-buttons {
     display: flex;    
-    /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
     justify-content: center;
 }
 
@@ -85,7 +84,7 @@
 }
 
 .signup-button:hover, .login-button:hover, .back-to-splash-button:hover {
-    background-color: rgb(207, 118, 177); 
+    background-color: rgb(123, 74, 202); 
 }
 
 .login-signup-background {
@@ -109,7 +108,3 @@
     display: flex;
     justify-content: center;
 }
-
-/* .login-signup-errors {
-    height: 100px;
-} */
