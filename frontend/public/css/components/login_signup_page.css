@@ -1,26 +1,3 @@
-.app-name {
-    display: flex;
-    justify-content: center;
-
-    color: black;
-    font-family: "Helvetica Neue";
-    font-weight: bold;
-    font-size: 30px;
-}
-
-.logo-image {
-    display: block;
-    justify-content: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-
-    border: 1px solid black;
-
-    height: 160px;
-}
-
 .login-form, .signup-form {
     display: flex;
     flex-direction: column;
@@ -46,54 +23,8 @@
     height: 30px;
 }
 
-.first-buttons {
-    display: flex;    
-    justify-content: center;
-}
 
 
-/* iPad width: 481px to 768px */
-@media (max-width: 768px) {
-    .first-buttons {
-        display: flex;    
-        /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
-
-.signup-button, .login-button, .back-to-splash-button, .submit-button {
-    /* box-sizing: border-box; */
-
-    width: 50px;
-
-    font-family: "Helvetica Neue";
-    border-radius: 4px;
-
-    /* text color */
-    color: white;
-    cursor: pointer;
-    background-color: rgb(84, 12, 201);
-
-    display: inline-block;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-}
-
-.signup-button:hover, .login-button:hover, .back-to-splash-button:hover {
-    background-color: rgb(123, 74, 202); 
-}
-
-.login-signup-background {
-    background-color: rgb(255, 244, 183);
-    height: 100vh; /* viewport height */
-
-    /* Gradient (doesn't look great) */
-    /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
-}
 
 .first-input-field {
     margin-bottom: 6px;

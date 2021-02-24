@@ -5,11 +5,13 @@ import FirstButtonsContainer from "../first_buttons/first_buttons_container";
 class SplashPage extends React.Component {
   render() {
     return (
-      <div className="login-signup-background">
+      <div className="splash-background">
         <Link className="app-name" to={"/"}>
           TimeBlocks
         </Link>
-        <p className="logo-image">TimeBlocks: short description</p>
+        <p className="splash-blurb">
+          A touch-friendly time management app for keeping track of daily tasks!
+        </p>
         <FirstButtonsContainer />
       </div>
     );

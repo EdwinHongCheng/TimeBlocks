@@ -50,7 +50,7 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-signup-background">
+      <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
         <br />
 

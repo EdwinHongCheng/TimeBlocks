@@ -13,10 +13,10 @@ class FirstButtons extends React.Component {
     return (
       <div className="first-buttons">
         <div>
-          <Link className="login-button" to={"/login"}>Login</Link>
+          <Link className="login-button" to={"/login"}>Log In</Link>
         </div>
         <div>
-          <Link className="signup-button" to={"/signup"}>Signup</Link>
+          <Link className="signup-button" to={"/signup"}>Sign Up</Link>
         </div>
       </div>
     );
