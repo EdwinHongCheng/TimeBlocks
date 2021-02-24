@@ -2,18 +2,15 @@
 .grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* grid-template-rows: repeat(6, 1fr); */
     background-color: rgba(255, 255, 255, 0.5);
-    width: 40em;
     place-items: center;
-    border: 1px solid black;
+    box-shadow: 0 0 10px #b4ac7c;
     border-radius: 5px;
     overflow: hidden;
 }
 
-.item {
-    width: 5em;
-    height: 5em;
-    margin: 1em;
-    background-color: hotpink;
+@media (min-width: 992px) {
+    .grid {
+        width: 40em;
+    }
 }
