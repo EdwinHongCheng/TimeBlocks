@@ -40,7 +40,7 @@
 }
 
 .splash-background {
-    padding-top: 40px;
+    /* padding-top: 40px; */
     background-color: rgb(255, 244, 183);
     height: 100vh; /* viewport height */
 

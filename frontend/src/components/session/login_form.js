@@ -46,8 +46,16 @@ class LoginForm extends React.Component {
 
     this.props.login(user);
   }
-
+  
   render() {
+    // [NOTE] "Return/Enter" -> form is submitted
+    let enterSubmitsForm = this.handleSubmit;
+    document.onkeydown = function(e) {
+        if (e.keyCode === 13) {
+          enterSubmitsForm(e)
+        }
+    };
+
     return (
       <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
