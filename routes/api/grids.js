@@ -2,16 +2,17 @@ const express = require("express");
 const router = express.Router();
 const Grid = require('../../models/Grid');
 const passport = require('passport');
-
+const validateGridInput = require('../../validation/grid');
+const Category = require("../../models/Category");
 
 router.post('/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        // const { errors, isValid } = validateCategoryInput(req.body);
+        const { errors, isValid } = validateGridInput(req.body);
 
-        // if (!isValid) {
-        //     return res.status(400).json(errors);
-        // }
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
 
         const newGrid = new Grid({
             task: req.body.taskId,
@@ -20,9 +21,29 @@ router.post('/',
         })
 
         newGrid.save()
-            .then((grid) => res.json(grid));
+            .then((grid) => res.json(grid))
+            .catch((errors) => res.json({error: "Task ID not found!"}))
     }
 );
+
+//Get a specific grid hour
+router.get('/hour', (req, res) => {
+    Grid.findOne({hour: req.body.hour})
+        .then(grid => {
+            if (!grid) {
+                res.json({error: "No task for this hour"})
+            } else {
+                Category.find({ 'tasks._id': grid.task }, { "tasks.$": true })
+                    .then(catArr => {
+                        Category.findById(catArr[0].id).then(cat => {
+                            const task = cat.tasks.id(grid.task)
+                            res.json({title: task.title});
+                        })
+                    })
+            }
+        })
+});
+
 
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
