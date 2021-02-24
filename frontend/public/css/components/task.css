@@ -1,29 +1,27 @@
 .task {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     margin: 1em;
     background-color: hotpink;
+    border-radius: 5px;
 }
 
 .bucket {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
     margin: 1em;
-    border: 1px dashed black
+    border: 1px dashed black;
+    border-radius: 5px;
 }
 
 @media (min-width: 992px) {
     .task {
         width: 5em;
         height: 5em;
-        margin: 1em;
-        background-color: hotpink;
     }
 
     .bucket {
         width: 5em;
         height: 5em;
-        margin: 1em;
-        border: 1px dashed black
     }
 }

@@ -6,7 +6,6 @@ import Task from "../task/task"
 const Grid = (props) => {
     return (
       <>
-        <Task />
         <div className="grid">
           <TaskBucket />
           <TaskBucket />
@@ -31,7 +30,9 @@ const Grid = (props) => {
           <TaskBucket />
           <TaskBucket />
           <TaskBucket />
+          <TaskBucket />
         </div>
+        <Task />
       </>
     );
 }
