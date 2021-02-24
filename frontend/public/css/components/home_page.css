@@ -1,6 +1,8 @@
 .home-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
-    background-color: #fff4b7; 
+    background-color: #fff4b7;
+    height: 100vh;
 }

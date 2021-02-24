@@ -1,35 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 
+import TaskBucket from "../task/task_bucket";
 import Task from "../task/task"
 
 const Grid = (props) => {
     return (
-      <div className="grid">
+      <>
         <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-        <Task />
-      </div>
+        <div className="grid">
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+          <TaskBucket />
+        </div>
+      </>
     );
 }
 
