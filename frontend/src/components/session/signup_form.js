@@ -49,22 +49,29 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    // [NOTE] "Return/Enter" -> form is submitted
+    let enterSubmitsForm = this.handleSubmit;
+    document.onkeydown = function(e) {
+        if (e.keyCode === 13) {
+          enterSubmitsForm(e)
+        }
+    };
+
     return (
       <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
 
         <form className="signup-form" onSubmit={this.handleSubmit}>
+
           <input
             type="text"
             value={this.state.email}
             onChange={this.update("email")}
             placeholder="Email"
           />
-
           <p className="rendered-error">
             {this.props.errors.email}
           </p>
-          <br />
 
           <input
             type="text"
@@ -72,13 +79,9 @@ class SignupForm extends React.Component {
             onChange={this.update("name")}
             placeholder="Name"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.name}
           </p>
-
-          <br />
 
           <input
             type="password"
@@ -86,14 +89,9 @@ class SignupForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.password}
           </p>
-
-
-          <br />
 
           <input
             type="password"
@@ -101,8 +99,6 @@ class SignupForm extends React.Component {
             onChange={this.update("password2")}
             placeholder="Confirm Password"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.password2}
           </p>
@@ -110,7 +106,7 @@ class SignupForm extends React.Component {
         </form>
 
         <div className="first-buttons">
-          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <p className="submit-button" onClick={this.handleSubmit}>Sign Up</p>
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 

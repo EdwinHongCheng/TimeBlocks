@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import TimeBlocksLogo from "../../time-logo.png";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -45,13 +46,23 @@ class LoginForm extends React.Component {
 
     this.props.login(user);
   }
-
+  
   render() {
+    // [NOTE] "Return/Enter" -> form is submitted
+    let enterSubmitsForm = this.handleSubmit;
+    document.onkeydown = function(e) {
+        if (e.keyCode === 13) {
+          enterSubmitsForm(e)
+        }
+    };
+
     return (
       <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
 
         <form className="login-form" onSubmit={this.handleSubmit}>
+
+          <img className="logo" src={TimeBlocksLogo} />
 
           <input
             type="text"
@@ -63,7 +74,6 @@ class LoginForm extends React.Component {
           <p className="rendered-error">
             {this.props.errors.email}
           </p>
-          <br />
 
           <input
             type="password"
@@ -79,7 +89,7 @@ class LoginForm extends React.Component {
         </form>
 
         <div className="first-buttons">
-          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <p className="submit-button" onClick={this.handleSubmit}>Log In</p>
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 

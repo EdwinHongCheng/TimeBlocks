@@ -1,3 +1,9 @@
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 58px;
+}
+
 .login-form, .signup-form {
     display: flex;
     flex-direction: column;
@@ -11,26 +17,15 @@
 .login-form input[type=text],
 .login-form input[type=password] {
     width: 220px;
-    height: 20px;
+    height: 28px;
     border-radius: 4px;
     border: 1px solid black;
     outline: none;
 
-    /* NOTE: testing out different displays for input field text */
+    /* [NOTE]: testing out different displays for input field text */
     padding-left: 8px;
     /* text-align: center; */
 }
-
-/* For rendering errors */
-.signup-form p, .login-form p {
-    display: flex;
-    justify-content: flex-start;
-    width: 220px;
-    height: 30px;
-}
-
-
-
 
 .first-input-field {
     margin-bottom: 6px;
@@ -39,8 +34,17 @@
     justify-content: center;
 }
 
+/* For rendering errors */
+.signup-form p, .login-form p {
+    display: flex;
+    justify-content: flex-start;
+    width: 220px;
+    height: 32px;
+}
+
 .rendered-error {
-    padding-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     font-family: "Helvetica Neue";
     font-size: 14px;
     color: red;

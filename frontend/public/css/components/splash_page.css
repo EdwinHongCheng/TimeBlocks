@@ -7,31 +7,47 @@
     font-weight: bold;
     font-size: 30px;
 
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.splash-blurb {
+.splash-body {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+
     /* margin - 3 values: top, left+right, bottom */
     margin: 0px 170px 0px;
-
     height: 280px;
+    /* border: 1px solid black; */
+}
+
+.splash-blurb p {
+    display: flex;
+    justify-content: center;
+
     font-family: "Helvetica Neue";
     font-size: 22px;
+    padding-bottom: 16px;
+    text-align: center;
+}
 
-    /* border: 1px solid black; */
+.splash-image {
+    width: 100px;
+    height: 100px;
 
-    /* [TEST] */
-    /* box-sizing: border-box; */
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .splash-background {
-    padding-top: 40px;
+    position: absolute;
     background-color: rgb(255, 244, 183);
     height: 100vh; /* viewport height */
+    width: 100vw;
 
-    /* Gradient (doesn't look great) */
+    /* [NOTES - FAILED TEST] Gradient (doesn't look great) */
     /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
 }
 
@@ -44,10 +60,20 @@
 @media (max-width: 768px) {
     .first-buttons {
         display: flex;    
-        /* [WIP] take "flex-direction: column;" out -> buttons are now side by side */
         flex-direction: column;
         align-items: center;
     }
+
+    .splash-image {
+        width: 90px;
+        height: 90px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 20px;
+    }   
 }
 
 .signup-button, .login-button, .back-to-splash-button, .submit-button {
@@ -67,6 +93,6 @@
     text-align: center;
 }
 
-.signup-button:hover, .login-button:hover, .back-to-splash-button:hover {
+.signup-button:hover, .login-button:hover, .back-to-splash-button:hover, .submit-button:hover {
     background-color: rgb(123, 74, 202); 
 }
