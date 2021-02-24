@@ -12,7 +12,7 @@ const GridSchema = new Schema({
         type: Number,
         required: true
     },
-    category: {
+    task: {
         type: Schema.Types.ObjectId,
         required: true
     }
