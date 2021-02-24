@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter, Link } from "react-router-dom";
+import TimeBlocksLogo from "../../time-logo.png";
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -53,6 +54,8 @@ class LoginForm extends React.Component {
 
         <form className="login-form" onSubmit={this.handleSubmit}>
 
+          <img className="logo" src={TimeBlocksLogo} />
+
           <input
             type="text"
             value={this.state.email}
@@ -63,7 +66,6 @@ class LoginForm extends React.Component {
           <p className="rendered-error">
             {this.props.errors.email}
           </p>
-          <br />
 
           <input
             type="password"

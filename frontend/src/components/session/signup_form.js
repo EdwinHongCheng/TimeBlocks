@@ -54,17 +54,16 @@ class SignupForm extends React.Component {
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
 
         <form className="signup-form" onSubmit={this.handleSubmit}>
+
           <input
             type="text"
             value={this.state.email}
             onChange={this.update("email")}
             placeholder="Email"
           />
-
           <p className="rendered-error">
             {this.props.errors.email}
           </p>
-          <br />
 
           <input
             type="text"
@@ -72,13 +71,9 @@ class SignupForm extends React.Component {
             onChange={this.update("name")}
             placeholder="Name"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.name}
           </p>
-
-          <br />
 
           <input
             type="password"
@@ -86,14 +81,9 @@ class SignupForm extends React.Component {
             onChange={this.update("password")}
             placeholder="Password"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.password}
           </p>
-
-
-          <br />
 
           <input
             type="password"
@@ -101,8 +91,6 @@ class SignupForm extends React.Component {
             onChange={this.update("password2")}
             placeholder="Confirm Password"
           />
-
-
           <p className="rendered-error">
             {this.props.errors.password2}
           </p>
