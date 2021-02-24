@@ -98,7 +98,7 @@ class SignupForm extends React.Component {
         </form>
 
         <div className="first-buttons">
-          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <p className="submit-button" onClick={this.handleSubmit}>Sign Up</p>
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 

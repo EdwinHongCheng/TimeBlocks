@@ -11,13 +11,15 @@ class SplashPage extends React.Component {
           TimeBlocks
         </Link>
         <div className="splash-body">
-          <p className="splash-blurb">
-            A touch-friendly time management app for keeping track of daily tasks!
-          </p>
-
-          {/* [ISSUE]: doesn't have it's own row */}
-          {/* <img className="logo" src={TimeBlocksLogo} /> */}
-
+          <div className="splash-blurb">
+            <p>
+              A touch-friendly time management app!
+            </p>
+            <p>
+              Keep track of daily tasks!
+            </p>
+          </div>
+          <img className="splash-image" src={TimeBlocksLogo} />
         </div>
         <FirstButtonsContainer />
       </div>

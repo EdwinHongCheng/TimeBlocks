@@ -12,16 +12,27 @@
 
 .splash-body {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+
     /* margin - 3 values: top, left+right, bottom */
     margin: 0px 170px 0px;
     height: 280px;
     /* border: 1px solid black; */
 }
 
-.splash-blurb {
+.splash-blurb p {
     font-family: "Helvetica Neue";
     font-size: 22px;
+}
+
+.splash-image {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .splash-background {
@@ -29,7 +40,7 @@
     background-color: rgb(255, 244, 183);
     height: 100vh; /* viewport height */
 
-    /* Gradient (doesn't look great) */
+    /* [NOTES - FAILED TEST] Gradient (doesn't look great) */
     /* background-image: linear-gradient(rgb(255, 217, 0), rgb(255, 255, 255), rgb(133, 71, 214)); */
 }
 
@@ -45,6 +56,14 @@
         flex-direction: column;
         align-items: center;
     }
+
+    .splash-image {
+        width: 90px;
+        height: 90px;
+
+        margin-top: 46px;
+        margin-bottom: 60px;
+    }   
 }
 
 .signup-button, .login-button, .back-to-splash-button, .submit-button {
