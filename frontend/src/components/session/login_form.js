@@ -12,7 +12,11 @@ class LoginForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
+  }
+
+  // [WORKS] clears errors
+  componentWillUnmount() {
+    this.props.clearErrors()
   }
 
   componentWillReceiveProps(nextProps) {
@@ -42,43 +46,43 @@ class LoginForm extends React.Component {
     this.props.login(user);
   }
 
-  // Render the session errors if there are any
-  renderErrors() {
-    return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
-    );
-  }
-
   render() {
     return (
-      <div className="login-signup-background">
+      <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
-          </div>
+
+        <form className="login-form" onSubmit={this.handleSubmit}>
+
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
+
+          <p className="rendered-error">
+            {this.props.errors.email}
+          </p>
+          <br />
+
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+
+          <p className="rendered-error">
+            {this.props.errors.password}
+          </p>
+
         </form>
 
-        <Link to={"/"}>Back</Link>
+        <div className="first-buttons">
+          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <Link className="back-to-splash-button" to={"/"}>Back</Link>
+        </div>
+
       </div>
     );
   }

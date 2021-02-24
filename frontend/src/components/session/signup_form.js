@@ -16,6 +16,11 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
+  // [WORKS] clears errors
+  componentWillUnmount() {
+    this.props.clearErrors()
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
       this.props.history.push("/login");
@@ -43,59 +48,72 @@ class SignupForm extends React.Component {
     this.props.signup(user, this.props.history);
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
-        ))}
-      </ul>
-    );
-  }
-
   render() {
     return (
-      <div className="login-signup-background">
+      <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
-        <div className="signup-form-container">
-          <form onSubmit={this.handleSubmit}>
-            <div className="signup-form">
-              <br />
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-              />
-              <br />
-              <input
-                type="text"
-                value={this.state.name}
-                onChange={this.update("name")}
-                placeholder="Name"
-              />
-              <br />
-              <input
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-              />
-              <br />
-              <input
-                type="password"
-                value={this.state.password2}
-                onChange={this.update("password2")}
-                placeholder="Confirm Password"
-              />
-              <br />
-              <input type="submit" value="Submit" />
-              {this.renderErrors()}
-            </div>
-          </form>
+
+        <form className="signup-form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
+
+          <p className="rendered-error">
+            {this.props.errors.email}
+          </p>
+          <br />
+
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.update("name")}
+            placeholder="Name"
+          />
+
+
+          <p className="rendered-error">
+            {this.props.errors.name}
+          </p>
+
+          <br />
+
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+
+
+          <p className="rendered-error">
+            {this.props.errors.password}
+          </p>
+
+
+          <br />
+
+          <input
+            type="password"
+            value={this.state.password2}
+            onChange={this.update("password2")}
+            placeholder="Confirm Password"
+          />
+
+
+          <p className="rendered-error">
+            {this.props.errors.password2}
+          </p>
+
+        </form>
+
+        <div className="first-buttons">
+          <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
+          <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 
-        <Link to={"/"}>Back</Link>
       </div>
     );
   }
