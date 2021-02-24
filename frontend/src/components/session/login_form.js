@@ -58,43 +58,39 @@ class LoginForm extends React.Component {
       <div className="login-signup-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
         <br />
+
         <form className="login-form" onSubmit={this.handleSubmit}>
-          <div>
 
-            <div className="first-input-field">
-              <input
-                className="first-input-field"
-                type="text"
-                value={this.state.email}
-                onChange={this.update("email")}
-                placeholder="Email"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.email || "placeholder"}
-            </p>
-            <br />
+          <input
+            type="text"
+            value={this.state.email}
+            onChange={this.update("email")}
+            placeholder="Email"
+          />
 
-            <div className="first-input-field">
-              <input
-                className="first-input-field"
-                type="password"
-                value={this.state.password}
-                onChange={this.update("password")}
-                placeholder="Password"
-              />
-            </div>
-            <p className="rendered-error">
-              {this.props.errors.password || "placeholder"}
-            </p>
+          <p className="rendered-error">
+            {this.props.errors.email}
+          </p>
+          <br />
 
-          </div>
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.update("password")}
+            placeholder="Password"
+          />
+
+          <p className="rendered-error">
+            {this.props.errors.password}
+          </p>
+
         </form>
 
         <div className="first-buttons">
           <p className="submit-button" onClick={this.handleSubmit}>Submit</p>
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
+
       </div>
     );
   }

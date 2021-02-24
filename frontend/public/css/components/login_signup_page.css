@@ -28,15 +28,22 @@
 }
 
 .signup-form input[type=text],
-.signup-form input[type=password] {
+.signup-form input[type=password],
+.login-form input[type=text],
+.login-form input[type=password] {
     width: 200px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
 }
 
-.signup-form p {
+/* For rendering errors */
+.signup-form p, .login-form p {
     display: flex;
     justify-content: flex-start;
     width: 200px;
-    height: 25px;
+    height: 30px;
 }
 
 .first-buttons {
@@ -97,6 +104,7 @@
 }
 
 .rendered-error {
+    font-family: "Helvetica Neue";
     color: red;
     display: flex;
     justify-content: center;

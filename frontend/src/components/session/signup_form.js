@@ -48,9 +48,8 @@ class SignupForm extends React.Component {
       <div className="login-signup-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
         <br />
-        <form className="signup-form" onSubmit={this.handleSubmit}>
-        
 
+        <form className="signup-form" onSubmit={this.handleSubmit}>
           <input
             type="text"
             value={this.state.email}
@@ -59,7 +58,7 @@ class SignupForm extends React.Component {
           />
 
           <p className="rendered-error">
-            {this.props.errors.email || "placeholder"}
+            {this.props.errors.email}
           </p>
           <br />
 
@@ -72,7 +71,7 @@ class SignupForm extends React.Component {
 
 
           <p className="rendered-error">
-            {this.props.errors.name || "placeholder"}
+            {this.props.errors.name}
           </p>
 
           <br />
