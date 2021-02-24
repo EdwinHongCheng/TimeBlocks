@@ -1,28 +1,27 @@
 const express = require("express");
 const router = express.Router();
-const Task = require('../../models/Task');
 const passport = require('passport');
 const Category = require('../../models/Category')
 const validateTaskInput = require('../../validation/task');
 
 //New Task
-router.post('/',
-    passport.authenticate('jwt', { session: false }),
+router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-      const { errors, isValid } = validateTaskInput(req.body);
-  
-      if (!isValid) {
+        const { errors, isValid } = validateTaskInput(req.body);
+    
+        if (!isValid) {
         return res.status(400).json(errors);
-      }
-    Category.findById(req.body.catId).then(category => {
-        const newTask = {
-            title: req.body.title,
-        };
-        category.tasks.push(newTask);
-        category.save()
-            .then((category) => res.json(category))
-            .catch(errors => res.json(errors))
-      })
+        }
+
+        Category.findById(req.body.catId).then(category => {
+            const newTask = {
+                title: req.body.title,
+            };
+            category.tasks.push(newTask);
+            category.save()
+                .then((category) => res.json(category))
+                .catch(errors => res.json(errors))
+        })
     }
 );
 
@@ -58,7 +57,8 @@ router.delete('/:id',
                 })
             })
             .catch((errors) => res.json(errors));
-});
+    }
+);
 
 //Update tasks category
 router.post('/updateCategory/:id',
@@ -83,15 +83,8 @@ router.post('/updateCategory/:id',
                 })
             })
             .catch(errors => res.json(errors));
-            
-
-        // Category.findById(req.body.catId).then(category => {
-        //     const task = category.tasks.id(req.params.id);
-        //     newTask["title"] = task.title;
-        //     task.remove();
-        //     category.save().then((cat) => res.json(cat));
-        // });
-    });
+    }
+);
 
 
 

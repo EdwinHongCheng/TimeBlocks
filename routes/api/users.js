@@ -10,7 +10,8 @@ const validateLoginInput = require('../../validation/login');
 
 router.get("/test", (req, res) => res.json({ msg: "This is the users route" }));
 
-router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+router.get('/current', passport.authenticate('jwt', { session: false }),
+    (req, res) => {
     res.json({ 
         id: req.user.id,
         name: req.user.name,
@@ -45,7 +46,8 @@ router.post('/register', (req, res) => {
                             .then(user => {
                                 const payload = { id: user.id, name: user.name };
 
-                                jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
+                                jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 },
+                                    (err, token) => {
                                     res.json({
                                         success: true,
                                         token: "Bearer " + token
@@ -98,5 +100,3 @@ router.post('/login', (req, res) => {
 })
 
 module.exports = router;
-
-//user authorization code: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMzU1MWFkZjQ3MjVjMTFmMTdiMDg0OCIsIm5hbWUiOiJ1c2VyMiIsImlhdCI6MTYxNDExNjIwMiwiZXhwIjoxNjE0MTE5ODAyfQ.7nb2oCQrrO7hFuVfVPaqGMEOpTWDzR-Wb3EFIgDzQc0"

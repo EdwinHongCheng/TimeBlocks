@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const passport = require('passport');
-
 const Category = require('../../models/Category')
 const validateCategoryInput = require('../../validation/categories');
 
@@ -34,35 +32,34 @@ router.get('/user/:user_id', (req, res) => {
 // });
 
 //Protected route to create categories
-router.post('/',
-    passport.authenticate('jwt', { session: false }),
+router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-      const { errors, isValid } = validateCategoryInput(req.body);
-  
-      if (!isValid) {
-        return res.status(400).json(errors);
-      }
+        const { errors, isValid } = validateCategoryInput(req.body);
+    
+        if (!isValid) {
+            return res.status(400).json(errors);
+        }
 
-    const newCategory = new Category({
-        text: req.body.text,
-        userId: req.user.id
-    })
+        const newCategory = new Category({
+            text: req.body.text,
+            userId: req.user.id
+        })
 
-    newCategory.save()
-        .then((cat) => res.json(cat));
+        newCategory.save()
+            .then((cat) => res.json(cat));
     }
 );
 
 //Protected route to delete categories
-router.delete('/:id',
-    passport.authenticate('jwt', { session: false }),
+router.delete('/:id', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         Category.findById(req.params.id).then(category => {
             category.remove()
                 .then(() => res.json({removed: true}))
                 .catch((err) => res.status(404).json({removed: false}))
         })
-});
+    }
+);
 
 
 module.exports = router

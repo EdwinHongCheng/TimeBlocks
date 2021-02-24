@@ -5,8 +5,7 @@ const passport = require('passport');
 const validateGridInput = require('../../validation/grid');
 const Category = require("../../models/Category");
 
-router.post('/',
-    passport.authenticate('jwt', { session: false }),
+router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         const { errors, isValid } = validateGridInput(req.body);
 
