@@ -46,11 +46,16 @@ router.put('/editTitle/:id',
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Category.findById(req.body.catId).then(category => {
-            const task = category.tasks.id(req.params.id);
-            task.remove();
-            category.save().then((cat) => res.json(cat));
-        });
+        Category.find({'tasks._id': req.params.id}, 
+        {"tasks.$": true})
+            .then( catArr => {
+                Category.findById(catArr[0].id).then(cat => {
+                    const task = cat.tasks.id(req.params.id);
+                    task.remove();
+                    cat.save().then(category => res.json(category));
+                })
+            })
+            .catch((errors) => res.json(errors));
 });
 
 router.post('/updateCategory/:id',

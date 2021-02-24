@@ -5,7 +5,7 @@ module.exports = function validateCatgegoryInput(data) {
   let errors = {};
 
   data.text = validText(data.text) ? data.text : '';
-  data.userId = validText(data.userId) ? data.userId : '';
+  // data.userId = validText(data.userId) ? data.userId : '';
 
   // if (!Validator.isLength(data.text, { max: 25 })) {
   //   errors.text = 'Category must be less than 25 characters';
@@ -15,9 +15,9 @@ module.exports = function validateCatgegoryInput(data) {
     errors.text = 'Text field is required';
   }
 
-  if (Validator.isEmpty(data.userId)) {
-    errors.text = 'User id is required';
-  }
+  // if (Validator.isEmpty(data.userId)) {
+  //   errors.text = 'User id is required';
+  // }
 
   return {
     errors,
