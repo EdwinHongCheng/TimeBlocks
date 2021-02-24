@@ -80,7 +80,6 @@ router.post('/updateCategory/:id',
             category.save().then((cat) => res.json(cat));
         });
         Category.findById(req.body.catId2).then(category => {
-            debugger
             category.tasks.push(newTask);
             category.save()
                 .then((category) => res.json(category))

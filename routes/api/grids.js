@@ -40,6 +40,7 @@ router.get('/hour', (req, res) => {
                             res.json({title: task.title});
                         })
                     })
+                    .catch((errors) => res.json(errors));
             }
         })
 });
