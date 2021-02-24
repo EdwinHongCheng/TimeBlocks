@@ -50,7 +50,6 @@ class LoginForm extends React.Component {
     return (
       <div className="splash-background">
         <Link className="app-name" to={"/"}>TimeBlocks</Link>
-        <br />
 
         <form className="login-form" onSubmit={this.handleSubmit}>
 

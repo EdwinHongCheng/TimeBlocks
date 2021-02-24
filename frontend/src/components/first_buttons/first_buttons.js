@@ -24,9 +24,9 @@ class FirstButtons extends React.Component {
 
   render() {
     return (
-      <div>
+      <>
         {this.getLinks()}
-      </div>
+      </>
     );
   }
 }
