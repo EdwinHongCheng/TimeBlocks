@@ -49,8 +49,7 @@ router.put('/editTitle/:id',
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Category.find({'tasks._id': req.params.id}, 
-        {"tasks.$": true})
+        Category.find({'tasks._id': req.params.id}, {"tasks.$": true})
             .then( catArr => {
                 Category.findById(catArr[0].id).then(cat => {
                     const task = cat.tasks.id(req.params.id);
@@ -63,28 +62,35 @@ router.delete('/:id',
 
 //Update tasks category
 router.post('/updateCategory/:id',
-    // passport.authenticate('jwt', { session: false }),
+    passport.authenticate('jwt', { session: false }),
     (req, res) => {
         
-        let newTask = {};
-        // const task = Category.tasks.find({"tasks.id": req.params.id});
-        // const parent = task.parent();
-        // newTask.title = task.title;
-        // task.remove();
-        // parent.save();
+        Category.find({ 'tasks._id': req.params.id }, { "tasks.$": true })
+            .then(catArr => {
+                return Category.findById(catArr[0].id).then(cat => {
+                    const task = cat.tasks.id(req.params.id);
+                    const newTask = {title: task.title};
+                    task.remove();
+                    cat.save();
+                    return newTask;
+                })
+            }).then((newTask) => {
+                Category.findById(req.body.catId).then(category => {
+                    category.tasks.push(newTask);
+                    category.save()
+                        .then((category) => res.json(category))
+                        .catch(errors => res.json(errors))
+                })
+            })
+            .catch(errors => res.json(errors));
+            
 
-        Category.findById(req.body.catId).then(category => {
-            const task = category.tasks.id(req.params.id);
-            newTask["title"] = task.title;
-            task.remove();
-            category.save().then((cat) => res.json(cat));
-        });
-        Category.findById(req.body.catId2).then(category => {
-            category.tasks.push(newTask);
-            category.save()
-                .then((category) => res.json(category))
-                .catch(errors => res.json(errors))
-        })
+        // Category.findById(req.body.catId).then(category => {
+        //     const task = category.tasks.id(req.params.id);
+        //     newTask["title"] = task.title;
+        //     task.remove();
+        //     category.save().then((cat) => res.json(cat));
+        // });
     });
 
 

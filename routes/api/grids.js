@@ -26,7 +26,7 @@ router.post('/',
     }
 );
 
-//Get a specific grid hour
+//Get a specific grid hour - currently sends back task name
 router.get('/hour', (req, res) => {
     Grid.findOne({hour: req.body.hour})
         .then(grid => {
