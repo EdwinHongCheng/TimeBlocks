@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const TaskSchema = require('./Task')
 
 const CategorySchema = new Schema({
-  user: { 
+  userId: { 
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
@@ -10,11 +11,8 @@ const CategorySchema = new Schema({
     type: String,
     required: true
   },
-  date: {
-    type: Date,
-    default: Date.now
-  },
-  // task: [TaskSchema]
+
+  tasks: [TaskSchema]
 });
 
 module.exports = Category = mongoose.model('category', CategorySchema);
