@@ -5,6 +5,7 @@ const passport = require('passport');
 const Category = require('../../models/Category')
 const validateTaskInput = require('../../validation/task');
 
+//New Task
 router.post('/',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -25,7 +26,7 @@ router.post('/',
     }
 );
 
-
+//edit task info
 router.put('/editTitle/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -43,6 +44,8 @@ router.put('/editTitle/:id',
     }
 );
 
+
+//delete task
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -58,6 +61,7 @@ router.delete('/:id',
             .catch((errors) => res.json(errors));
 });
 
+//Update tasks category
 router.post('/updateCategory/:id',
     // passport.authenticate('jwt', { session: false }),
     (req, res) => {
