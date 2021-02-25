@@ -1,7 +1,6 @@
 .task {
     width: 3em;
     height: 3em;
-    margin: 1em;
     background-color: hotpink;
     border-radius: 5px;
 }
@@ -10,6 +9,7 @@
     width: 3em;
     height: 3em;
     margin: 1em;
+    padding: 1em;
     border: 1px dashed black;
     border-radius: 5px;
 }
