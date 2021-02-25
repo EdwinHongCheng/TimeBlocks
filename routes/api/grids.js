@@ -14,7 +14,7 @@ router.post('/', passport.authenticate('jwt', { session: false }),
         }
 
         const newGrid = new Grid({
-            task: req.body.taskId,
+            taskId: req.body.taskId,
             userId: req.user.id,
             hour: req.body.hour
         })
@@ -45,8 +45,10 @@ router.get('/hour', (req, res) => {
 });
 
 //Get all of a user's grids
-router.get('/allGrids/:user_id', (req, res) => {
-    Grid.find({user_id: })
+router.get('/allGrids/:userId', (req, res) => {
+    Grid.find({userId: req.params.userId})
+        .then(grids => res.json(grids))
+        .catch(errors => res.json(errors))
 })
 
 
