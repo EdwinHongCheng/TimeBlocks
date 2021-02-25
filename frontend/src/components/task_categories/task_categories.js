@@ -24,7 +24,7 @@ class TaskCategories extends React.Component {
             return (
               <div>
                 {this.state.categories.map(category => (
-                  <CategoryBox key={category._id} title={category.title} tasks={category.tasks} />
+                  <CategoryBox key={category._id} text={category.text} tasks={category.tasks} />
                 ))}
               </div>
             );
