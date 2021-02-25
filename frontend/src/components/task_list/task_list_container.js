@@ -3,14 +3,8 @@ import TaskList from "./task_list";
 
 const mapStateToProps = (state) => {
     return {
-
+        tasks: ["sdcfgvhbjn", "asdfasdfasd"]
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TaskList);
+export default connect(mapStateToProps)(TaskList);

@@ -11,7 +11,8 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home-container">
-        <Grid />
+        {/* <Grid /> */}
+        <TaskList />
         <LogoutButtonContainer />
       </div>
     );
