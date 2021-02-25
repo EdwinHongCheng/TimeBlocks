@@ -44,8 +44,13 @@ router.get('/hour', (req, res) => {
         })
 });
 
+//Get all of a user's grids
+router.get('/allGrids/:user_id', (req, res) => {
+    Grid.find({user_id: })
+})
 
-//delete grid
+
+//delete grid via grid's id
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
