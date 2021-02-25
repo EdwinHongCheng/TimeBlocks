@@ -1,9 +1,12 @@
+.app-name-parent {
+    text-align: center;
+}
+
 .app-name {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
 
     color: black;
-    font-family: "Helvetica Neue";
+    /* font-family: "Helvetica Neue"; */
     font-weight: bold;
     font-size: 30px;
 
@@ -27,7 +30,7 @@
     display: flex;
     justify-content: center;
 
-    font-family: "Helvetica Neue";
+    /* font-family: "Helvetica Neue"; */
     font-size: 22px;
     padding-bottom: 16px;
     text-align: center;
@@ -78,11 +81,12 @@
 
 .signup-button, .login-button, .back-to-splash-button, .submit-button {
     width: 100px;
+    font-size: 16px;
 
-    font-family: "Helvetica Neue";
+    /* font-family: "Helvetica Neue"; */
     border-radius: 4px;
 
-    /* text color */
+    /* [NOTE] text color */
     color: white;
     cursor: pointer;
     background-color: rgb(84, 12, 201);

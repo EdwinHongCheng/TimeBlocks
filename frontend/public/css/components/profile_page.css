@@ -1,0 +1,214 @@
+.profile-page-background {
+    position: absolute;
+    background-color: rgb(255, 244, 183);
+    height: 100vh;
+    width: 100vw;
+}
+
+.profile-header-parent {
+    text-align: center;
+}
+
+.profile-header {
+    display: inline-block;
+
+    color: black;
+    /* font-family: "Helvetica Neue"; */
+    font-weight: bold;
+    font-size: 28px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-page-body {
+    display: flex;
+    justify-content: center;
+}
+
+.prof-page-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* [NOTE] margin = top/right/bottom/left */
+    margin: 0px 0px 0px 40px;
+    height: 280px;
+
+    /* border: 1px solid black; */
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.friends-list {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.profile-page-buttons {
+    display: flex;
+    flex-direction: column;  
+}
+
+.clear-grid-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.clear-grid-button {
+    background-color: rgb(84, 12, 201);
+    /* [Margin Bottom] - for dead space for cancel Clear Grid Button */
+    margin-bottom: 66px;
+}
+
+.clear-grid-button:hover, .back-to-home-button:hover {
+    background-color: rgb(123, 74, 202); 
+}
+
+/* [WIP] Back Button */
+.back-to-home-button {
+    width: 50px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(84, 12, 201);
+    margin-top: 60px;
+    margin-left: 70px;
+}
+
+.logout-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    display: inline-block;
+    text-align: center;
+    background-color:black;
+    padding: 10px;
+    margin: 10px;
+
+    margin-bottom: 40px;
+}
+
+.logout-button:hover {
+    background-color: red;
+}
+
+/* [WORKS] Dropdown -------------------------------------------------------> */
+.friends-dropdown-parent {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.friends-dropdown-title {
+    width: 160px;
+    font-size: 16px;
+
+    /* border-radius: 4px; */
+    color: white;
+    /* cursor: pointer; */
+    background-color: rgb(84, 12, 201);
+
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+/* .friends-dropdown-title:hover {
+    background-color: rgb(123, 74, 202); 
+} */
+
+.friends-dropdown-false {
+    display: none;
+}
+
+/* [ISSUE] pushes the bottom buttons down */
+.friends-dropdown-true {
+    position: relative;
+    background-color: white;
+    border: 1px solid white;
+    opacity: 1;
+    z-index: 2;
+}
+
+/* [WORKS] Scrollable List */
+.friends-dropdown-true {
+    width: 180px;
+    height: 300px;
+    overflow: hidden; 
+    overflow-y: scroll;
+}
+
+.friends-dropdown-parent ul li {
+    padding: 4px;
+}
+
+/* [WORKS] Confirm Clear --------------------------------------------------> */
+.confirm-clear-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.confirm-clear-button:hover {
+    background-color: rgb(253, 110, 110);
+}
+
+/* Don't Clear Button */
+.dont-clear-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.dont-clear-button:hover {
+    background-color: rgb(92, 197, 92);  
+}
+

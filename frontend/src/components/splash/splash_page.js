@@ -7,9 +7,11 @@ class SplashPage extends React.Component {
   render() {
     return (
       <div className="splash-background">
-        <Link className="app-name" to={"/"}>
-          TimeBlocks
-        </Link>
+        <div className="app-name-parent">
+          <Link className="app-name" to={"/"}>
+            TimeBlocks
+          </Link>
+        </div>
         <div className="splash-body">
           <div className="splash-blurb">
             <p>

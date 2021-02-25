@@ -45,7 +45,7 @@
 .rendered-error {
     padding-top: 4px;
     padding-bottom: 4px;
-    font-family: "Helvetica Neue";
+    /* font-family: "Helvetica Neue"; */
     font-size: 14px;
     color: red;
     display: flex;
