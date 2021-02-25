@@ -91,3 +91,31 @@
     top: 60%;
     left: 60%;
 }
+
+/* [TEST] Dropdown ---------------------------------------------------------> */
+
+.friends-dropdown-parent {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.friends-dropdown-title {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* [NOTE] ref code - change to fit Friends List */
+.friends-dropdown-true{
+    position: absolute;
+    background-color: white;
+    border: 1px solid white;
+    opacity: 1;
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+}
+.friends-dropdown-false{
+    display: none;
+}
