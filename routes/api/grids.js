@@ -45,6 +45,7 @@ router.get('/hour', (req, res) => {
 });
 
 
+//delete grid
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
@@ -53,6 +54,15 @@ router.delete('/:id',
                 .then(() => res.json({ removed: true }))
                 .catch((err) => res.status(404).json({ removed: false }))
         })
-    });
+    }
+);
+
+//clear all grids that belong to user
+router.get('/clearGrids', passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+    Grid.find({ userId: req.user.id })
+        .then(grid => res.json(grid))
+        
+});
 
 module.exports = router;
