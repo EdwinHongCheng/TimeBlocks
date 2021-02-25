@@ -16,9 +16,6 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute path="/" component={HomePage} />
     </Switch>
-
-    {/* Returns null if not logged in */}
-    <LogoutButtonContainer />
   </div>
 );
 
