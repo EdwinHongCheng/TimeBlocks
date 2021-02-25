@@ -6,17 +6,27 @@ import Task from "./task";
 const TaskBucket = (props) => {
   const [color, setColor] = useState("#fff4b7");
 
-  const [collectedProps, drop] = useDrop(() => ({
+  let newColor = color => {
+      setColor(color)
+      console.log(color)
+  }
+
+  const [, drop] = useDrop(() => ({
     accept: "TASK",
     drop: (item, monitor) => {
-      console.log(item.color);
-      setColor(item.color);
+        setColor(item.color)
+        // Bucket.current.style.backgroundColor = item.color;
     },
   }));
 
+  let style = {
+      backgroundColor: color
+  }
+
   return (
     <div ref={drop} className="bucket">
-      <Task color={color}>{props.children}</Task>
+      {/* <Task color={color}>{props.children}</Task> */}
+      <div style={style} className="task">{props.children}</div>
     </div>
   );
 };

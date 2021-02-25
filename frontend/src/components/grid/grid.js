@@ -13,12 +13,12 @@ const Grid = (props) => {
     <div className="grid">
       {times.map(time => {
         return (
-          <TaskBucket time={time}>
-            <div className="task-time">              
+          <TaskBucket key={time} time={time}>
+            <div className="task-time">
               <h1>{time}</h1>
             </div>
           </TaskBucket>
-        )
+        );
       })}
     </div>
   );

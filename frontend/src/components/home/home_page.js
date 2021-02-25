@@ -1,5 +1,6 @@
 import React from "react";
 import Grid from "../grid/grid";
+import Task from "../task/task"
 
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
@@ -11,6 +12,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-container">
         <Grid />
+      <Task color={"#00ff00"}></Task>
         <LogoutButtonContainer />
       </div>
     );
