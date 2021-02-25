@@ -13,6 +13,14 @@
     grid-template-rows: 50px 1fr;
 }
 
+.task-list-container.show {
+    transform: translate3d(60vw, 0, 0)
+}
+
+.task-list-container.hide {
+    transform: translate3d()
+}
+
 .task-list-title {
     padding: 0 20px;
     font-size: 20px;
@@ -21,6 +29,10 @@
     color: #bb8a3b;
     justify-content: space-between;
     border-bottom: 1px solid #e6cfa4;
+}
+
+.task-list-title h1 {
+    cursor: default;
 }
 
 .task-list-entries {
@@ -36,6 +48,10 @@
     border-bottom: 1px solid #ffe6b7;
 }
 
+.task-list-item h1 {
+    cursor: default;
+}
+
 .task-list-item:hover {
     background-color: #f1e1ad;
 }
@@ -43,5 +59,13 @@
 @media (min-width: 992px) {
     .task-list-container {
         width: 35vw;
+    }
+
+    .task-list-container.show {
+        transform: translate3d()
+    }
+
+    .task-list-container.hide {
+        transform: translate3d()
     }
 }
