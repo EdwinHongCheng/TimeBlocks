@@ -1,5 +1,5 @@
 .task-list-container {
-    width: 40vw;
+    width: 60vw;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -9,15 +9,39 @@
     overflow-y: scroll;
     background-color: #ffeeb7;
     border-left: 1px solid #ffe6b7;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.task-list-title {
+    padding: 0 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    color: #bb8a3b;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6cfa4;
+}
+
+.task-list-entries {
+    overflow-y: scroll;
 }
 
 .task-list-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    width: 100%;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    height: 40px;
+    border-bottom: 1px solid #ffe6b7;
 }
 
 .task-list-item:hover {
     background-color: #f1e1ad;
+}
+
+@media (min-width: 992px) {
+    .task-list-container {
+        width: 35vw;
+    }
 }
