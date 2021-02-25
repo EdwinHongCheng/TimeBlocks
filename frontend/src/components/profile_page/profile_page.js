@@ -39,9 +39,18 @@ class ProfilePage extends React.Component {
 
                     <div className="friends-dropdown-parent">
                         <p className="friends-dropdown-title"
-                            onClick={this.handleFriendsList}
-                        >Friends List</p>
+                            onClick={this.handleFriendsList}>
+                                Friends List
+                        </p>
                         <ul className={`friends-dropdown-${this.state.dropdown}`} >
+                            <li>Hello There</li>
+                            <li>General Kenobi!</li>
+                            <li>Hello There</li>
+                            <li>General Kenobi!</li>
+                            <li>Hello There</li>
+                            <li>General Kenobi!</li>
+                            <li>Hello There</li>
+                            <li>General Kenobi!</li>
                             <li>Hello There</li>
                             <li>General Kenobi!</li>
                         </ul>

@@ -106,7 +106,7 @@
 }
 
 /* [NOTE] ref code - change to fit Friends List */
-.friends-dropdown-true{
+.friends-dropdown-true {
     position: absolute;
     background-color: white;
     border: 1px solid white;
@@ -116,6 +116,14 @@
     top: 50%;
     left: 50%;
 }
-.friends-dropdown-false{
+.friends-dropdown-false {
     display: none;
+}
+
+
+/* [TEST][WORKS] Scrollable List */
+.friends-dropdown-true {
+    height: 100px;
+    overflow: hidden; 
+    overflow-y: scroll;
 }
