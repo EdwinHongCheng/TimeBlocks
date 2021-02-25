@@ -41,8 +41,9 @@ router.post('/', passport.authenticate('jwt', { session: false }),
         }
 
         const newCategory = new Category({
-            text: req.body.text,
-            userId: req.user.id
+            title: req.body.title,
+            userId: req.user.id,
+            color: req.body.color
         })
 
         newCategory.save()
