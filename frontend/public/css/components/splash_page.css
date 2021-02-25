@@ -85,7 +85,7 @@
     /* font-family: "Helvetica Neue"; */
     border-radius: 4px;
 
-    /* text color */
+    /* [NOTE] text color */
     color: white;
     cursor: pointer;
     background-color: rgb(84, 12, 201);

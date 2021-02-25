@@ -41,7 +41,24 @@
     margin-bottom: 40px;
 }
 
+.profile-page-buttons {
+    display: flex;    
+    justify-content: center;
+}
+
+.clear-grid-button, .logout-button {
+    width: 100px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: rgb(84, 12, 201);
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
 .back-to-home-button {
-    display: flex;
-    right: 0px;
 }
