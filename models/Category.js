@@ -11,8 +11,7 @@ const CategorySchema = new Schema({
     type: String,
     required: true
   },
-
-  tasks: [TaskSchema]
+  tasks: [ TaskSchema ]
 });
 
 module.exports = Category = mongoose.model('category', CategorySchema);

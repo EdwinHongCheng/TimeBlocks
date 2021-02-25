@@ -1,9 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
 const GridSchema = new Schema({
-    
     user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
@@ -12,7 +10,7 @@ const GridSchema = new Schema({
         type: Number,
         required: true
     },
-    category: {
+    task: {
         type: Schema.Types.ObjectId,
         required: true
     }
