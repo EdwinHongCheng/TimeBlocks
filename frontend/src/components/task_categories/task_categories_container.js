@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchCategories: userId => dispatch(fetchCategories(userId))
+        //need more actions?
     }
 }
 
