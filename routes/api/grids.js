@@ -49,11 +49,11 @@ router.get('/hour', (req, res) => {
 router.delete('/:id',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Grid.findById(req.params.id).then(grid => {
-            grid.remove()
-                .then(() => res.json({ removed: true }))
-                .catch((err) => res.status(404).json({ removed: false }))
-        })
+        Grid.findByIdAndDelete(req.params.id)
+            .then(() => {
+                res.json({message: "Grid deleted"})
+            })
+            .catch((err) => res.status(404).json({ removed: false }))
     }
 );
 
