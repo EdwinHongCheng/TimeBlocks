@@ -6,10 +6,18 @@ class ProfilePage extends React.Component {
     render() {
         return (
             <div className="profile-page-background">
-                <p>Profile Page</p>
-                <Link to="/home">Back to Home</Link>
-                <p>Username (Placeholder)</p>
-                <LogoutButton />
+                <div className="profile-header-parent">
+                    <p className="profile-header">User Profile</p>
+                </div>
+
+                <div className="prof-page-body">
+                    <p className="user-name">John Wick</p>
+                    <p className="friends-list">Friends List (3)</p>
+                    <p>Clear Grid Button</p>
+                    <LogoutButton />
+                </div>
+
+                <Link className="back-to-home-button" to="/home">Back</Link>
             </div>
         )
     }
