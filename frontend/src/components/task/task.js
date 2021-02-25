@@ -1,31 +1,31 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import { useDrag } from "react-dnd"
 
 const Task = (props) => {
-    const [{ isDragging }, drag] = useDrag(() => ({
-        item: {type: "TASK", color: "#000000"},
+    // const [color, setColor] = useState(props.color)
+    
+    const [{ isDragging }, drag, dragPreview] = useDrag(() => ({
+        item: {type: "TASK", color: props.color},
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
         })
     }))
-
-    const Task = React.useRef()
-
-    const [color, setColor] = useState("hotpink")
+    
+    // const Task = useRef();
 
     if(isDragging) {
-        console.log(Task)
-        // drag.setAt
-        Task.current.setAttribute("style", "background-color:black")
+        // console.log(Task)
     }
 
     const style = {
-        backgroundColor: color
+        backgroundColor: props.color
     }
 
     return (
-        <div ref={drag}  style={style}>
-            <div ref={Task} className="task"></div>
+        <div ref={drag}>
+            <div style={style} className="task">
+                {props.children}
+            </div>
         </div>
     )
 }

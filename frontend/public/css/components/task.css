@@ -1,17 +1,29 @@
 .task {
-    width: 3em;
-    height: 3em;
-    background-color: hotpink;
-    border-radius: 5px;
+    width: 2em;
+    height: 2em;
+    background-color: #fff4b7;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bucket {
-    width: 3em;
-    height: 3em;
+    width: 2em;
+    height: 2em;
     margin: 1em;
-    padding: 1em;
-    border: 1px dashed black;
+    border: 3px solid #d2c999;
     border-radius: 5px;
+}
+
+.task-time {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: #fff4b7; 
 }
 
 @media (min-width: 992px) {
