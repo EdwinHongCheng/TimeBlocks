@@ -1,11 +1,21 @@
-import React from "react"
+import React from "react";
+
+import { useDrop } from "react-dnd"
+import Task from "./task"
 
 const TaskBucket = (props) => {
-    return (
-        <div className="bucket">
+  const [, drop] = useDrop(() => ({
+    accept: "TASK",
+    drop: (item, monitor) => {
+        console.log(item, monitor)
+    }
+  }));
 
-        </div>
-    )
-}
+  return (
+    <div ref={drop} className="bucket">
+      <Task />
+    </div>
+  );
+};
 
 export default TaskBucket;
