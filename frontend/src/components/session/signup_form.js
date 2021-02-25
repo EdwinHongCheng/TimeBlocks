@@ -59,7 +59,11 @@ class SignupForm extends React.Component {
 
     return (
       <div className="splash-background">
-        <Link className="app-name" to={"/"}>TimeBlocks</Link>
+        <div className="app-name-parent">
+          <Link className="app-name" to={"/"}>
+            TimeBlocks
+          </Link>
+        </div>
 
         <form className="signup-form" onSubmit={this.handleSubmit}>
 

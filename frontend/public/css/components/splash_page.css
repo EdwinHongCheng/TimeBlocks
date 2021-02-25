@@ -1,6 +1,9 @@
+.app-name-parent {
+    text-align: center;
+}
+
 .app-name {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
 
     color: black;
     font-family: "Helvetica Neue";
