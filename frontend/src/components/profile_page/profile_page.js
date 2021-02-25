@@ -6,13 +6,12 @@ class ProfilePage extends React.Component {
         super(props);
 
         this.state = {
-            dropdown: false,
             showConfirmClear: false 
         }
 
         this.logoutUser = this.logoutUser.bind(this);
         // [WORKS] dropdown
-        this.handleFriendsList = this.handleFriendsList.bind(this)
+        // this.handleFriendsList = this.handleFriendsList.bind(this)
         // [WORKS] show Confirm Clear
         this.handleConfirmClear = this.handleConfirmClear.bind(this)
     }
@@ -24,10 +23,10 @@ class ProfilePage extends React.Component {
     }
 
     // [WORKS] Dropdown
-    handleFriendsList() {
-        let newState = !this.state.dropdown;
-        this.setState({ dropdown: newState });
-    }
+    // handleFriendsList() {
+    //     let newState = !this.state.dropdown;
+    //     this.setState({ dropdown: newState });
+    // }
 
     // [WORKS] Toggles "Confirm Clear" + "Don't Clear" buttons
     handleConfirmClear() {
@@ -70,16 +69,15 @@ class ProfilePage extends React.Component {
             <div className="profile-page-background">
 
                 <div className="profile-header-parent">
-                    <p className="profile-header">User Profile</p>
+                    <p className="profile-header">Your Profile Page</p>
                 </div>
 
                 <div className="profile-page-body">
                     <div className="friends-dropdown-parent">
                         <p className="friends-dropdown-title"
-                            onClick={this.handleFriendsList}>
-                                Friends List
-                        </p>
-                        <ul className={`friends-dropdown-${this.state.dropdown}`} >
+                            // onClick={this.handleFriendsList}
+                        >Friends List</p>
+                        <ul className={`friends-dropdown-true`} >
                             <li>Bobby Fischer</li>
                             <li>Magnus Carlsen</li>
                             <li>Leffen</li>
@@ -96,12 +94,12 @@ class ProfilePage extends React.Component {
                         <p className="user-name">John Wick</p>
 
                         <div className="profile-page-buttons">
-                            {secondButton}
                             {thirdButton}
+                            {secondButton}
                         </div>
                     </div>
                 </div>
-                
+
                 <Link className="back-to-home-button" to="/home">Back</Link>
             </div>
         )
