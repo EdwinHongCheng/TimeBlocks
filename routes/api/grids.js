@@ -58,11 +58,13 @@ router.delete('/:id',
 );
 
 //clear all grids that belong to user
-router.get('/clearGrids', passport.authenticate('jwt', { session: false }),
+router.delete('/clearGrid/:userId', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-    Grid.find({ userId: req.user.id })
-        .then(grid => res.json(grid))
-        
+    Grid.deleteMany({userId: req.params.userId})
+        .then(() => {
+            res.json({message: "Grid cleared"});
+        })
+        .catch((errors) => res.json(errors));
 });
 
 module.exports = router;
