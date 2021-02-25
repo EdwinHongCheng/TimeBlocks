@@ -12,7 +12,6 @@ class HomePage extends React.Component {
     return (
       <div className="home-container">
         <Grid />
-      <Task color={"#00ff00"}></Task>
         <LogoutButtonContainer />
       </div>
     );
