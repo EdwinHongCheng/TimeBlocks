@@ -23,15 +23,15 @@ export const removeCategory = catId => ({
     catId
 })
 
-////Thunk Middleware/////
+////Thunk/////
 
 //Get all categories of a specific user
-export const fetchCategories = userId => dispatch => (
-    getCategories(userId)
+export const fetchCategories = userId => dispatch => {
+    return getCategories(userId)
         .then(categories => dispatch(receiveCategories(categories)))
         .catch(err => console.log(err))
-)
-
+}
+   
 //Create a category
 export const newCategory = data => dispatch => (
     createCategory(data)
@@ -45,3 +45,5 @@ export const destroyCategory = catId => dispatch => (
         .then(() => dispatch (removeCategory(catId)))
         .catch(err => console.log(err))
 )
+
+//Create tested

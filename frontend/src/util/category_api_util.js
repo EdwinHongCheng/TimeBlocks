@@ -1,4 +1,4 @@
-import axios from 'aios'
+import axios from 'axios'
  
 //Get all categories of a specific user
 export const getCategories = userId => {
@@ -12,5 +12,7 @@ export const createCategory = data => {
  
 //Delete a category
 export const deleteCategory = catId => {
-    return axios.delete(`/api/categries/${catId}`)
+    return axios.delete(`/api/categories/${catId}`)
 }
+
+//TESTED. Works
