@@ -53,7 +53,7 @@
 }
 
 .clear-grid-button, .logout-button {
-    width: 100px;
+    width: 120px;
     font-size: 16px;
 
     border-radius: 4px;
@@ -92,17 +92,25 @@
     left: 60%;
 }
 
-/* [TEST] Dropdown ---------------------------------------------------------> */
+/* [WORKS] Dropdown -------------------------------------------------------> */
 
 .friends-dropdown-parent {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .friends-dropdown-title {
-    font-size: 20px;
-    font-weight: bold;
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
     cursor: pointer;
+    background-color: rgb(84, 12, 201);
+
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
 }
 
 /* [NOTE] ref code - change to fit Friends List */
@@ -121,9 +129,50 @@
 }
 
 
-/* [TEST][WORKS] Scrollable List */
+/* [WIP][WORKS] Scrollable List */
 .friends-dropdown-true {
     height: 100px;
     overflow: hidden; 
     overflow-y: scroll;
 }
+
+/* [TEST] Confirm Clear --------------------------------------------------> */
+.confirm-clear-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: red;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.confirm-clear-button:hover {
+    background-color: rgb(253, 110, 110);
+}
+
+/* Don't Clear Button */
+.dont-clear-button {
+    width: 120px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    background-color: green;
+
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.dont-clear-button:hover {
+    background-color: rgb(92, 197, 92);  
+}
+

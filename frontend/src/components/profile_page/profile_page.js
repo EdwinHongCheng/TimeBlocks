@@ -6,12 +6,15 @@ class ProfilePage extends React.Component {
         super(props);
 
         this.state = {
-            dropdown: false
+            dropdown: false,
+            showConfirmClear: false 
         }
 
         this.logoutUser = this.logoutUser.bind(this);
-        // [TEST] dropdown
+        // [WORKS] dropdown
         this.handleFriendsList = this.handleFriendsList.bind(this)
+        // [TEST] show Confirm Clear
+        this.handleConfirmClear = this.handleConfirmClear.bind(this)
     }
 
     logoutUser(e) {
@@ -20,13 +23,53 @@ class ProfilePage extends React.Component {
         return (<Link to={"/"}/>)
     }
 
-    // [TEST] Dropdown
+    // [WORKS] Dropdown
     handleFriendsList() {
         let newState = !this.state.dropdown;
         this.setState({ dropdown: newState });
     }
 
+    // [TEST] Show "Confirm Clear?" button
+    handleConfirmClear() {
+        let newState = !this.state.showConfirmClear;
+        this.setState({ showConfirmClear: newState });
+    }
+
     render() {
+        // [WORKS] "Clear Grid/Confirm Clear?" Button
+        let secondButton;
+        if (!this.state.showConfirmClear) {
+            secondButton = (
+                <p className="clear-grid-button" 
+                    onClick={this.handleConfirmClear}
+                >Clear Grid</p>
+            )
+        } else if (this.state.showConfirmClear) {
+            secondButton = (
+                <p className="confirm-clear-button" 
+                    onClick={ () => {console.log("Grid Cleared!"); this.handleConfirmClear()} }
+                >Confirm Clear</p>
+            )
+        }
+
+        // [TEST] "Log Out/Go Back" Button (turns to "Go Back") if we don't want to Clear Grid
+        let thirdButton;
+        if (!this.state.showConfirmClear) {
+            thirdButton = (
+                <p className="logout-button" onClick={this.logoutUser}>
+                    Log Out
+                </p>
+            )
+        } else if (this.state.showConfirmClear) {
+            thirdButton = (
+                <p className="dont-clear-button" 
+                    onClick={ () => {this.handleConfirmClear()} }
+                >Don't Clear</p>
+            )
+        }
+
+
+
         return (
             <div className="profile-page-background">
 
@@ -56,14 +99,8 @@ class ProfilePage extends React.Component {
                     </div>
 
                     <div className="profile-page-buttons">
-                        <p className="clear-grid-button" 
-                            onClick={() => console.log("Grid Cleared!")}
-                        >
-                            Clear Grid
-                        </p>
-                        <p className="logout-button" onClick={this.logoutUser}>
-                            Log Out
-                        </p>
+                        {secondButton}
+                        {thirdButton}
                     </div>
                 </div>
 
