@@ -12,7 +12,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-container">
         {/* <Grid /> */}
-        <TaskList />
+        <TaskListContainer />
         <LogoutButtonContainer />
       </div>
     );

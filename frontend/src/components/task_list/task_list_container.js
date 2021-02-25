@@ -3,7 +3,15 @@ import TaskList from "./task_list";
 
 const mapStateToProps = (state) => {
     return {
-        tasks: ["sdcfgvhbjn", "asdfasdfasd"]
+        tasks: [{
+            id: 1,
+            name: "Brush Teeth",
+            hour: 6
+        }, {
+            id: 2,
+            name: "Do Laundry",
+            hour: 7
+        }]
     }
 }
 

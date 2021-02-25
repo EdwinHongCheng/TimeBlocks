@@ -1,0 +1,23 @@
+.task-list-container {
+    width: 40vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: transform .3s cubic-bezier(0, 0.52, 0, 1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #ffeeb7;
+    border-left: 1px solid #ffe6b7;
+}
+
+.task-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.task-list-item:hover {
+    background-color: #f1e1ad;
+}

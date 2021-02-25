@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
 
         <form className="login-form" onSubmit={this.handleSubmit}>
 
-          <img className="logo" src={TimeBlocksLogo} />
+          <img className="logo" src={TimeBlocksLogo} alt="TimeBlocks Logo" />
 
           <input
             type="text"

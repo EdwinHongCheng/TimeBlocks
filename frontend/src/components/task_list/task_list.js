@@ -1,17 +1,13 @@
 import React from "react";
 
-// class TaskList extends React.Component {
-//     render() {
-//         r
-//     }
-// }
+import TaskListItem from "./task_list_item"
 
 const TaskList = (props) => {
     return (
-        <div>
-            {this.props.tasks.map(task => {
+        <div className="task-list-container">
+            {props.tasks.map((task, idx) => {
                 return (
-                    <div></div>
+                    <TaskListItem key={idx} task={task}/>
                 )
             })}
         </div>
