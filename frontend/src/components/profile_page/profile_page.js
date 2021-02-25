@@ -43,16 +43,15 @@ class ProfilePage extends React.Component {
                                 Friends List
                         </p>
                         <ul className={`friends-dropdown-${this.state.dropdown}`} >
-                            <li>Hello There</li>
-                            <li>General Kenobi!</li>
-                            <li>Hello There</li>
-                            <li>General Kenobi!</li>
-                            <li>Hello There</li>
-                            <li>General Kenobi!</li>
-                            <li>Hello There</li>
-                            <li>General Kenobi!</li>
-                            <li>Hello There</li>
-                            <li>General Kenobi!</li>
+                            <li>Bobby Fischer</li>
+                            <li>Magnus Carlsen</li>
+                            <li>Leffen</li>
+                            <li>Mang0</li>
+                            <li>Zain</li>
+                            <li>Garry Kasparov</li>
+                            <li>Jose Capablanca</li>
+                            <li>Hikaru Nakamura</li>
+                            <li>Fabiano Caruana</li>
                         </ul>
                     </div>
 
