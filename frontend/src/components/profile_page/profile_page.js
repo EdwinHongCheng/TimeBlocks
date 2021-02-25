@@ -17,7 +17,7 @@ class ProfilePage extends React.Component {
     render() {
         return (
             <div className="profile-page-background">
-                
+
                 <div className="profile-header-parent">
                     <p className="profile-header">User Profile</p>
                 </div>
@@ -27,7 +27,9 @@ class ProfilePage extends React.Component {
                     <p className="friends-list">Friends List (3)</p>
 
                     <div className="profile-page-buttons">
-                        <p className="clear-grid-button" onClick={() => console.log("hello")}>
+                        <p className="clear-grid-button" 
+                            onClick={() => console.log("Grid Cleared!")}
+                        >
                             Clear Grid
                         </p>
                         <p className="logout-button" onClick={this.logoutUser}>
