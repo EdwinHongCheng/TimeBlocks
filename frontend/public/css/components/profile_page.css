@@ -21,12 +21,17 @@
     margin-bottom: 40px;
 }
 
-.prof-page-body {
+.profile-page-body {
+    display: flex;
+    justify-content: center;
+}
+
+.prof-page-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* margin - 3 values: top, left+right, bottom */
-    margin: 0px 170px 0px;
+    margin: 0px 0px 0px;
     height: 280px;
 
     border: 1px solid black;
@@ -59,7 +64,6 @@
     border-radius: 4px;
     color: white;
     cursor: pointer;
-    background-color: rgb(84, 12, 201);
 
     display: inline-block;
     padding: 10px;
@@ -67,8 +71,22 @@
     text-align: center;
 }
 
-.clear-grid-button:hover, .logout-button:hover {
+.clear-grid-button {
+    background-color: rgb(84, 12, 201);
+    /* [Margin Bottom] - for dead space for cancel Clear Grid Button */
+    margin-bottom: 66px;
+}
+
+.clear-grid-button:hover {
     background-color: rgb(123, 74, 202); 
+}
+
+.logout-button {
+    background-color: red;
+}
+
+.logout-button:hover {
+    background-color: rgb(253, 110, 110);
 }
 
 .back-to-home-button {
@@ -93,10 +111,13 @@
 }
 
 /* [WORKS] Dropdown -------------------------------------------------------> */
-
 .friends-dropdown-parent {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .friends-dropdown-title {
@@ -113,30 +134,35 @@
     text-align: center;
 }
 
-/* [NOTE] ref code - change to fit Friends List */
-.friends-dropdown-true {
-    position: absolute;
-    background-color: white;
-    border: 1px solid white;
-    opacity: 1;
-    z-index: 2;
-
-    top: 50%;
-    left: 50%;
+.friends-dropdown-title:hover {
+    background-color: rgb(123, 74, 202); 
 }
+
 .friends-dropdown-false {
     display: none;
 }
 
+/* [ISSUE] pushes the bottom buttons down */
+.friends-dropdown-true {
+    position: relative;
+    background-color: white;
+    border: 1px solid white;
+    opacity: 1;
+    z-index: 2;
+}
 
-/* [WIP][WORKS] Scrollable List */
+/* [WORKS] Scrollable List */
 .friends-dropdown-true {
     height: 100px;
     overflow: hidden; 
     overflow-y: scroll;
 }
 
-/* [TEST] Confirm Clear --------------------------------------------------> */
+.friends-dropdown-parent ul li {
+    padding: 4px;
+}
+
+/* [WORKS] Confirm Clear --------------------------------------------------> */
 .confirm-clear-button {
     width: 120px;
     font-size: 16px;
