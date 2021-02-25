@@ -1,6 +1,5 @@
 import React from "react";
 import Grid from "../grid/grid";
-import Task from "../task/task"
 
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
