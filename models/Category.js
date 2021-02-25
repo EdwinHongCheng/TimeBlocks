@@ -7,6 +7,10 @@ const CategorySchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
+  color: {
+    type: String,
+    required: true
+  },
   text: {
     type: String,
     required: true
