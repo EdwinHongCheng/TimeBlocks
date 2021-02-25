@@ -1,7 +1,7 @@
 import React from "react"
 import Grid from "../grid/grid";
-import CategoryContainer from "../task_categories/task_categories_container"
-import Menu from "../task_categories/sliding_pane"
+// import CategoryContainer from "../task_categories/task_categories_container"
+import Menu from "../sliding_menu/sliding_pane"
 
 class HomePage extends React.Component {
 
@@ -9,7 +9,7 @@ class HomePage extends React.Component {
         return (
           <div className="home-container">
             <Grid />
-            <CategoryContainer/>
+            {/* <CategoryContainer/> */}
             <Menu/>
           </div>
         );

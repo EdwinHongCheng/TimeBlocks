@@ -1,8 +1,8 @@
 import React, { Component, useState } from "react";
 import { render } from "react-dom";
 import SlidingPane from "react-sliding-pane";
-import "react-sliding-pane/dist/react-sliding-pane.css";
-import CategoryContainer from "./task_categories_container"
+import "./sliding_pane.css";
+import CategoryContainer from "../task_categories/task_categories_container"
 
 const Menu = () => {
   const [state, setState] = useState({
@@ -26,6 +26,7 @@ const Menu = () => {
         isOpen={state.isPaneOpen}
         title="Categories"
         subtitle="Optional subtitle."
+        width="50%"
         onRequestClose={() => {
           // triggered on "<" on left top click or on outside click
           setState({ isPaneOpen: false });
@@ -38,7 +39,7 @@ const Menu = () => {
         isOpen={state.isPaneOpenLeft}
         title="Hey, it is optional pane title.  I can be React component too."
         from="left"
-        width="200px"
+        width="50%"
         onRequestClose={() => setState({ isPaneOpenLeft: false })}
       >
         <div>And I am pane content on left.</div>
