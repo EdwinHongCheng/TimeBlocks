@@ -5,7 +5,7 @@ class CategoryBox extends React.Component {
   render() {
     return (
         <div> 
-            <h3>{this.props.text}</h3> 
+            <h3>{this.props.title}</h3> 
             <ul>
               <h3>Tasks: </h3>
               <li>{this.props.tasks.title}</li>
