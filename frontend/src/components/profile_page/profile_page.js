@@ -96,11 +96,12 @@ class ProfilePage extends React.Component {
                         <div className="profile-page-buttons">
                             {thirdButton}
                             {secondButton}
+
+
+                            <Link className="back-to-home-button" to="/home">Back</Link>
                         </div>
                     </div>
                 </div>
-
-                <Link className="back-to-home-button" to="/home">Back</Link>
             </div>
         )
     }
