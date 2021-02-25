@@ -5,8 +5,7 @@ const passport = require('passport');
 const validateGridInput = require('../../validation/grid');
 const Category = require("../../models/Category");
 
-router.post('/',
-    passport.authenticate('jwt', { session: false }),
+router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         const { errors, isValid } = validateGridInput(req.body);
 
@@ -26,7 +25,7 @@ router.post('/',
     }
 );
 
-//Get a specific grid hour
+//Get a specific grid hour - currently sends back task name
 router.get('/hour', (req, res) => {
     Grid.findOne({hour: req.body.hour})
         .then(grid => {
