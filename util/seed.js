@@ -3,12 +3,12 @@ const Category = require('../models/Category');
 
 const seedUser = (user) => {
     const catSeed1 = new Category({
-        text: "Health and Fitness",
+        title: "Health and Fitness",
         userId: user.id,
         color: "#FF5733"
     });
     const catSeed2 = new Category({
-        text: "Chores",
+        title: "Chores",
         userId: user.id,
         color: "#33FFEC"
     });

@@ -16,8 +16,8 @@ module.exports = function validateTaskInput(data) {
     }
 
     if (Validator.isEmpty(data.catId)) {
-        errors.text = 'Category id is required';
-      }
+        errors.catId = 'Category id is required';
+    }
 
     return {
         errors,
