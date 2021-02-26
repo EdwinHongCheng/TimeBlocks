@@ -7,11 +7,6 @@ import configureStore from "./store/store";
 
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions"; 
-////TEST////
-import axios from 'axios'
-// import {fetchCategories, newCategory, destroyCategory } from "./actions/category_actions"
-import {newTask, destroyTask, updateTaskTitle, updateTaskCategory} from "./actions/task_actions"
-import {editTaskTitle} from "./util/task_api_util"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -38,14 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const root = document.getElementById("root");
-//TEST//
-  window.store = store
-window.axios = axios
-  window.newTask = newTask
-  window.destroyTask = destroyTask
-  window.updateTaskTitle = updateTaskTitle
-  window.updateTaskCategory = updateTaskCategory
-  window.editTaskTitle = editTaskTitle
 
   ReactDOM.render(<Root store={store} />, root);
 });
