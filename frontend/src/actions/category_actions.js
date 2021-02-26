@@ -46,4 +46,3 @@ export const destroyCategory = catId => dispatch => (
         .catch(err => console.log(err))
 )
 
-//Create tested

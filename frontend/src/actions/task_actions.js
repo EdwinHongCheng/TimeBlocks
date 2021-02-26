@@ -18,9 +18,9 @@ export const removeTask = taskId => ({
     taskId
 })
 
-export const receiveTask = task => ({
+export const receiveTask = taskId => ({
     type: RECEIVE_TASK,
-    task
+    taskId
 }) 
 
 //Create a task
@@ -40,14 +40,13 @@ export const destroyTask = taskId => dispatch => (
 //Edit task title
 export const updateTaskTitle = (taskId, data) => dispatch => (
     editTaskTitle(taskId, data)
-        .then(() => dispatch(receiveTask(taskId)))
+        .then(id => dispatch(receiveTask(id.taskId)))
         .catch(err => console.log(err))
 )
 
-
-//Edit task category
+// //Edit task category
 export const updateTaskCategory = (taskId, data) => dispatch => (
-    editTaskCatgeory(taskId, data)
+    editTaskCategory(taskId, data)
         .then(task => dispatch(receiveNewTask(task)))
         .catch(err => console.log(err))
 )
