@@ -28,7 +28,7 @@ export const removeCategory = catId => ({
 //Get all categories of a specific user
 export const fetchCategories = userId => dispatch => {
     return getCategories(userId)
-        .then(categories => dispatch(receiveCategories(categories)))
+        .then(categories => dispatch(receiveCategories(categories.data)))
         .catch(err => console.log(err))
 }
    

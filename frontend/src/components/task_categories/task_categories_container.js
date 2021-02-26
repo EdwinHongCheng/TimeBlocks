@@ -4,7 +4,7 @@ import {fetchCategories, newCategory, destroyCategory} from "../../actions/categ
 
 const mapStateToProps = (state) => {
     return {
-        categories: Object.values(state.categories.user),
+        categories: Object.values(state.categories),
         currentUser: state.session.user
     }
 }
@@ -12,7 +12,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchCategories: userId => dispatch(fetchCategories(userId))
-        //need more actions?
     }
 }
 
