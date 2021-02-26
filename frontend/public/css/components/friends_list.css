@@ -1,6 +1,7 @@
 .friend-and-delete-button {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .friend-delete-button {
@@ -10,12 +11,11 @@
     cursor: pointer;
     padding-left: 4px;
     padding-right: 4px;
+    margin-right: 2px;
 }
 
 .friend-delete-button:hover {
     color: white;
     background-color: red;
-    padding-left: 4px;
-    padding-right: 4px;
     border-radius: 2px;
 }
