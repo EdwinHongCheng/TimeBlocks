@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import TaskBucketContainer from "../task/task_bucket_container";
 
@@ -8,6 +8,12 @@ const Grid = (props) => {
   for (let i = 1; i < 25; i++) {
     times.push(i)
   }
+
+
+
+  useEffect(() => {
+    props.fetchUserGrids(props.currentUser.id)
+  })
 
   return ( 
     <div className="grid">

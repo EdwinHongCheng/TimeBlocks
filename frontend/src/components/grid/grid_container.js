@@ -1,12 +1,18 @@
 import { connect } from "react-redux"
+import { fetchUserGrids } from "../../actions/grid_actions"
 
 import Grid from "./grid"
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
-
+        currentUser: state.session.user
     }
 }
 
-export default connect(mapStateToProps)(Grid)
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchUserGrids: user => dispatch(fetchUserGrids(user))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Grid)
