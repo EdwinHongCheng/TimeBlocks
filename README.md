@@ -14,11 +14,14 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 
 [SCREENSHOT]
 
+Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks are able to be dragged and dropped into each block to assign them to a specific hour of the day. The blocks change color based on the color corresponding to the category the task is grouped under. Tasks are able to be reassigned to different categories as well as different time blocks. Categories and tasks are able to be added and deleted. 
 
 
 ### Slidable Menus
 
 [SCREENSHOT]
+
+On the left side of the screen, when the corresponding button is clicked, a list of creaated categories and their tasks can be viewed in a slide-out menu. 
 
 ### Friends List
 
