@@ -12,7 +12,7 @@ const Grid = (props) => {
   return ( 
     <div className="grid">
       {times.map(time => {
-        
+        console.log(time)
 
         return (
           <TaskBucketContainer key={time} time={time}>

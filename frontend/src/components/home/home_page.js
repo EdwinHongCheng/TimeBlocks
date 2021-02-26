@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "../grid/grid";
+import GridContainer from "../grid/grid_container";
 import { Link } from "react-router-dom";
 
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
@@ -97,7 +97,7 @@ class HomePage extends React.Component {
             value="Show Task List"
           />
         </div>
-        <Grid />
+        <GridContainer />
       </div>
     );
   }
