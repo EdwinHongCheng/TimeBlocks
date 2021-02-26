@@ -24,7 +24,7 @@ class HomePage extends React.Component {
     return (
       <div className="home-container">
         {/* <TaskCategoriesContainer /> */}
-        <TaskListContainer />
+        {/* <TaskListContainer /> */}
 
         <input type="button" onClick={this.openTaskList} />
         <Grid />
