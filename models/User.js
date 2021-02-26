@@ -14,6 +14,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    friends: [ mongoose.Types.ObjectId ]
 }, {
     timestamps: true
 })
