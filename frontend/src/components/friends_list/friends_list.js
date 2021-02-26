@@ -26,9 +26,10 @@ class FriendsList extends React.Component {
         this.deleteFriend = this.deleteFriend.bind(this);
     }
 
-    // [TEST] 
+    // [TEST] replaces current local state's array with the below placeholder
     deleteFriend() {
-        this.setState({ friendsArray: ["Yugi", "Kaiba", "Joey"] })
+        this.setState({ friendsArray: ["Yugi Muto", "Seto Kaiba", "Joey Wheeler"] })
+        console.log("You have removed a friend from you friend's list.")
     }
 
     render() {
