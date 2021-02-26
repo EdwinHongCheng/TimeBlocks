@@ -27,3 +27,9 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 * Create weeks, montly, and yearly calendar views
 * Allow users to be able to invite friends to join them in their planned tasks
 * Allow users to be able to create both public and private grids
+
+## Contributors
+* [Edwin Cheng](https://github.com/EdwinHongCheng/)
+* [Bryce DeGuzman](https://github.com/bcdguz)
+* [Samuel Dubner](https://github.com/IsoVoyd)
+* [Michelle Ha](https://github.com/michelle-ha)
