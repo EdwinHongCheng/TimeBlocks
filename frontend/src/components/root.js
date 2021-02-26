@@ -5,14 +5,19 @@ import { HashRouter } from "react-router-dom";
 import { DndProvider } from "react-dnd-multi-backend"
 import {HTML5Backend} from "react-dnd-html5-backend";
 import {TouchBackend} from "react-dnd-touch-backend";
-import MultiBackend, { TouchTransition, Preview } from "react-dnd-multi-backend";
+import MultiBackend, { TouchTransition, Preview, createTransition } from "react-dnd-multi-backend";
 
 import App from "./app";
+
+const ClickTransition = createTransition("mousedown", (event) => {
+  return event.buttons != null;
+})
 
 const HTML5toTouch = {
   backends: [
     {
-      backend: HTML5Backend
+      backend: HTML5Backend,
+      transition: ClickTransition
     },
     {
       backend: TouchBackend,
