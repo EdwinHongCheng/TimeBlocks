@@ -4,6 +4,7 @@ import AddFriendForm from "./add_friend_form";
 const mapStateToProps = (state) => {
     return {
         // [WIP]
+        errors: state.errors.session,
     }
 }
 

@@ -7,11 +7,8 @@
 .add-friend-header {
     width: 168px;
     font-size: 16px;
-
-    /* border-radius: 4px; */
     color: white;
     background-color: rgb(84, 12, 201);
-
     display: inline-block;
     padding: 10px;
     text-align: center;
@@ -47,4 +44,13 @@
 
 .add-friend-button:hover {
     background-color: rgb(123, 74, 202); 
+}
+
+.add-friend-error {
+    margin-top: 4px;
+    margin-left: 6px;
+    font-size: 14px;
+    color: red;
+    display: flex;
+    justify-content: flex-start;
 }

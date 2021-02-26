@@ -76,12 +76,14 @@ class ProfilePage extends React.Component {
                                 <li>Bobby Fischer</li>
                                 <li>Magnus Carlsen</li>
                                 <li>Leffen</li>
-                                <li>Mang0</li>
+                                <li>mang0</li>
                                 <li>Zain</li>
                                 <li>Garry Kasparov</li>
                                 <li>Jose Capablanca</li>
                                 <li>Hikaru Nakamura</li>
                                 <li>Fabiano Caruana</li>
+                                <li>Judit Polgar</li>
+                                <li>Mew2King</li>
                             </ul>
                         </div>
                         {/* [WIP] Add Friend Form */}
