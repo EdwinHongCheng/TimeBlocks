@@ -37,20 +37,19 @@ router.get('/get', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         User.findById(req.user.id)
             .then(user => {
-                const friends = [];
-                user.friends.forEach(id => {
-                    User.findById(id).then(friend => {
-                        const info = {
-                            userId: friend.id,
-                            name: friend.name
-                        }
-                        return info;
-                    })
-                })
-                return friends;
-            })
-            .then(friends => {
-                res.json(friends);
+                user.execPopulate('friends')
+                    .then(populated => {
+                        const friendsInfo = [];
+                        populated.friends.forEach(friend => {
+                            const info = {
+                                id: friend.id,
+                                name: friend.name,
+                                email: friend.email
+                            }
+                            friendsInfo.push(info);
+                        });
+                        res.json(friendsInfo);
+                    });
             })
     }
 );
