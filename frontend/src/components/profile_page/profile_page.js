@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AddFriendFormContainer from "../add_friend_form/add_friend_form_container";
+// [TEST] Friends List
+import FriendsListContainer from "../friends_list/friends_list_container";
 
 class ProfilePage extends React.Component {
     constructor(props) {
@@ -73,6 +75,7 @@ class ProfilePage extends React.Component {
                             <p className="friends-dropdown-title"
                             >Friends List</p>
                             <ul className={`friends-dropdown-true`} >
+                                <FriendsListContainer />
                                 <li>Bobby Fischer</li>
                                 <li>Magnus Carlsen</li>
                                 <li>Leffen</li>
