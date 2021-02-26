@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require('passport');
 const Category = require('../../models/Category')
 const validateCategoryInput = require('../../validation/categories');
+const arrToObj = require('../../util/methods');
 
 // //Get all categories (default categories?)
 // router.get('/', (req, res) => {
@@ -14,15 +15,7 @@ const validateCategoryInput = require('../../validation/categories');
 
 // //Get all categories from a specific user
 router.get('/user/:user_id', (req, res) => {
-    const arrToObj = (array, key) => {
-        const initialValue = {};
-        return array.reduce((obj, item) => {
-            return {
-                ...obj,
-                [item[key]]: item,
-            };
-        }, initialValue);
-    };
+    
     Category.find({userId: req.params.user_id})
         .then(categories => res.json(arrToObj(categories, "_id")))
         .catch(err =>
