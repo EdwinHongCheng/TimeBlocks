@@ -21,6 +21,16 @@
     margin-bottom: 20px;
 }
 
+.straightline {  
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin-bottom: 30px; 
+}
+
+/* ----------------------------------------------------------------> */
+
 .profile-page-body {
     display: flex;
     justify-content: center;
@@ -130,22 +140,17 @@
 }
 
 .friends-dropdown-title {
-    width: 160px;
+    width: 162px;
     font-size: 16px;
 
     /* border-radius: 4px; */
     color: white;
-    /* cursor: pointer; */
     background-color: rgb(84, 12, 201);
 
     display: inline-block;
     padding: 10px;
     text-align: center;
 }
-
-/* .friends-dropdown-title:hover {
-    background-color: rgb(123, 74, 202); 
-} */
 
 .friends-dropdown-false {
     display: none;
