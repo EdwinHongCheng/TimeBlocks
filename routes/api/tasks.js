@@ -38,7 +38,7 @@ router.put('/editTitle/:id',
         Category.updateOne(
             { _id: req.body.catId, "tasks._id": req.params.id},
             { $set : {"tasks.$.title": req.body.title }})
-                .then(response => res.json({update: "successful"}))
+                .then(response => res.json({taskId: req.params.id}))
                 .catch(res => res.json({update: "failed"}))
     }
 );
