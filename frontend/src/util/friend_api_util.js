@@ -12,6 +12,7 @@ export const createFriend = email => {
 }
 
 //Delete a friend
+//friend id is an object {userId: "idstring"}
 export const deleteFriend = friendId => {
-    return axios.delete(`/api/friends/${friendId}`)
+    return axios.delete(`/api/friends/delete`, friendId)
 }
