@@ -35,9 +35,9 @@ class FriendsList extends React.Component {
     render() {
         let mappedFriends = this.state.friendsArray.map((name, idx) => {
             return (
-                <div className="friend-and-delete-button">
+                <div key={idx} className="friend-and-delete-button">
                     <div>
-                        <li key={idx}>
+                        <li>
                             {name}
                         </li>
                     </div>
