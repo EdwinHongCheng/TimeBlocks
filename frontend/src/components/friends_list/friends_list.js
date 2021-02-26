@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class FriendsList extends React.Component {
     constructor(props) {
@@ -28,7 +29,20 @@ class FriendsList extends React.Component {
 
     // [TEST] replaces current local state's array with the below placeholder
     deleteFriend() {
-        this.setState({ friendsArray: ["Yugi Muto", "Seto Kaiba", "Joey Wheeler"] })
+        this.setState({ friendsArray: [
+            "Nujabes",
+            "Bobby Fischer",
+            "Magnus Carlsen",
+            "Leffen",
+            "mang0",
+            "Zain",
+            "Garry Kasparov",
+            "Jose Raul Capablanca",
+            "Hikaru Nakamura",
+            "Fabiano Caruana",
+            "Judit Polgar",
+            "Mew2King"
+        ] })
         console.log("You have removed a friend from you friend's list.")
     }
 
@@ -37,7 +51,10 @@ class FriendsList extends React.Component {
             return (
                 <div key={idx} className="friend-and-delete-button">
                     <li>
-                        {name}
+                        {/* [WIP] change path to friendEmail (later) */}
+                        <Link className="friend-link" 
+                            to={`/friends/${name}`}
+                        >{name}</Link>
                     </li>
                     <p className="friend-delete-button" 
                         onClick={this.deleteFriend}>x</p>

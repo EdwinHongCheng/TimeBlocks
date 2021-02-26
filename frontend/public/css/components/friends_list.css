@@ -8,6 +8,10 @@
     background-color: rgb(240, 240, 240);
 }
 
+.friend-link {
+    color: rgb(0, 196, 0);
+}
+
 .friend-delete-button {
     font-size: 18px;
     font-weight: lighter;
