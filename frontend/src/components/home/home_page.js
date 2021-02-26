@@ -87,20 +87,24 @@ class HomePage extends React.Component {
 
         <div className="panel-buttons">
           <input
+            id="show-categories"
             type="button"
             onClick={this.openCategories}
             value="Show Categories"
           />
+
+          <Link className="prof-page-button" to="/profile-page">
+            Profile Page
+          </Link>
+          
           <input
+            id="show-tasks"
             type="button"
             onClick={this.openTaskList}
             value="Show Task List"
           />
         </div>
         <Grid />
-        <Link className="prof-page-button" to="/profile-page">
-          Profile Page
-        </Link>
       </div>
     );
   }

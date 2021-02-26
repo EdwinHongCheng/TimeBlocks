@@ -29,12 +29,29 @@
 .panel-buttons {
     display: flex;
     width: 100%;
+    padding: 10px;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
+    /* margin-top: 0; */
+    /* margin-bottom: 20px; */
+}
+
+.panel-buttons a {
+    margin-top: 0;
+}
+
+#show-categories,
+#show-tasks {
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    background-color:rgb(84, 12, 201);
+    color: white;
+    border-radius: 5px;
 }
 
 @media (min-width: 992px) {
     .panel-buttons {
-        
+        width: 60%;
     }
 }
