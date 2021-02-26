@@ -75,21 +75,11 @@ class ProfilePage extends React.Component {
                             <p className="friends-dropdown-title"
                             >Friends List</p>
                             <ul className={`friends-dropdown-true`} >
+                                {/* [WIP] Friends List */}
                                 <FriendsListContainer />
-                                <li>Bobby Fischer</li>
-                                <li>Magnus Carlsen</li>
-                                <li>Leffen</li>
-                                <li>mang0</li>
-                                <li>Zain</li>
-                                <li>Garry Kasparov</li>
-                                <li>Jose Raul Capablanca</li>
-                                <li>Hikaru Nakamura</li>
-                                <li>Fabiano Caruana</li>
-                                <li>Judit Polgar</li>
-                                <li>Mew2King</li>
                             </ul>
                         </div>
-                        {/* [WIP] Add Friend Form */}
+                        {/* [WIP][can let rest right now] Add Friend Form */}
                         <AddFriendFormContainer />
                     </div>
 

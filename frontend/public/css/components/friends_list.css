@@ -1,0 +1,21 @@
+.friend-and-delete-button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.friend-delete-button {
+    font-size: 18px;
+    font-weight: lighter;
+    color: gray;
+    cursor: pointer;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.friend-delete-button:hover {
+    color: white;
+    background-color: red;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 2px;
+}
