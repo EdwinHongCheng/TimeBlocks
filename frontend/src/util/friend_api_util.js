@@ -16,3 +16,5 @@ export const createFriend = email => {
 export const deleteFriend = friendId => {
     return axios.delete(`/api/friends/delete`, friendId)
 }
+
+//Tested and working
