@@ -5,7 +5,8 @@ import Grid from "./grid"
 
 const mapStateToProps = state => {
     return {
-        currentUser: state.session.user
+        currentUser: state.session.user,
+        grids: state.grids
     }
 }
 
