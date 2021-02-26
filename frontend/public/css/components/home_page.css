@@ -52,12 +52,14 @@
 #show-categories {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    /* border-left: 1px solid rgb(84, 12, 201); */
     left: 0;
 }
 
 #show-tasks {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    /* border-right: 1px solid rgb(84, 12, 201); */
     right: 0;
 }
 
