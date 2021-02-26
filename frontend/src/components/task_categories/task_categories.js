@@ -9,7 +9,6 @@ const TaskCategories = (props) => {
     props.fetchCategories(props.currentUser.id)
   }, categories)
 
-  console.log(props)
   return (
     <div id="task-categories-container" className="hide">
       <div className="categories-title-box">

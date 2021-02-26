@@ -8,83 +8,75 @@ import TaskListContainer from "../task_list/task_list_container";
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      categoriesOpen: false,
-      tasksOpen: false,
-    };
     this.openCategories = this.openCategories.bind(this);
     this.openTaskList = this.openTaskList.bind(this);
-    this.closePanels = this.closePanels.bind(this)
+    this.closePanels = this.closePanels.bind(this);
   }
 
   openCategories(e) {
-    const taskListContainer = document.getElementById("task-list-container");
+    const taskListContainer = document.getElementById("task-list-container").classList;
     const taskCategoriesContainer = document.getElementById(
       "task-categories-container"
-    );
+    ).classList;
 
-    if (!this.state.categoriesOpen) {
-      if(this.state.tasksOpen) {
-        taskListContainer.classList.remove("show")
-        taskListContainer.classList.add("hide")
-        this.setState({tasksOpen: false})
+    if (taskCategoriesContainer.contains("hide")) {
+      if (taskListContainer.contains("show")) {
+        taskListContainer.classList.remove("show");
+        taskListContainer.classList.add("hide");
       }
-      taskCategoriesContainer.classList.remove("hide");
-      taskCategoriesContainer.classList.add("show");
-      this.setState({ categoriesOpen: true });
+      taskCategoriesContainer.remove("hide")
+      taskCategoriesContainer.add("show");
     } else {
       taskCategoriesContainer.classList.remove("show");
       taskCategoriesContainer.classList.add("hide");
-      this.setState({ categoriesOpen: false });
     }
   }
 
   openTaskList(e) {
-    const taskListContainer = document.getElementById("task-list-container");
+    const taskListContainer = document.getElementById("task-list-container")
+      .classList;
     const taskCategoriesContainer = document.getElementById(
       "task-categories-container"
-    );
+    ).classList;
 
-    if (!this.state.tasksOpen) {
-      if (this.state.categoriesOpen) {
-        taskCategoriesContainer.classList.remove("show");
-        taskCategoriesContainer.classList.add("hide");
-        this.setState({categoriesOpen: false})
+    if (taskListContainer.contains("hide")) {
+      if (taskCategoriesContainer.contains("show")) {
+        taskCategoriesContainer.remove("show");
+        taskCategoriesContainer.add("hide");
       }
-      taskListContainer.classList.remove("hide");
-      taskListContainer.classList.add("show");
-      this.setState({ tasksOpen: true });
+      taskListContainer.remove("hide");
+      taskListContainer.add("show");
     } else {
-      taskListContainer.classList.remove("show");
-      taskListContainer.classList.add("hide");
-      this.setState({ tasksOpen: false });
+      taskListContainer.remove("show");
+      taskListContainer.add("hide");
     }
   }
 
   closePanels(e) {
-    const taskListContainer = document.getElementById("task-list-container");
+    const taskListContainer = document.getElementById("task-list-container")
+      .classList;
     const taskCategoriesContainer = document.getElementById(
       "task-categories-container"
-    );
+    ).classList;
 
-    if(this.state.tasksOpen) {
-      taskListContainer.classList.remove("show")
-      taskListContainer.classList.add("hide")
-      this.setState({tasksOpen: false})
+    if(e.target.id == "show-categories" || e.target.id == "show-tasks") return;
+
+    if (taskListContainer.contains("show")) {
+      taskListContainer.remove("show");
+      taskListContainer.add("hide");
     }
 
-    if(this.state.categoriesOpen) {
-      taskCategoriesContainer.classList.remove("show")
-      taskCategoriesContainer.classList.add("hide")
-      this.setState({categoriesOpen: false})
+    if (taskCategoriesContainer.contains("show")) {
+      taskCategoriesContainer.remove("show");
+      taskCategoriesContainer.add("hide");
     }
   }
 
   render() {
     return (
       <div className="home-container" onClick={this.closePanels}>
-        <TaskCategoriesContainer display={this.state.categoriesOpen} />
-        <TaskListContainer display={this.state.tasksOpen} />
+        <TaskCategoriesContainer />
+        <TaskListContainer />
 
         <div className="panel-buttons">
           <input
