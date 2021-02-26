@@ -10,7 +10,7 @@ const GridSchema = new Schema({
         type: Number,
         required: true
     },
-    task: {
+    taskId: {
         type: Schema.Types.ObjectId,
         required: true
     }

@@ -1,5 +1,9 @@
 import React from "react";
 import Grid from "../grid/grid";
+// [TEST][WORKS] Profile Page
+import { Link } from "react-router-dom";
+
+import CategoryContainer from "../task_categories/task_categories_container"
 
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
@@ -24,7 +28,8 @@ class HomePage extends React.Component {
 
         <input type="button" onClick={this.openTaskList} />
         <Grid />
-        <LogoutButtonContainer />
+        {/* [TEST][WORKS] Profile Page */}
+        <Link to="/profile-page">Profile Page</Link>
       </div>
     );
   }

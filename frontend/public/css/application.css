@@ -1,10 +1,14 @@
 /* css reset */
 @import "reset.css";
 
+/* Font (for the Entire App) */
+@import "font.css";
+
 /* components css */
 @import "./components/splash_page.css";
 @import "./components/login_signup_page.css";
 @import "./components/home_page.css";
 @import "./components/grid.css";
 @import "./components/task.css";
-@import "./components/task_list.css"
+@import "./components/task_list.css";
+@import "./components/profile_page.css";
