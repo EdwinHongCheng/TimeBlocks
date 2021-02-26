@@ -25,9 +25,6 @@ class AddFriendForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         // [WIP] To replace w "Add New friend" method later (from props)
-        console.log("Added a New Friend!");
-        console.log("Current Local State's Email:");
-        console.log(this.state.email);
     }
     
     render() {

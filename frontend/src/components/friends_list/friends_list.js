@@ -43,7 +43,6 @@ class FriendsList extends React.Component {
             "Judit Polgar",
             "Mew2King"
         ] })
-        console.log("You have removed a friend from you friend's list.")
     }
 
     render() {
