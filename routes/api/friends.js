@@ -13,7 +13,6 @@ router.post('/', passport.authenticate('jwt', { session: false }),
                     .then(user => res.json(user))
                     .catch(() => res.json({error: "User Id not found!"}))
             })
-            
     }
 );
 
@@ -54,6 +53,5 @@ router.get('/get', passport.authenticate('jwt', { session: false }),
             })
     }
 );
-
 
 module.exports = router;
