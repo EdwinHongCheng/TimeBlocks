@@ -45,11 +45,23 @@ router.get('/hour', (req, res) => {
 });
 
 //Get all of a user's grids
-router.get('/allGrids/:userId', (req, res) => {
-    Grid.find({userId: req.params.userId})
-        .then(grids => res.json(grids))
-        .catch(errors => res.json(errors))
-});
+// router.get('/allGrids/:userId', async (req, res) => {
+//     let grids =  await Grid.find({userId: req.params.userId});
+//     const result = [];
+//     grids.forEach(async (grid) => {
+//         let newGrid = await grid.populate('taskId');
+//         console.log(result);
+//         result.push(newGrid)
+//         // let catArr = await Category.find({ 'tasks._id': grid.task }, { "tasks.$": true })
+//         // console.log(catArr)
+//         // let category = await Category.findById(catArr[0].id)
+//         // const task = category.tasks.id(grid.task);
+//         // result.push(task);
+        
+//     })
+//         // .catch(errors => res.json(errors))
+//     .then(result => res.json(result));
+// })
 
 //Update an existing grid with a new task
 router.put('/updateGridTask/:gridId', passport.authenticate('jwt', { session: false }),
