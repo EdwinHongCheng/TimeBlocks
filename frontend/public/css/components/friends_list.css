@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.friend-and-delete-button:hover {
+    background-color: rgb(240, 240, 240);
+}
+
 .friend-delete-button {
     font-size: 18px;
     font-weight: lighter;
