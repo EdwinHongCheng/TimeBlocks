@@ -9,8 +9,6 @@ import MultiBackend, { TouchTransition, Preview } from "react-dnd-multi-backend"
 
 import App from "./app";
 
-import Task from "./task/task"
-
 const HTML5toTouch = {
   backends: [
     {
