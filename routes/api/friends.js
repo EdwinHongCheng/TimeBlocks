@@ -7,11 +7,14 @@ const User = require('../../models/User');
 router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         User.findById(req.user.id)
-            .then(user => {
-                user.friends.push(req.body.userId);
-                user.save()
-                    .then(user => res.json(user))
-                    .catch(() => res.json({error: "User Id not found!"}))
+            .then(currentUser => {
+                User.find({email: req.body.email})
+                    .then(friend => {
+                        currentUser.friends.push(friend.id);
+                        currentUser.save()
+                            .then(user => res.json(user))
+                            .catch(() => res.json({error: "User Id not found!"}))
+                    })
             })
     }
 );
