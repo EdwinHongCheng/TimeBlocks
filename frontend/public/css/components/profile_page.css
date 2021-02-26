@@ -21,6 +21,16 @@
     margin-bottom: 20px;
 }
 
+.straightline {  
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin-bottom: 30px; 
+}
+
+/* ----------------------------------------------------------------> */
+
 .profile-page-body {
     display: flex;
     justify-content: center;

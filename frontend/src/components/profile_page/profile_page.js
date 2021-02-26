@@ -10,8 +10,6 @@ class ProfilePage extends React.Component {
         }
 
         this.logoutUser = this.logoutUser.bind(this);
-        // [WORKS] dropdown
-        // this.handleFriendsList = this.handleFriendsList.bind(this)
         // [WORKS] show Confirm Clear
         this.handleConfirmClear = this.handleConfirmClear.bind(this)
     }
@@ -22,12 +20,6 @@ class ProfilePage extends React.Component {
         return (<Link to={"/"}/>)
     }
 
-    // [WORKS] Dropdown
-    // handleFriendsList() {
-    //     let newState = !this.state.dropdown;
-    //     this.setState({ dropdown: newState });
-    // }
-
     // [WORKS] Toggles "Confirm Clear" + "Don't Clear" buttons
     handleConfirmClear() {
         let newState = !this.state.showConfirmClear;
@@ -35,7 +27,7 @@ class ProfilePage extends React.Component {
     }
 
     render() {
-        // [WORKS] "Clear Grid/Confirm Clear" Button
+        // [WORKS] "Clear Grid/Don't Clear" Button
         let secondButton;
         if (!this.state.showConfirmClear) {
             secondButton = (
@@ -70,6 +62,7 @@ class ProfilePage extends React.Component {
 
                 <div className="profile-header-parent">
                     <p className="profile-header">Your Profile Page</p>
+                    <p className="straightline"></p>
                 </div>
 
                 <div className="profile-page-body">
