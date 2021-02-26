@@ -68,7 +68,6 @@ class ProfilePage extends React.Component {
                 <div className="profile-page-body">
                     <div className="friends-dropdown-parent">
                         <p className="friends-dropdown-title"
-                            // onClick={this.handleFriendsList}
                         >Friends List</p>
                         <ul className={`friends-dropdown-true`} >
                             <li>Bobby Fischer</li>

@@ -16,7 +16,7 @@ class HomePage extends React.Component {
       <div className="home-container">
         <Grid />
           {/* [TEST][WORKS] Profile Page */}
-          <Link to="/profile-page">Profile Page</Link>
+          <Link className="prof-page-button" to="/profile-page">Profile Page</Link>
       </div>
     );
   }
