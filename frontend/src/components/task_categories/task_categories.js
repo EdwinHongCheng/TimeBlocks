@@ -9,13 +9,17 @@ const TaskCategories = (props) => {
     props.fetchCategories(props.currentUser.id)
   }, categories)
 
+  console.log(props)
   return (
-    <div className="task-categories-container">
-      {props.categories.map(category => {
-        return (
-          <TaskCategoryItem key={category._id} category={category} />
-        )
-      })}
+    <div id="task-categories-container" className="hide">
+      <div className="categories-title-box">
+        <h1>Categories</h1>
+      </div>
+      <div className="categories-list">
+        {props.categories.map((category) => {
+          return <TaskCategoryItem key={category._id} category={category} />;
+        })}
+      </div>
     </div>
   );
 }

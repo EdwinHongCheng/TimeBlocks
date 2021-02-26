@@ -25,3 +25,16 @@
 .prof-page-button:hover {
     background-color: rgb(123, 74, 202); 
 }
+
+.panel-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .panel-buttons {
+        
+    }
+}
