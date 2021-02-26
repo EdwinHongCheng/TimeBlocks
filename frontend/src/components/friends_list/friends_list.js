@@ -36,15 +36,11 @@ class FriendsList extends React.Component {
         let mappedFriends = this.state.friendsArray.map((name, idx) => {
             return (
                 <div key={idx} className="friend-and-delete-button">
-                    <div>
-                        <li>
-                            {name}
-                        </li>
-                    </div>
-                    <div>
-                        <p className="friend-delete-button" 
-                            onClick={this.deleteFriend}>x</p>
-                    </div>
+                    <li>
+                        {name}
+                    </li>
+                    <p className="friend-delete-button" 
+                        onClick={this.deleteFriend}>x</p>
                 </div>
             );
         })
