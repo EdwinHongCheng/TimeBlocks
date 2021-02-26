@@ -14,6 +14,8 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 
 [SCREENSHOT]
 
+
+
 ### Slidable Menus
 
 [SCREENSHOT]
@@ -29,7 +31,7 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 * Allow users to be able to create both public and private grids
 
 ## Contributors
-* [Edwin Cheng](https://github.com/EdwinHongCheng/)
-* [Bryce DeGuzman](https://github.com/bcdguz)
-* [Samuel Dubner](https://github.com/IsoVoyd)
-* [Michelle Ha](https://github.com/michelle-ha)
+* [Edwin Cheng](https://github.com/EdwinHongCheng/): Team Lead
+* [Bryce DeGuzman](https://github.com/bcdguz): Backend Lead
+* [Samuel Dubner](https://github.com/IsoVoyd): Frontend Lead
+* [Michelle Ha](https://github.com/michelle-ha): Flex
