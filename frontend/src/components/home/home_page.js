@@ -21,14 +21,14 @@ class HomePage extends React.Component {
 
     if (taskCategoriesContainer.contains("hide")) {
       if (taskListContainer.contains("show")) {
-        taskListContainer.classList.remove("show");
-        taskListContainer.classList.add("hide");
+        taskListContainer.remove("show");
+        taskListContainer.add("hide");
       }
       taskCategoriesContainer.remove("hide")
       taskCategoriesContainer.add("show");
     } else {
-      taskCategoriesContainer.classList.remove("show");
-      taskCategoriesContainer.classList.add("hide");
+      taskCategoriesContainer.remove("show");
+      taskCategoriesContainer.add("hide");
     }
   }
 
