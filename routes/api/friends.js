@@ -17,4 +17,20 @@ router.post('/', passport.authenticate('jwt', { session: false }),
     }
 );
 
+//remove friend
+router.delete('/delete', passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        User.findById(req.user.id)
+            .then(user => {
+                const userIdx = user.friends.indexOf(req.body.userId);
+                user.friends.splice(userIdx, 1);
+                user.save()
+                    .then(user => res.json(user))
+                    .catch((errors) => res.json(errors));
+            });
+
+    }
+);
+
+
 module.exports = router;
