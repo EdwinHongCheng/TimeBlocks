@@ -14,8 +14,17 @@ const validateCategoryInput = require('../../validation/categories');
 
 // //Get all categories from a specific user
 router.get('/user/:user_id', (req, res) => {
+    const arrToObj = (array, key) => {
+        const initialValue = {};
+        return array.reduce((obj, item) => {
+            return {
+                ...obj,
+                [item[key]]: item,
+            };
+        }, initialValue);
+    };
     Category.find({userId: req.params.user_id})
-        .then(categories => res.json(categories))
+        .then(categories => res.json(arrToObj(categories, "_id")))
         .catch(err =>
             res.status(404).json({ nocategoriesfound: 'No categories found from that user' }
         )
