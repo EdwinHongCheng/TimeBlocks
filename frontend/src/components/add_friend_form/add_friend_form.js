@@ -11,6 +11,11 @@ class AddFriendForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    // [WORKS] clears errors
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
     update(field) {
         return e => {
             this.setState({ [field]: e.currentTarget.value })
