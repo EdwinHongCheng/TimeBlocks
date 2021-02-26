@@ -12,18 +12,23 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 
 ### Grid
 
+Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks are able to be dragged and dropped into each block to assign them to a specific hour of the day. The blocks change color based on the color corresponding to the category the task is grouped under. Tasks are able to be reassigned to different categories as well as different time blocks. Categories and tasks are able to be added and deleted. 
+
 [SCREENSHOT]
 
-Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks are able to be dragged and dropped into each block to assign them to a specific hour of the day. The blocks change color based on the color corresponding to the category the task is grouped under. Tasks are able to be reassigned to different categories as well as different time blocks. Categories and tasks are able to be added and deleted. 
 
 
 ### Slidable Menus
 
+On the left side of the screen, when the Show Categories button is clicked, a list of creaated categories and their tasks can be viewed in a slide-out menu. In thee categories menu, each category title is shown along with a number representing the number of tasks in the category. Below each category, colored blocks are displayed representing each task. These blocks are able to be dragged onto the hours grid. 
+
+On the right side of the screen, when the Show Task List button is clicked, a list of tasks currently placed on the hours grid is shown. The task name is displyed, along with the hour of the day it is assiggned to. The tasks are sorted by the earliest hour. 
+
 [SCREENSHOT]
 
-On the left side of the screen, when the corresponding button is clicked, a list of creaated categories and their tasks can be viewed in a slide-out menu. 
-
 ### Friends List
+
+On each user's profle page, 
 
 [SCREENSHOT]
 
