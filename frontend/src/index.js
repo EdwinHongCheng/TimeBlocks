@@ -10,7 +10,6 @@ import { logout } from "./actions/session_actions";
 ////TEST////
 import axios from 'axios'
 // import {fetchCategories, newCategory, destroyCategory } from "./actions/category_actions"
-import {createTask, editTaskTitle, editTaskCategory, deleteTask} from "./actions/task_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const root = document.getElementById("root");
   ///////TEST////
-  window.axios = axios
+  // window.axios = axios
   // window.fetchCategories = fetchCategories
   // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
