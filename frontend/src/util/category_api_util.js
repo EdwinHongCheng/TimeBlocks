@@ -15,4 +15,4 @@ export const deleteCategory = catId => {
     return axios.delete(`/api/categories/${catId}`)
 }
 
-//TESTED. Works
+//TESTED. Works (test using: axios.method("url", {data key: "data value"}))
