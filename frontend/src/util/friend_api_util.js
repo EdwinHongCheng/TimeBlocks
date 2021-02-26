@@ -6,8 +6,9 @@ export const getFriends = () => {
 }
 
 //Create a friend
-export const createFriend = friendEmail => {
-    return axios.post(`/api/friends/`, friendEmail)
+//email is an object {email: "example@gmail.com"}
+export const createFriend = email => {
+    return axios.post(`/api/friends/`, email)
 }
 
 //Delete a friend

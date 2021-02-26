@@ -9,12 +9,15 @@ router.post('/', passport.authenticate('jwt', { session: false }),
         User.findById(req.user.id)
             .then(currentUser => {
                 User.find({email: req.body.email})
-                    .then(friend => {
+                    .then(friendArr => {
+                        const friend = friendArr[0]
+                        // debugger
                         currentUser.friends.push(friend.id);
                         currentUser.save()
                             .then(user => res.json(user))
                             .catch(() => res.json({error: "User Id not found!"}))
                     })
+                    .catch(() => res.json({error: "user not found"}))
             })
     }
 );
