@@ -59,7 +59,7 @@ class HomePage extends React.Component {
       "task-categories-container"
     ).classList;
 
-    if(e.target.id == "show-categories" || e.target.id == "show-tasks") return;
+    if(e.target.id === "show-categories" || e.target.id === "show-tasks") return;
 
     if (taskListContainer.contains("show")) {
       taskListContainer.remove("show");
