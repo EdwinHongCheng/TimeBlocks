@@ -31,6 +31,9 @@
     "mongoose": "^5.11.17",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-sliding-pane": "^7.0.0",
     "validator": "^13.5.2"
   },
   "devDependencies": {

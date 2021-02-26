@@ -21,7 +21,7 @@ class SplashPage extends React.Component {
               Keep track of daily tasks!
             </p>
           </div>
-          <img className="splash-image" src={TimeBlocksLogo} />
+          <img className="splash-image" src={TimeBlocksLogo} alt="TimeBlocks Logo" />
         </div>
         <FirstButtonsContainer />
       </div>
