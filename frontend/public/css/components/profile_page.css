@@ -48,6 +48,14 @@
     /* border: 1px solid black; */
 }
 
+/* [NOTE] gives margin between Left + Right sides in iPad+ wider */
+@media (max-width: 768px) {
+    .prof-page-right {
+    /* [NOTE] margin = top/right/bottom/left */
+    margin: 0px 0px 0px 0px;
+    }      
+}
+
 .user-name {
     font-weight: bold;
     font-size: 22px;
