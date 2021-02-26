@@ -32,5 +32,28 @@ router.delete('/delete', passport.authenticate('jwt', { session: false }),
     }
 );
 
+//retrieve all friends
+router.get('/get', passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        User.findById(req.user.id)
+            .then(user => {
+                const friends = [];
+                user.friends.forEach(id => {
+                    User.findById(id).then(friend => {
+                        const info = {
+                            userId: friend.id,
+                            name: friend.name
+                        }
+                        return info;
+                    })
+                })
+                return friends;
+            })
+            .then(friends => {
+                res.json(friends);
+            })
+    }
+);
+
 
 module.exports = router;
