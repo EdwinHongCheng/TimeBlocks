@@ -30,8 +30,7 @@ class HomePage extends React.Component {
           <input type="button" onClick={this.openTaskList} value="Show Task List" />
         </div>
         <Grid />
-        {/* [TEST][WORKS] Profile Page */}
-        <Link to="/profile-page">Profile Page</Link>
+          <Link className="prof-page-button" to="/profile-page">Profile Page</Link>
       </div>
     );
   }
