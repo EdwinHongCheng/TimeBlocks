@@ -13,7 +13,7 @@ const TaskCategoryItem = (props) => {
             return (
                 <div className="task-entry" key={task._id}>
                     <h1>{task.title}</h1>
-                    <Task color={props.category.color} />
+                    <Task task={task} color={props.category.color} />
                 </div>
             )
           })}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import TaskBucket from "../task/task_bucket";
+import TaskBucketContainer from "../task/task_bucket_container";
 
 const Grid = (props) => {
   let times = []
@@ -12,12 +12,14 @@ const Grid = (props) => {
   return ( 
     <div className="grid">
       {times.map(time => {
+        
+
         return (
-          <TaskBucket key={time} time={time}>
+          <TaskBucketContainer key={time} time={time}>
             <div className="task-time">
               <h1>{time}</h1>
             </div>
-          </TaskBucket>
+          </TaskBucketContainer>
         );
       })}
     </div>
