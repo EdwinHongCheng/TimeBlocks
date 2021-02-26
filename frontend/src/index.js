@@ -43,10 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
   // window.store = store
-  window.createTask = createTask
-  window.editTaskTitle = editTaskTitle
-  window.editTaskCategory = editTaskCategory
-  window.deleteTask = deleteTask
+  // window.createTask = createTask
+  // window.editTaskTitle = editTaskTitle
+  // window.editTaskCategory = editTaskCategory
+  // window.deleteTask = deleteTask
 
   ReactDOM.render(<Root store={store} />, root);
 });
