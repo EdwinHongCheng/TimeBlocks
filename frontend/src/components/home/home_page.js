@@ -96,7 +96,7 @@ class HomePage extends React.Component {
           <Link className="prof-page-button" to="/profile-page">
             Profile Page
           </Link>
-          
+
           <input
             id="show-tasks"
             type="button"
