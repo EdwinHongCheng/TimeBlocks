@@ -20,4 +20,3 @@ export const deleteTask = taskId => {
     return axios.delete(`/api/tasks/${taskId}`)
 }
 
-//TESTED. Works.
