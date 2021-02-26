@@ -32,7 +32,7 @@ router.delete('/delete', passport.authenticate('jwt', { session: false }),
     }
 );
 
-//retrieve all friends CURRENTLY NOT WORKING!
+//retrieve all friends (sends arr of objects w/ friend info)
 router.get('/get', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         User.findById(req.user.id)
@@ -49,7 +49,8 @@ router.get('/get', passport.authenticate('jwt', { session: false }),
                             friendsInfo.push(info);
                         });
                         res.json(friendsInfo);
-                    });
+                    })
+                    .catch(errors => res.json(errors));
             })
     }
 );
