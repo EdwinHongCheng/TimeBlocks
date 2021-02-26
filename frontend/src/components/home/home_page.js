@@ -76,6 +76,7 @@ class HomePage extends React.Component {
     if(this.state.categoriesOpen) {
       taskCategoriesContainer.classList.remove("show")
       taskCategoriesContainer.classList.add("hide")
+      this.setState({categoriesOpen: false})
     }
   }
 
