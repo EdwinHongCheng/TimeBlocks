@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const passport = require('passport');
-const Category = require('../../models/Category')
+const Category = require('../../models/Category');
 const validateTaskInput = require('../../validation/task');
 
 //New Task
