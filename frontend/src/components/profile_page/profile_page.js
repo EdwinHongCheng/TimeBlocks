@@ -79,7 +79,7 @@ class ProfilePage extends React.Component {
                                 <li>mang0</li>
                                 <li>Zain</li>
                                 <li>Garry Kasparov</li>
-                                <li>Jose Capablanca</li>
+                                <li>Jose Raul Capablanca</li>
                                 <li>Hikaru Nakamura</li>
                                 <li>Fabiano Caruana</li>
                                 <li>Judit Polgar</li>

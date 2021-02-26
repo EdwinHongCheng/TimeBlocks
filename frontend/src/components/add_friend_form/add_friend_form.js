@@ -36,7 +36,6 @@ class AddFriendForm extends React.Component {
             <>
                 <div className="add-friend-parent">
                     <p className="add-friend-header">Add a New Friend</p>
-
                     <form onSubmit={this.handleSubmit}>
                         <input
                             className="add-friend-input"
@@ -49,8 +48,8 @@ class AddFriendForm extends React.Component {
                             onClick={this.handleSubmit}
                         >+</p>
                     </form>
-
                 </div>
+                
                 <p className="add-friend-error">
                   {this.props.errors.email}
                   {/* Placeholder Error */}
