@@ -16,7 +16,9 @@ Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks
 
 [SCREENSHOT]
 
+In order for a task to be re-assigned to a different category, the task's title is saved into a different variable, and then the original task object is removed from the current category. The new variable containing the original task's data is then pushed into the category it is being re-assigned to.
 
+[SCREENSHOT]
 
 ### Slidable Menus
 
@@ -28,7 +30,7 @@ On the right side of the screen, when the Show Task List button is clicked, a li
 
 ### Friends List
 
-On each user's profle page, 
+On each user's profle page, a Friends List is shown displaying all of the user's friends. Users are able to remove existing friends from their list or add new friends by entering their email addresses. Users are able to view their friend's TimeBlock by clicking the name in the Friends List.   
 
 [SCREENSHOT]
 
