@@ -4,7 +4,7 @@ export const RECEIVE_CATEGORIES = "RECEIVE_CATEGORIES"
 
 export const RECEIVE_NEW_CATEGORY = "RECEIVE_NEW_CATEGORY"
 
-export const REMOVE_CATEGORY = "REMOVE_POST"
+export const REMOVE_CATEGORY = "REMOVE_CATEGORY"
 
 ///////Action creators///////
 
