@@ -1,5 +1,4 @@
-[LOGO HERE]
-
+![alt text](https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/logo.png "TimeBlocks Logo") 
 # TimeBlocks
 
 [Timeblocks Live Link](https://time-blocks.herokuapp.com/#/)
@@ -18,7 +17,8 @@ Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks
 
 In order for a task to be re-assigned to a different category, the task's title is saved into a different variable, and then the original task object is removed from the current category. The new variable containing the original task's data is then pushed into the category it is being re-assigned to.
 
-[SCREENSHOT]
+![alt text](https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/code_snapshot.png "Coding Snap-shot") 
+
 
 ### Slidable Menus
 
