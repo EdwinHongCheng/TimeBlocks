@@ -90,7 +90,7 @@
     background-color: rgb(123, 74, 202); 
 }
 
-/* [WIP] Back Button */
+/* [WORKS] Back Button */
 .back-to-home-button {
     width: 50px;
     font-size: 16px;
@@ -104,8 +104,8 @@
     margin: 10px;
     text-align: center;
     background-color: rgb(84, 12, 201);
-    margin-top: 60px;
-    margin-left: 70px;
+    margin-top: 76px;
+    margin-left: 76px;
 }
 
 .logout-button {
@@ -129,10 +129,10 @@
     background-color: red;
 }
 
-/* [WORKS] Dropdown -------------------------------------------------------> */
+/* [WORKS] Friends List (used to be Dropdown) -----------------------------> */
 .friends-dropdown-parent {
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
     display: flex;
     flex-direction: column;
@@ -140,7 +140,7 @@
 }
 
 .friends-dropdown-title {
-    width: 162px;
+    width: 168px;
     font-size: 16px;
 
     /* border-radius: 4px; */
@@ -168,7 +168,7 @@
 /* [WORKS] Scrollable List */
 .friends-dropdown-true {
     width: 180px;
-    height: 300px;
+    height: 220px;
     overflow: hidden; 
     overflow-y: scroll;
 }
