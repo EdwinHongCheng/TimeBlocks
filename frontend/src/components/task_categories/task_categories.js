@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TaskCategoryItem from "./task_category_item"
 
 const TaskCategories = (props) => {
+  console.log(props.currentUser)
+
+  useEffect(() => {
+    // props.fetchCategories(props.currentUser.id)
+  })
+
   return (
     <div className="task-categories-container">
-      <TaskCategoryItem />
-      <TaskCategoryItem />
-      {/* {this.props.categories.map(category => {
+      {/* <TaskCategoryItem /> */}
+      {props.categories.map(category => {
         return (
           <TaskCategoryItem category={category} />
         )
-      })} */}
+      })}
     </div>
   );
 }
