@@ -23,6 +23,7 @@ class SignupForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
+      // <--- [BUG NOTES] --->
       // [WIP] need to also authenticate user (global state) ->
       // -> Only then, will I be able to send user to "/home"
       // Current Global State after Signing Up Sucessfully [WIP]:
