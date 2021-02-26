@@ -3,14 +3,23 @@ import TaskList from "./task_list";
 
 const mapStateToProps = (state) => {
     return {
-
-    }
+      tasks: [
+        {
+          id: 1,
+          name: "Brush Teeth",
+          hour: 6,
+        },
+        {
+          id: 2,
+          name: "Do Laundry",
+          hour: 7,
+        },
+        {
+          id: 2,
+          name: "Do Laundry",
+          hour: 7,
+        }],
+    };
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TaskList);
+export default connect(mapStateToProps)(TaskList);
