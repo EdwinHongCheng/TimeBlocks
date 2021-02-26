@@ -1,0 +1,56 @@
+.add-friend-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-friend-header {
+    width: 168px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(84, 12, 201);
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.add-friend-input {
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+
+    width: 150px;
+    height: 20px;
+
+    padding-left: 6px;
+}
+
+.add-friend-button {
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+
+    border-radius: 4px;
+    background-color: rgb(84, 12, 201);
+    color: white;
+    cursor: pointer;
+
+    display: inline-block;
+    padding: 4px;
+    margin-left: 2px;
+    text-align: center;
+}
+
+.add-friend-button:hover {
+    background-color: rgb(123, 74, 202); 
+}
+
+.add-friend-error {
+    margin-top: 4px;
+    margin-left: 6px;
+    font-size: 14px;
+    color: red;
+    display: flex;
+    justify-content: flex-start;
+}

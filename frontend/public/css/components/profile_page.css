@@ -48,6 +48,14 @@
     /* border: 1px solid black; */
 }
 
+/* [NOTE] gives margin between Left + Right sides in iPad+ wider */
+@media (max-width: 768px) {
+    .prof-page-right {
+    /* [NOTE] margin = top/right/bottom/left */
+    margin: 0px 0px 0px 0px;
+    }      
+}
+
 .user-name {
     font-weight: bold;
     font-size: 22px;
@@ -90,7 +98,7 @@
     background-color: rgb(123, 74, 202); 
 }
 
-/* [WIP] Back Button */
+/* [WORKS] Back Button */
 .back-to-home-button {
     width: 50px;
     font-size: 16px;
@@ -105,7 +113,7 @@
     text-align: center;
     background-color: rgb(84, 12, 201);
     margin-top: 60px;
-    margin-left: 70px;
+    margin-left: 76px;
 }
 
 .logout-button {
@@ -122,17 +130,17 @@
     padding: 10px;
     margin: 10px;
 
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .logout-button:hover {
     background-color: red;
 }
 
-/* [WORKS] Dropdown -------------------------------------------------------> */
+/* [WIP] Friends List (used to be Dropdown) -----------------------------> */
 .friends-dropdown-parent {
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 
     display: flex;
     flex-direction: column;
@@ -140,7 +148,7 @@
 }
 
 .friends-dropdown-title {
-    width: 162px;
+    width: 168px;
     font-size: 16px;
 
     /* border-radius: 4px; */
@@ -152,29 +160,22 @@
     text-align: center;
 }
 
-.friends-dropdown-false {
-    display: none;
-}
 
-/* [ISSUE] pushes the bottom buttons down */
 .friends-dropdown-true {
     position: relative;
     background-color: white;
     border: 1px solid white;
-    opacity: 1;
-    z-index: 2;
-}
 
-/* [WORKS] Scrollable List */
-.friends-dropdown-true {
+    /* [WORKS] Scrollable List */
     width: 180px;
-    height: 300px;
+    height: 220px;
     overflow: hidden; 
     overflow-y: scroll;
 }
 
 .friends-dropdown-parent ul li {
     padding: 4px;
+    color: rgb(0, 196, 0);
 }
 
 /* [WORKS] Confirm Clear --------------------------------------------------> */

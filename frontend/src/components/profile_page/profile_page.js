@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AddFriendFormContainer from "../add_friend_form/add_friend_form_container";
+// [TEST] Friends List
+import FriendsListContainer from "../friends_list/friends_list_container";
 
 class ProfilePage extends React.Component {
     constructor(props) {
@@ -66,20 +69,18 @@ class ProfilePage extends React.Component {
                 </div>
 
                 <div className="profile-page-body">
-                    <div className="friends-dropdown-parent">
-                        <p className="friends-dropdown-title"
-                        >Friends List</p>
-                        <ul className={`friends-dropdown-true`} >
-                            <li>Bobby Fischer</li>
-                            <li>Magnus Carlsen</li>
-                            <li>Leffen</li>
-                            <li>Mang0</li>
-                            <li>Zain</li>
-                            <li>Garry Kasparov</li>
-                            <li>Jose Capablanca</li>
-                            <li>Hikaru Nakamura</li>
-                            <li>Fabiano Caruana</li>
-                        </ul>
+
+                    <div className="prof-page-left">
+                        <div className="friends-dropdown-parent">
+                            <p className="friends-dropdown-title"
+                            >Friends List</p>
+                            <ul className={`friends-dropdown-true`} >
+                                {/* [WIP] Friends List */}
+                                <FriendsListContainer />
+                            </ul>
+                        </div>
+                        {/* [WIP][can let rest right now] Add Friend Form */}
+                        <AddFriendFormContainer />
                     </div>
 
                     <div className="prof-page-right">
@@ -88,12 +89,12 @@ class ProfilePage extends React.Component {
                         <div className="profile-page-buttons">
                             {thirdButton}
                             {secondButton}
-
-
                             <Link className="back-to-home-button" to="/home">Back</Link>
                         </div>
                     </div>
+
                 </div>
+                
             </div>
         )
     }
