@@ -1,4 +1,4 @@
 import React from 'react';
-import CategoryBox from './category_box'
+import CategoryBox from './task_category_item'
 
 //NOT YET STARTED

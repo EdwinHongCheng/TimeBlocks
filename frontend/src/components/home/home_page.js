@@ -7,6 +7,8 @@ import { Link } from "react-router-dom"
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
 
+import Task from "../task/task"
+
 import LogoutButtonContainer from "../logout/logout_button_container";
 
 class HomePage extends React.Component {
@@ -22,12 +24,20 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="home-container">
-        {/* <TaskCategoriesContainer /> */}
+        <TaskCategoriesContainer />
         {/* <TaskListContainer /> */}
 
         <div>
-          <input type="button" onClick={this.openCategories} value="Show Categories" />
-          <input type="button" onClick={this.openTaskList} value="Show Task List" />
+          <input
+            type="button"
+            onClick={this.openCategories}
+            value="Show Categories"
+          />
+          <input
+            type="button"
+            onClick={this.openTaskList}
+            value="Show Task List"
+          />
         </div>
         <Grid />
         {/* [TEST][WORKS] Profile Page */}
