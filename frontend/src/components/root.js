@@ -31,7 +31,8 @@ const generatePreview = ({ itemType, item, style }) => {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: "5px"
+    borderRadius: "5px",
+    zIndex: "2"
   };
   return <div style={newStyle}></div>;
 };

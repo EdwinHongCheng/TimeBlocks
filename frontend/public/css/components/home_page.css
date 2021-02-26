@@ -25,3 +25,54 @@
 .prof-page-button:hover {
     background-color: rgb(123, 74, 202); 
 }
+
+.panel-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 0; */
+    /* margin-bottom: 20px; */
+}
+
+.panel-buttons a {
+    margin-top: 0;
+}
+
+#show-categories,
+#show-tasks {
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    background-color:rgb(84, 12, 201);
+    color: white;
+    /* border-radius: 5px; */
+}
+
+#show-categories {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    left: 0;
+}
+
+#show-tasks {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    right: 0;
+}
+
+@media (min-width: 992px) {
+    .home-container {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .panel-buttons {
+        width: 60%;
+    }
+
+    #show-categories,
+    #show-tasks {
+        border-radius: 5px;
+    }
+}

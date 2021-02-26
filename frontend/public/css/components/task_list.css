@@ -1,4 +1,4 @@
-.task-list-container {
+#task-list-container {
     width: 60vw;
     height: 100vh;
     position: fixed;
@@ -13,12 +13,12 @@
     grid-template-rows: 50px 1fr;
 }
 
-.task-list-container.show {
-    transform: translate3d(60vw, 0, 0)
+#task-list-container.show {
+    transform: translate3d(0vw, 0, 0)
 }
 
-.task-list-container.hide {
-    transform: translate3d()
+#task-list-container.hide {
+    transform: translate3d(60vw, 0, 0);
 }
 
 .task-list-title {
@@ -59,13 +59,5 @@
 @media (min-width: 992px) {
     .task-list-container {
         width: 35vw;
-    }
-
-    .task-list-container.show {
-        transform: translate3d()
-    }
-
-    .task-list-container.hide {
-        transform: translate3d()
     }
 }

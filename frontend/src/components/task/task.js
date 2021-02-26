@@ -4,7 +4,7 @@ import { useDrag } from "react-dnd"
 const Task = (props) => {
     const Task = useRef();
     
-    const [, drag] = useDrag(() => ({
+    const [{isDragging} , drag] = useDrag(() => ({
         item: {type: "TASK", color: props.color},
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
@@ -13,6 +13,17 @@ const Task = (props) => {
 
     const style = {
         backgroundColor: props.color
+    }
+
+    if (isDragging) {
+            const taskCategoriesContainer = document.getElementById(
+              "task-categories-container"
+            ).classList;
+
+            if (taskCategoriesContainer.contains("show")) {
+              taskCategoriesContainer.remove("show");
+              taskCategoriesContainer.add("hide");
+            }
     }
 
     return (

@@ -1,36 +1,26 @@
-import React from "react";
-import CategoryBox from "./category_box"
+import React, { useEffect, useState } from "react";
+import TaskCategoryItem from "./task_category_item"
 
-class TaskCategories extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            categories: []
-        }
-    }
+const TaskCategories = (props) => {
+  
+  const [categories, setCategories] = useState(props.categories)
 
-    componentWillMount() {
-        this.props.fetchCategories(this.props.currentUser.id)
-    }
+  useEffect(() => {
+    props.fetchCategories(props.currentUser.id)
+  }, categories)
 
-    componentWillReceiveProps(nextProps) {
-        this.setState({categories: nextProps.categories})
-    }
-
-    render() {
-        if (this.state.categories.length === 0) {
-            return (<div>There are no categories</div>)
-          } else {
-            return (
-              <div>
-                <h1>Categories:</h1>
-                {this.state.categories.map(category => (
-                  <CategoryBox key={category._id} title={category.title} tasks={category.tasks} />
-                ))}
-              </div>
-            );
-          }
-        }
-      }
+  return (
+    <div id="task-categories-container" className="hide">
+      <div className="categories-title-box">
+        <h1>Categories</h1>
+      </div>
+      <div className="categories-list">
+        {props.categories.map((category) => {
+          return <TaskCategoryItem key={category._id} category={category} />;
+        })}
+      </div>
+    </div>
+  );
+}
 
 export default TaskCategories;
