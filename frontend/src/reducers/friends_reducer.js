@@ -9,11 +9,13 @@ const FriendsReducer = (oldState = {}, action) => {
     switch (action.type) {
         case RECEIVE_FRIENDS:
             return action.friends;
-
-        case RECEIVE_FRIEND:
-            nextState[action.friend.id] = action.friend;
-            return nextState;
         
+        // [JANKY BUT WORKS FOR NOW (edwin)]
+        case RECEIVE_FRIEND:
+            // [NOTE] as of now, action.friend = object of all current friends
+            return action.friend;
+
+        // [STILL NEED TO TEST]
         case REMOVE_FRIEND:
             delete nextState[action.friendId]
             return nextState;

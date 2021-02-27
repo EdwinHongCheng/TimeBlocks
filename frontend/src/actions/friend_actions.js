@@ -31,17 +31,17 @@ const removeFriend = friendId => {
 // [TEST] Thunk Action Creators
 export const fetchFriends = () => dispatch => {
     return FriendApiUtil.getFriends()
-        .then(friends => dispatch(receiveFriends(friends)))
+        .then(friends => dispatch(receiveFriends(friends.data)))
         .catch(err => console.log(err))
 }
 
 export const fetchFriend = email => dispatch => {
     return FriendApiUtil.createFriend(email)
-        .then(friend => dispatch(receiveFriend(friend)))
+        .then(friends => dispatch(receiveFriend(friends.data)))
         .catch(err => console.log(err))
 }
 
-export const deleteFriend = friendId => dispatch => {
+export const destroyFriend = friendId => dispatch => {
     return FriendApiUtil.deleteFriend(friendId)
         .then(() => dispatch(removeFriend(friendId)))
         .catch(err => console.log(err))
