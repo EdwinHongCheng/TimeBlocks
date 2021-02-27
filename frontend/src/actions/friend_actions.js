@@ -4,7 +4,7 @@ export const RECEIVE_FRIENDS = "RECEIVE_FRIENDS";
 export const RECEIVE_FRIEND = "RECEIVE_FRIEND";
 export const REMOVE_FRIEND = "REMOVE_FRIEND";
 
-// Action Creators
+// [TEST] Action Creators
 const receiveFriends = friends => {
     return {
         type: RECEIVE_FRIENDS,
@@ -28,18 +28,21 @@ const removeFriend = friendId => {
 
 // [TEST] not sure what friend api util requests return 
 // -> best guess (?)
-// Thunk Action Creators
+// [TEST] Thunk Action Creators
 export const fetchFriends = () => dispatch => {
     return FriendApiUtil.getFriends()
         .then(friends => dispatch(receiveFriends(friends)))
+        .catch(err => console.log(err))
 }
 
 export const fetchFriend = email => dispatch => {
-    return TrackApiUtil.createFriend(email)
+    return FriendApiUtil.createFriend(email)
         .then(friend => dispatch(receiveFriend(friend)))
+        .catch(err => console.log(err))
 }
 
 export const deleteFriend = friendId => dispatch => {
-    return TrackApiUtil.deleteFriend(friendId)
+    return FriendApiUtil.deleteFriend(friendId)
         .then(() => dispatch(removeFriend(friendId)))
+        .catch(err => console.log(err))
 }
