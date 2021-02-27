@@ -26,44 +26,50 @@ router.post('/', passport.authenticate('jwt', { session: false }),
 );
 
 //Get a specific grid hour - currently sends back task name
-router.get('/hour', (req, res) => {
-    Grid.findOne({hour: req.body.hour})
-        .then(grid => {
-            if (!grid) {
-                res.json({error: "No task for this hour"})
-            } else {
-                Category.find({ 'tasks._id': grid.task }, { "tasks.$": true })
-                    .then(catArr => {
-                        Category.findById(catArr[0].id).then(cat => {
-                            const task = cat.tasks.id(grid.task)
-                            res.json({title: task.title});
-                        })
-                    })
-                    .catch((errors) => res.json(errors));
-            }
-        })
-});
+// router.get() = (hour) => {
+//     Grid.findOne({hour})
+//         .then(grid => {
+//             if (!grid) {
+//                 res.json({error: "No task for this hour"})
+//             } else {
+//                 Category.find({ 'tasks._id': grid.taskId }, { "tasks.$": true })
+//                     .then(catArr => {
+//                         Category.findById(catArr[0].id).then(cat => {
+//                             const task = cat.tasks.id(grid.taskId)
+//                             return ({ [hour] : {
+//                                 task: task.title,
+//                                 color: cat.color
+//                             }});
+//                         })
+//                     })
+//                     .catch((errors) => res.json(errors));
+//             }
+//         })
+// };
 
 //Get all of a user's grids
-// router.get('/allGrids/:userId', async (req, res) => {
-//     let grids =  await Grid.find({userId: req.params.userId});
-//     const result = [];
-//     grids.forEach(async (grid) => {
-//         let newGrid = await grid.populate('taskId');
-//         console.log(result);
-//         result.push(newGrid)
-//         // let catArr = await Category.find({ 'tasks._id': grid.task }, { "tasks.$": true })
-//         // console.log(catArr)
-//         // let category = await Category.findById(catArr[0].id)
-//         // const task = category.tasks.id(grid.task);
-//         // result.push(task);
-        
-//     })
-//         // .catch(errors => res.json(errors))
-//     .then(result => res.json(result));
-// })
+router.get('/allGrids/:userId', (req, res) => {
+    Grid.find({userId: req.params.userId})
+        .then( async grids => {
+            const taskIds = grids.map((grid) => {return(grid.taskId)});
+            const cats = await Category.find({"tasks._id": taskIds});
+            const taskList = {};
+            grids.forEach(grid => {
+                cats.forEach(cat => {
+                    const task = cat.tasks.id(grid.taskId);
+                    if (task) {
+                        taskList[grid.hour] = {title: task.title, color: cat.color};
+                    }
+                })
+            })
+            res.json(taskList);
+        })
+        .catch(errors => res.json(errors))
+});
 
 //Update an existing grid with a new task
+//check for if grid exits at that hour
+//if not create grid; if it does then update
 router.put('/updateGridTask/:gridId', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         Grid.findById(req.params.gridId)
