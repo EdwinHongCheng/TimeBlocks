@@ -10,6 +10,9 @@ class ShowFriend extends React.Component {
     render() {
         return (
             <div>
+
+                <p>Friend's Profile Page</p>
+
                 <ShowFriendGridContainer />
                 <ShowFriendListContainer />
 
