@@ -55,9 +55,14 @@ router.get('/allGrids/:userId', (req, res) => {
             const cats = await Category.find({"tasks._id": taskIds});
             const taskList = {};
             grids.forEach(grid => {
-                cats.forEach()
+                cats.forEach(cat => {
+                    const task = cat.tasks.id(grid.taskId);
+                    if (task) {
+                        taskList[grid.hour] = {title: task.title, color: cat.color};
+                    }
+                })
             })
-            res.json(cats);
+            res.json(taskList);
         })
         .catch(errors => res.json(errors))
 });
