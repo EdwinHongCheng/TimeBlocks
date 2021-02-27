@@ -3,18 +3,20 @@ import React, { useEffect, useState } from "react";
 import TaskBucketContainer from "../task/task_bucket_container";
 
 const Grid = (props) => {
+  
   let tasks = []
-  const [grids, setGrids] = useState(Object.values(props.grids))
-
   for (let i = 1; i < 25; i++) {
     tasks.push(i)
   }
 
-  console.log(props.grids)
+  const [grids, setGrids] = useState(props.grids)
 
   useEffect(() => {
-    props.fetchUserGrids(props.currentUser.id)
-  }, [props.grids])
+      props.fetchUserGrids(props.currentUser.id)
+  }, [])
+
+  console.log(grids)
+  console.log(props.grids)
 
   return ( 
     <div className="grid">
@@ -26,11 +28,7 @@ const Grid = (props) => {
         }
 
         return (
-          <TaskBucketContainer color={color} key={time} time={time}>
-            <div className="task-time">
-              <h1>{time}</h1>
-            </div>
-          </TaskBucketContainer>
+          <TaskBucketContainer color={color} key={time} time={time} />
         );
       })}
     </div>

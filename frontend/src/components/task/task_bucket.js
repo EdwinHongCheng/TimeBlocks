@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useDrop } from "react-dnd";
 
@@ -13,13 +13,21 @@ const TaskBucket = (props) => {
     },
   }));
 
+  useEffect(() => {
+    setColor(props.color)
+  }, [props.color])
+
   let style = {
       backgroundColor: color
   }
 
   return (
     <div ref={drop} className="bucket">
-      <div style={style} className="task">{props.children}</div>
+      <div className="bucket-background" style={style}>
+          <div className="task-time">
+            <h1>{props.time}</h1>
+          </div>
+      </div>
     </div>
   );
 };
