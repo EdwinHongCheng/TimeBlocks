@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        // [WIP] for a specific Friend's Show Page
+        // [WIP]
     }
 }
 

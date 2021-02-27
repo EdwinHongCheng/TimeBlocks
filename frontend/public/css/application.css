@@ -15,3 +15,5 @@
 @import "./components/profile_page.css";
 @import "./components/add_friend_form.css";
 @import "./components/friends_list.css";
+@import "./components/show_friend.css";
+@import "./components/show_friend_list.css";
