@@ -22,14 +22,14 @@ class SignupForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn === true) {
+    if (nextProps.isAuthenticated === true) {
       // <--- [BUG NOTES] --->
       // [WIP] need to also authenticate user (global state) ->
       // -> Only then, will I be able to send user to "/home"
       // Current Global State after Signing Up Sucessfully [WIP]:
       // session: { isAuthenticated: false, isSignedIn: true }
       // - since isAuthenticated = false, history.push to "/home" -> "/" redirect (Splash page)
-      this.props.history.push("/login");
+      this.props.history.push("/");
     }
 
     this.setState({ errors: nextProps.errors });
