@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import TaskCategoryItem from "./task_category_item"
+import CategoryComposeContainer from "./category_compose_container"
+
 
 const TaskCategories = (props) => {
   useEffect(() => {
@@ -15,7 +17,10 @@ const TaskCategories = (props) => {
         {props.categories.map((category) => {
           return <TaskCategoryItem key={category._id} category={category} />;
         })}
+        <CategoryComposeContainer/>
+
       </div>
+
     </div>
   );
 }
