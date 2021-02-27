@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// [TEST][WORKS] copied + Grid + Task List (removed className="hide" for Task List)
+// [WORKS] copied + Grid + Task List (removed className="hide" for Task List)
 import ShowFriendGridContainer from "../show_friend_grid/show_friend_grid_container";
 import ShowFriendListContainer from "../show_friend_list/show_friend_list_container";
 
@@ -17,7 +17,7 @@ class ShowFriend extends React.Component {
         this.handleShowGridOverList = this.handleShowGridOverList.bind(this)
     }
 
-    // [TEST] Tap -> switches between Friend's Grid + Friend's Task List
+    // [WORKS] Tap -> switches between Friend's Grid + Friend's Task List
     handleShowGridOverList() {
         let newState = !this.state.showGridOverList;
         this.setState({ showGridOverList: newState });
@@ -43,26 +43,31 @@ class ShowFriend extends React.Component {
         let tapAdvice;
         if (this.state.showGridOverList) {
             tapAdvice = (
-                <p onClick={this.handleShowGridOverList}
-                >Tap to see Task List!</p>
+                <p className="tap-advice" 
+                    onClick={this.handleShowGridOverList}
+                >Tap Time Grid to view Task List!</p>
             )
         } else {
             tapAdvice = (
-                <p onClick={this.handleShowGridOverList}
-                >Tap to see Time Grid!</p>
+                <p className="tap-advice"
+                    onClick={this.handleShowGridOverList}
+                >Tap Task List to view Time Grid!</p>
             )
         }
 
         return (
             <div className="show-friend-all">
-                <p>Hermione Granger's Profile Page</p>
+
+                <p className="friend-show-header"
+                >Hermione Granger's Profile Page</p>
+                <p className="friend-show-straightline"></p>
+
+                <Link className="show-friend-back-button" to="/profile-page">
+                    Back to Your Profile Page
+                </Link>
 
                 {tapAdvice}
                 {showGridOrList}
-
-                <Link className="prof-page-button" to="/profile-page">
-                    Back to Your Profile Page
-                </Link>
             </div>
         );
     }
