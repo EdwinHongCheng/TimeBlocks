@@ -33,8 +33,13 @@ export const logoutUser = () => {
 };
 
 export const signup = (user) => (dispatch) => {
-  return APIUtil.signup(user).then(
-    () => dispatch(receiveUserSignIn()),
+  return APIUtil.signup(user).then((res) => {
+      const { token } = res.data;
+      localStorage.setItem("jwtToken", token);
+      APIUtil.setAuthToken(token);
+      const decoded = jwt_decode(token);
+      dispatch(receiveCurrentUser(decoded));
+    },
     (err) => dispatch(receiveErrors(err.response.data))
   );
 };

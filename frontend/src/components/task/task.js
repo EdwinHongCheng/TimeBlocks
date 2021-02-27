@@ -5,7 +5,7 @@ const Task = (props) => {
     const Task = useRef();
     
     const [{isDragging} , drag] = useDrag(() => ({
-        item: {type: "TASK", color: props.color},
+        item: {type: "TASK", id: props.task._id, color: props.color},
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
         })
