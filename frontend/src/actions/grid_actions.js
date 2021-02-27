@@ -12,5 +12,5 @@ const receiveUserGrids = grids => {
 
 export const fetchUserGrids = user => dispatch => {
     return getGrids(user)
-        .then(grids => dispatch(receiveUserGrids(grids)))
+        .then(grids => dispatch(receiveUserGrids(grids.data)))
 }

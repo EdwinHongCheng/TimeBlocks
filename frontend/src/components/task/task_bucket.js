@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useDrop } from "react-dnd";
 
 const TaskBucket = (props) => {
-  const [color, setColor] = useState("#fff4b7");
+  const [color, setColor] = useState(props.color);
 
   const [, drop] = useDrop(() => ({
     accept: "TASK",
