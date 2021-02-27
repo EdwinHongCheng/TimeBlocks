@@ -7,7 +7,7 @@ import configureStore from "./store/store";
 
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions"; 
-// import {newTask} from "./actions/task_actions"
+import {newTask, updateTaskTitle, destroyTask} from "./actions/task_actions"
 import {newCategory} from "./actions/category_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -42,11 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
   window.store = store;
-  // window.newTask = newTask
+  window.newTask = newTask;
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
   // window.deleteTask = deleteTask
-
+  window.destroyTask = destroyTask;
+  window.updateTaskTitle = updateTaskTitle;
 
   ReactDOM.render(<Root store={store} />, root);
 });

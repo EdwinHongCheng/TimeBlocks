@@ -29,13 +29,20 @@ router.put('/editTitle/:id',
     (req, res) => {
         const { errors, isValid } = validateTaskInput(req.body);
 
-        if (!isValid) return res.status(400).json(errors);
-
-        Category.updateOne(
-            { _id: req.body.catId, "tasks._id": req.params.id},
-            { $set : {"tasks.$.title": req.body.title }})
-                .then(cat => res.json(cat))
-                .catch(res => res.json({update: "failed"}));
+        Category.findOne({"tasks._id": req.params.id})
+            .then(cat => {
+                const task = cat.tasks.id(req.params.id);
+                task.title = req.body.title;
+                console.log(cat);
+                cat.save()
+                    .then(category => res.json(category))
+                    .catch(errors => res.json(errors))
+            })
+        // Category.updateOne(
+        //     { _id: req.body.catId, "tasks._id": req.params.id},
+        //     { $set : {"tasks.$.title": req.body.title }})
+        //         .then(cat => res.json(cat))
+        //         .catch(res => res.json({update: "failed"}));
     }
 );
 
