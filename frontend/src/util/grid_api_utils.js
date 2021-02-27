@@ -20,7 +20,8 @@ export const clearGrids = userId => {
     return axios.delete(`/api/grids/clearGrid/${userId}`);
 }
 
-//Update grid with new task
+//Update grid by hour
+//If not grid at that hour it creates new task
 //data should be obj with taskID as key {taskId}
 export const updateGrid = (hour, data) => { 
     return axios.put(`/api/grids/updateGridTask/${hour}`, data)
