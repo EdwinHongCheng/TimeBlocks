@@ -53,13 +53,15 @@ class HomePage extends React.Component {
   }
 
   closePanels(e) {
+    
     const taskListContainer = document.getElementById("task-list-container")
-      .classList;
+    .classList;
     const taskCategoriesContainer = document.getElementById(
       "task-categories-container"
     ).classList;
 
-    if(e.target.id === "show-categories" || e.target.id === "show-tasks") return;
+    let allowedElements = ["show-categories", "show-tasks"]
+    if(allowedElements.includes(e.target.id)) return;
 
     if (taskListContainer.contains("show")) {
       taskListContainer.remove("show");

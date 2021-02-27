@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import TaskBucketContainer from "../task/task_bucket_container";
 
-const Grid = (props) => {
-  
+const Grid = (props) => { 
   let tasks = []
   for (let i = 1; i < 25; i++) {
     tasks.push(i)
@@ -18,7 +17,7 @@ const Grid = (props) => {
       {tasks.map(time => {
         let color = "#fff4b7";
 
-        if (props.grids[time] != undefined) {
+        if (props.grids[time] !== undefined) {
           color = props.grids[time].color
         }
 

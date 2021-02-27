@@ -1,4 +1,3 @@
-import { bindActionCreators } from "redux";
 import { RECEIVE_USER_GRIDS, RECEIVE_USER_GRID } from "../actions/grid_actions"
 
 const gridReducer = (prevState={}, action) => {
