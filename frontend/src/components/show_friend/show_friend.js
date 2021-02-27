@@ -7,20 +7,62 @@ import ShowFriendListContainer from "../show_friend_list/show_friend_list_contai
 // [CURRENT GOAL] do CSS on Show Friend page Components, etc.
 
 class ShowFriend extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            showGridOverList: true
+        }
+
+        this.handleShowGridOverList = this.handleShowGridOverList.bind(this)
+    }
+
+    // [TEST] Tap -> switches between Friend's Grid + Friend's Task List
+    handleShowGridOverList() {
+        let newState = !this.state.showGridOverList;
+        this.setState({ showGridOverList: newState });
+    }
+
     render() {
-        return (
-            <div>
 
-                <p>Friend's Profile Page</p>
-
-                <ShowFriendGridContainer />
-                <ShowFriendListContainer />
-
-                <div className="panel-buttons">
-                    <Link className="prof-page-button" to="/profile-page">
-                        Back to Your Profile Page
-                    </Link>
+        let showGridOrList;
+        if (this.state.showGridOverList) {
+            showGridOrList = (
+                <div onClick={this.handleShowGridOverList}>
+                    <ShowFriendGridContainer/>
                 </div>
+            );
+        } else {
+            showGridOrList = (
+                <div onClick={this.handleShowGridOverList}>
+                    <ShowFriendListContainer />
+                </div>
+            );
+        }
+
+        let tapAdvice;
+        if (this.state.showGridOverList) {
+            tapAdvice = (
+                <p onClick={this.handleShowGridOverList}
+                >Tap to see Task List!</p>
+            )
+        } else {
+            tapAdvice = (
+                <p onClick={this.handleShowGridOverList}
+                >Tap to see Time Grid!</p>
+            )
+        }
+
+        return (
+            <div className="show-friend-all">
+                <p>Hermione Granger's Profile Page</p>
+
+                {tapAdvice}
+                {showGridOrList}
+
+                <Link className="prof-page-button" to="/profile-page">
+                    Back to Your Profile Page
+                </Link>
             </div>
         );
     }

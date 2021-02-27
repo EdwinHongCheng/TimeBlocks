@@ -1,5 +1,7 @@
 import React from "react";
 
+// [NOTE] do I need to "clone" Task as well
+// -> to make Task boxes on my copied Grid smaller?
 import Task from "../task/task";
 import ShowFriendListItem from "./show_friend_list_item";
 
