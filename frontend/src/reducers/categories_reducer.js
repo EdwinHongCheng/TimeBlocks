@@ -1,6 +1,6 @@
-import {RECEIVE_CATEGORIES, RECEIVE_NEW_CATEGORY, REMOVE_CATEGORY} from '../actions/category_actions'
+import { RECEIVE_CATEGORIES, RECEIVE_NEW_CATEGORY, REMOVE_CATEGORY } from '../actions/category_actions';
+import { RECEIVE_NEW_TASK, REMOVE_TASK, RECEIVE_TASK } from "../actions/task_actions";
 
-// let preloadedState =  { user: [], new: undefined }
 
 const CategoriesReducer = (state = {}, action) => {
     Object.freeze(state);
