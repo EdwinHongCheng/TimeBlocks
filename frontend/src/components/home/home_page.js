@@ -81,6 +81,7 @@ class HomePage extends React.Component {
       <div className="home-container" onClick={this.closePanels}>
         <TaskCategoriesContainer />
         <TaskListContainer />
+        {/* <CategoryComposeContainer/> */}
 
         <div className="panel-buttons">
           <input
