@@ -22,6 +22,6 @@ export const clearGrids = userId => {
 
 //Update grid with new task
 //data should be obj with taskID as key {taskId}
-export const updateGrid = (gridId, data) => { 
-    return axios.put(`/api/grids/updateGridTask/${gridId}`, data)
+export const updateGrid = (hour, data) => { 
+    return axios.put(`/api/grids/updateGridTask/${hour}`, data)
 }

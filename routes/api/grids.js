@@ -70,14 +70,26 @@ router.get('/allGrids/:userId', (req, res) => {
 //Update an existing grid with a new task
 //check for if grid exits at that hour
 //if not create grid; if it does then update
-router.put('/updateGridTask/:gridId', passport.authenticate('jwt', { session: false }),
+router.put('/updateGridTask/:hour', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Grid.findById(req.params.gridId)
-            .then(grid => {
-                grid.taskId = req.body.taskId;
-                grid.save().then(grid => res.json(grid));
+        Grid.findOne({hour: req.params.hour})
+            .then((grid) => {
+                if (!grid) {
+                    const newGrid = new Grid({
+                        taskId: req.body.taskId,
+                        userId: req.user.id,
+                        hour: req.params.hour
+                    })
+                    newGrid.save()
+                        .then((grid) => res.json(grid))
+                        .catch((errors) => res.json(errors));
+                } else {
+                    grid.taskId = req.body.taskId;
+                    grid.save()
+                        .then(grid => res.json(grid))
+                        .catch(errors => res.json(errors));
+                }
             })
-            .catch(errors => res.json(errors))
     }
 );
 
