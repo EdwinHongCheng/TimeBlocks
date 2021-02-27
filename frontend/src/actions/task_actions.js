@@ -1,21 +1,12 @@
 import {createTask, editTaskTitle, editTaskCategory, deleteTask} from "../util/task_api_util"
 
-
-export const RECEIVE_NEW_TASK = "RECEIVE_NEW_TASK"
-
-export const REMOVE_TASK = "REMOVE_TASK"
+export const UPDATE_CATEGORY = "UPDATE_CATEGORY";
 
 export const RECEIVE_TASK = 'RECEIVE_TASK';
 
-
-export const receiveNewTask = category => ({
-    type: RECEIVE_NEW_TASK,
+const updateCategory = category => ({
+    type: UPDATE_CATEGORY,
     category
-})
-
-export const removeTask = taskId => ({
-    type: REMOVE_TASK,
-    taskId
 })
 
 export const receiveTask = taskId => ({
@@ -26,14 +17,14 @@ export const receiveTask = taskId => ({
 //Create a task
 export const newTask = data => dispatch => (
     createTask(data)
-        .then(category => dispatch(receiveNewTask(category)))
+        .then(category => dispatch(updateCategory(category)))
         .catch(err => console.log(err))
 )
 
 //Delete a task
 export const destroyTask = taskId => dispatch => (
     deleteTask(taskId)
-        .then(() => dispatch (removeTask(taskId)))
+        .then((category) => dispatch (updateCategory(category)))
         .catch(err => console.log(err))
 )
 

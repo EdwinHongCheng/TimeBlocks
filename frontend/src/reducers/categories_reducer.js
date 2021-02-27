@@ -1,5 +1,5 @@
 import { RECEIVE_CATEGORIES, RECEIVE_NEW_CATEGORY, REMOVE_CATEGORY } from '../actions/category_actions';
-import { RECEIVE_NEW_TASK, REMOVE_TASK, RECEIVE_TASK } from "../actions/task_actions";
+import { UPDATE_CATEGORY, RECEIVE_TASK } from "../actions/task_actions";
 
 
 const CategoriesReducer = (state = {}, action) => {
@@ -16,10 +16,7 @@ const CategoriesReducer = (state = {}, action) => {
     case REMOVE_CATEGORY: 
         delete newState[action.catId];
         return newState;
-    case RECEIVE_NEW_TASK:
-        newState[action.category.id] = action.category;
-        return newState;
-    case REMOVE_TASK:
+    case UPDATE_CATEGORY:
         newState[action.category.id] = action.category;
         return newState;
     default:
