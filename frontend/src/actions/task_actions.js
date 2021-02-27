@@ -31,13 +31,13 @@ export const destroyTask = taskId => dispatch => (
 //Edit task title
 export const updateTaskTitle = (taskId, data) => dispatch => (
     editTaskTitle(taskId, data)
-        .then(id => dispatch(receiveTask(id.taskId)))
+        .then(cat => dispatch(updateCategory(cat)))
         .catch(err => console.log(err))
 )
 
 // //Edit task category
 export const updateTaskCategory = (taskId, data) => dispatch => (
     editTaskCategory(taskId, data)
-        .then(task => dispatch(receiveNewTask(task)))
+        .then(task => dispatch(updateCategory(task)))
         .catch(err => console.log(err))
 )
