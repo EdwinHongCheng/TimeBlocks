@@ -9,7 +9,11 @@ const TaskBucket = (props) => {
     accept: "TASK",
     drop: (item, monitor) => {
         setColor(item.color)
-        console.log(item.id, props.currentUser)
+        props.updateUserGrid(props.time, {
+          taskId: item.id,
+          title: item.title,
+          color: item.color
+        })
     },
   }));
 

@@ -1,10 +1,12 @@
 import { connect } from "react-redux"
 import TaskBucket from "./task_bucket"
 
-const mapStateToProps = state => {
+import { updateUserGrid } from "../../actions/grid_actions"
+
+const mapDispatchToProps = dispatch => {
     return {
-        currentUser: state.session.user
+        updateUserGrid: (hour, data) => dispatch(updateUserGrid(hour, data))
     }
 }
 
-export default connect(mapStateToProps)(TaskBucket)
+export default connect(null, mapDispatchToProps)(TaskBucket)
