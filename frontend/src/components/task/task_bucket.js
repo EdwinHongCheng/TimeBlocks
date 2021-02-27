@@ -9,6 +9,7 @@ const TaskBucket = (props) => {
     accept: "TASK",
     drop: (item, monitor) => {
         setColor(item.color)
+        console.log(item.id, props.currentUser)
     },
   }));
 

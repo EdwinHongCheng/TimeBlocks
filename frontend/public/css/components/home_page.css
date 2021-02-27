@@ -31,8 +31,6 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    /* margin-top: 0; */
-    /* margin-bottom: 20px; */
 }
 
 .panel-buttons a {
@@ -46,18 +44,24 @@
     border: none;
     background-color:rgb(84, 12, 201);
     color: white;
-    /* border-radius: 5px; */
+}
+
+#show-categories:hover,
+#show-tasks:hover {
+    background-color: rgb(123, 74, 202);
 }
 
 #show-categories {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    /* border-left: 1px solid rgb(84, 12, 201); */
     left: 0;
 }
 
 #show-tasks {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    /* border-right: 1px solid rgb(84, 12, 201); */
     right: 0;
 }
 
