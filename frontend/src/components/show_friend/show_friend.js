@@ -44,13 +44,13 @@ class ShowFriend extends React.Component {
         if (this.state.showGridOverList) {
             tapAdvice = (
                 <p className="tap-advice" 
-                    onClick={this.handleShowGridOverList}
+                    // onClick={this.handleShowGridOverList}
                 >Tap Time Grid to view Task List!</p>
             )
         } else {
             tapAdvice = (
                 <p className="tap-advice"
-                    onClick={this.handleShowGridOverList}
+                    // onClick={this.handleShowGridOverList}
                 >Tap Task List to view Time Grid!</p>
             )
         }
