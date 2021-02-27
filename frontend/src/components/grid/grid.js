@@ -9,14 +9,9 @@ const Grid = (props) => {
     tasks.push(i)
   }
 
-  const [grids, setGrids] = useState(props.grids)
-
   useEffect(() => {
       props.fetchUserGrids(props.currentUser.id)
   }, [])
-
-  console.log(grids)
-  console.log(props.grids)
 
   return ( 
     <div className="grid">

@@ -83,7 +83,7 @@ class HomePage extends React.Component {
             id="show-categories"
             type="button"
             onClick={this.openCategories}
-            value="Show Categories"
+            value="Categories"
           />
 
           <Link className="prof-page-button" to="/profile-page">
@@ -94,7 +94,7 @@ class HomePage extends React.Component {
             id="show-tasks"
             type="button"
             onClick={this.openTaskList}
-            value="Show Task List"
+            value="Task List"
           />
         </div>
         <GridContainer />
