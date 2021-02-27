@@ -8,6 +8,7 @@ import configureStore from "./store/store";
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions"; 
 // import {newTask} from "./actions/task_actions"
+import {newCategory} from "./actions/category_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -38,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ///////TEST////
   // window.axios = axios
   // window.fetchCategories = fetchCategories
-  // window.newCategory = newCategory
+  window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
-  // window.store = store;
+  window.store = store;
   // window.newTask = newTask
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
