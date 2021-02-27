@@ -67,6 +67,19 @@ router.get('/allGrids/:userId', (req, res) => {
         .catch(errors => res.json(errors))
 });
 
+parseGrid = async (grid, res) => {
+    const taskId = grid.taskId
+    const cats = await Category.find({"tasks._id": taskId})
+    const taskList = {}
+    cats.forEach(cat => {
+        const task = cat.tasks.id(grid.taskId);
+        if (task) {
+            taskList[grid.hour] = {title: task.title, color: cat.color};
+        }
+    })
+    res.json(taskList)
+}
+
 //Update an existing grid with a new task
 //check for if grid exits at that hour
 //if not create grid; if it does then update
@@ -81,12 +94,12 @@ router.put('/updateGridTask/:hour', passport.authenticate('jwt', { session: fals
                         hour: req.params.hour
                     })
                     newGrid.save()
-                        .then((grid) => res.json(grid))
+                        .then((grid) => parseGrid(grid, res))
                         .catch((errors) => res.json(errors));
                 } else {
                     grid.taskId = req.body.taskId;
                     grid.save()
-                        .then(grid => res.json(grid))
+                        .then(grid => parseGrid(grid, res))
                         .catch(errors => res.json(errors));
                 }
             })
