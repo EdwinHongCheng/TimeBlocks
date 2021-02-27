@@ -1,6 +1,5 @@
 import React from "react";
 
-import Task from "../task/task"
 import TaskListItem from "./task_list_item"
 
 const TaskList = (props) => {

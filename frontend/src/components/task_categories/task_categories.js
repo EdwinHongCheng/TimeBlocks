@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import TaskCategoryItem from "./task_category_item"
 
 const TaskCategories = (props) => {
-  
-  const [categories, setCategories] = useState(props.categories)
-
   useEffect(() => {
     props.fetchCategories(props.currentUser.id)
-  }, categories)
+  }, [])
 
   return (
     <div id="task-categories-container" className="hide">
