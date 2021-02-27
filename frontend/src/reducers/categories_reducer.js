@@ -11,10 +11,13 @@ const CategoriesReducer = (state = {}, action) => {
     case RECEIVE_CATEGORIES:
         return action.categories;
     case RECEIVE_NEW_CATEGORY:
-        newState[action.category.id] = action.category.data;
+        newState[action.category.id] = action.category;
         return newState;
     case REMOVE_CATEGORY: 
         delete newState[action.catId]
+        return newState;
+    case RECEIVE_NEW_TASK:
+        newState[action.category.id] = action.category;
         return newState;
     default:
         return state;

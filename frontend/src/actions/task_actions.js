@@ -8,9 +8,9 @@ export const REMOVE_TASK = "REMOVE_TASK"
 export const RECEIVE_TASK = 'RECEIVE_TASK';
 
 
-export const receiveNewTask = task => ({
+export const receiveNewTask = category => ({
     type: RECEIVE_NEW_TASK,
-    task
+    category
 })
 
 export const removeTask = taskId => ({
@@ -26,7 +26,7 @@ export const receiveTask = taskId => ({
 //Create a task
 export const newTask = data => dispatch => (
     createTask(data)
-        .then(task => dispatch(receiveNewTask(task)))
+        .then(category => dispatch(receiveNewTask(category)))
         .catch(err => console.log(err))
 )
 
