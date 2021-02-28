@@ -20,12 +20,11 @@ const TaskList = (props) => {
   return (
     <div id="task-list-container" className="hide">
       <div className="task-list-title">
-        <h1>Task Name</h1>
-        <h1>Hour</h1>
+        <h1>Today's Tasks</h1>
       </div>
       <div className="task-list-entries">
-        {grids.map((gridItem) => {
-          return <TaskListItem task={gridItem} />;
+        {grids.map((gridItem, idx) => {
+          return <TaskListItem key={idx} task={gridItem} />;
         })}
       </div>
     </div>
