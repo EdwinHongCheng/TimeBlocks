@@ -24,9 +24,9 @@ In order for a task to be re-assigned to a different category, the task's title 
 
 ### Slidable Menus
 
-On the left side of the screen, when the Show Categories button is clicked, a list of creaated categories and their tasks can be viewed in a slide-out menu. In thee categories menu, each category title is shown along with a number representing the number of tasks in the category. Below each category, colored blocks are displayed representing each task. These blocks are able to be dragged onto the hours grid. 
+On the left side of the screen, when the Categories button is clicked, a list of creaated categories and their tasks can be viewed in a slide-out menu. In thee categories menu, each category title is shown along with a number representing the number of tasks in the category. Below each category, colored blocks are displayed representing each task. These blocks are able to be dragged onto the hours grid. 
 
-On the right side of the screen, when the Show Task List button is clicked, a list of tasks currently placed on the hours grid is shown. The task name is displyed, along with the hour of the day it is assiggned to. The tasks are sorted by the earliest hour. 
+On the right side of the screen, when the Task List button is clicked, a list of tasks currently placed on the hours grid is shown. The task name is displyed, along with the hour of the day it is assiggned to. The tasks are sorted by the earliest hour. 
 
 [SCREENSHOT/Gif]
 
