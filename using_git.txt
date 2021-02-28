@@ -1,4 +1,4 @@
-In terminal:
+git In terminal:
 
 1. git checkout -b <name-of-branch>
     -Switches to new branch
