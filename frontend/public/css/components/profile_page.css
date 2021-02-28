@@ -60,6 +60,10 @@
     font-weight: bold;
     font-size: 22px;
     margin-top: 10px;
+
+    text-align: center;
+    width: 160px;
+    overflow-wrap: break-word;
 }
 
 .friends-list {
