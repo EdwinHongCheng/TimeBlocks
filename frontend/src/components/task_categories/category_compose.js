@@ -29,15 +29,34 @@ class CategoryCompose extends React.Component {
                   id="createCategoryTitle"
                 />
                 
-                <input
-                    type='text'
-                    placeholder= "Category color..."
+                {/* <input
+                    type='color'
+                    // placeholder= "Category color..."
                     value={this.state.color}
                     onChange={this.update('color')}
                     id="createCategoryColor"
-                />
+                /> */}
+                
+                <select name="colors" id="category-color-select" onChange={this.update('color')}>
+                    <option value="">--Please choose a color--</option>
+                    <option value="#ff3232">Red</option>
+                    <option value="#ffd27f">Orangle</option>
+                    <option value="#e9f60e">Yellow</option>
+                    <option value="#b9ffb7">Green</option>
+                    <option value="#b3f6f2">Blue</option>
+                    <option value="#b899ff">Purple</option>
+                    <option value="#c0c0c0">Grey</option>
+                    <option value="#ffc5d9">Pink</option>
+                    <option value="#d29494">Brown</option>
+                    <option value="#f8f8ff">White</option>
+                </select>
+
               <button type='submit' id="createCategoryButton">Create Category</button>
+              
             </form>
+
+
+            
           </div>
         );
       }
@@ -45,4 +64,3 @@ class CategoryCompose extends React.Component {
      
     export default CategoryCompose;
     
-

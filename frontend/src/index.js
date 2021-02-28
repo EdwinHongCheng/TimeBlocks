@@ -7,7 +7,7 @@ import configureStore from "./store/store";
 
 import { setAuthToken } from "./util/session_api_util";
 import { logout } from "./actions/session_actions"; 
-// import {newTask} from "./actions/task_actions"
+import {newTask, updateTaskTitle, destroyTask} from "./actions/task_actions"
 import {newCategory} from "./actions/category_actions"
 // [TEST]
 import { getFriends, createFriend, deleteFriend } from "./util/friend_api_util";
@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchCategories = fetchCategories
   // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
+<<<<<<< HEAD
+  // window.store = store;
+  // window.newTask = newTask;
+=======
 
   // friend_api_utils
   // window.getFriends = getFriends;
@@ -56,10 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.destroyFriend = destroyFriend;
   window.store = store;
   // window.newTask = newTask
+>>>>>>> main
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
   // window.deleteTask = deleteTask
-
+  // window.destroyTask = destroyTask;
+  // window.updateTaskTitle = updateTaskTitle;
 
   ReactDOM.render(<Root store={store} />, root);
 });
