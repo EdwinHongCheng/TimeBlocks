@@ -1,16 +1,17 @@
 #task-list-container {
-    width: 60vw;
+    width: 35vw;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    transition: transform .5s cubic-bezier(0, 0.52, 0, 1);
+    transition: transform 0.5s cubic-bezier(0, 0.52, 0, 1);
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;
     border-left: 1px solid #ffe6b7;
     display: grid;
     grid-template-rows: 50px 1fr;
+    z-index: 1000;
 }
 
 #task-list-container.show {
@@ -18,7 +19,7 @@
 }
 
 #task-list-container.hide {
-    transform: translate3d(61vw, 0, 0);
+    transform: translate3d(36vw, 0, 0);
 }
 
 .task-list-title {
