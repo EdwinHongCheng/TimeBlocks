@@ -44,23 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchCategories = fetchCategories
   // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
-<<<<<<< HEAD
   // window.store = store;
   // window.newTask = newTask;
-=======
-
-  // friend_api_utils
-  // window.getFriends = getFriends;
-  window.createFriend = createFriend;
-  window.deleteFriend = deleteFriend;
-  // friend_actions - thunk action creators [
-  // [TEST RESULTS SO FAR] fetchFriends works. fetchFriend = works but weird
-  window.fetchFriends = fetchFriends;
-  window.fetchFriend = fetchFriend;
-  window.destroyFriend = destroyFriend;
-  window.store = store;
-  // window.newTask = newTask
->>>>>>> main
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
   // window.deleteTask = deleteTask
