@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
 
-import CategoryComposeContainer from "../task_categories/category_compose_container"
 
 class HomePage extends React.Component {
   constructor(props) {
@@ -81,7 +80,6 @@ class HomePage extends React.Component {
       <div className="home-container" onClick={this.closePanels}>
         <TaskCategoriesContainer />
         <TaskListContainer />
-        {/* <CategoryComposeContainer/> */}
 
         <div className="panel-buttons">
           <input
