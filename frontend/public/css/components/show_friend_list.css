@@ -2,11 +2,16 @@
     margin-top: 30px;
     width: 322px;
     height: 468px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px #b4ac7c;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;
     display: grid;
     grid-template-rows: 50px 1fr;
+
+    cursor: pointer;
 }
 
 .friend-task-list-title {
@@ -17,10 +22,6 @@
     color: #bb8a3b;
     justify-content: space-between;
     border-bottom: 1px solid #e6cfa4;
-}
-
-.friend-task-list-title h1 {
-    cursor: default;
 }
 
 .friend-task-list-entries {
@@ -38,4 +39,18 @@
 
 .friend-task-list-item h1 {
     cursor: default;
+}
+
+#friend-task-list-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------------------------------------- */
+.show-friend-list-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    height: 40px;
+    border-bottom: 1px solid #ffe6b7;
 }

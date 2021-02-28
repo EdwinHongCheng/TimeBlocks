@@ -11,7 +11,8 @@ import { clearFriendErrors } from "../../actions/friend_actions";
 const mapStateToProps = (state) => {
     return {
         currentUserId: state.session.user.id,
-        friends: state.friends
+        friends: state.friends,
+        currentUser: state.session.user
     }
 }
 
