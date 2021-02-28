@@ -1,52 +1,38 @@
 import {createTask, editTaskTitle, editTaskCategory, deleteTask} from "../util/task_api_util"
 
-
-export const RECEIVE_NEW_TASK = "RECEIVE_NEW_TASK"
-
-export const REMOVE_TASK = "REMOVE_TASK"
+export const UPDATE_CATEGORY = "UPDATE_CATEGORY";
 
 export const RECEIVE_TASK = 'RECEIVE_TASK';
 
-
-export const receiveNewTask = task => ({
-    type: RECEIVE_NEW_TASK,
-    task
+const updateCategory = category => ({
+    type: UPDATE_CATEGORY,
+    category
 })
-
-export const removeTask = taskId => ({
-    type: REMOVE_TASK,
-    taskId
-})
-
-export const receiveTask = taskId => ({
-    type: RECEIVE_TASK,
-    taskId
-}) 
 
 //Create a task
 export const newTask = data => dispatch => (
     createTask(data)
-        .then(task => dispatch(receiveNewTask(task)))
+        .then(category => dispatch(updateCategory(category.data)))
         .catch(err => console.log(err))
 )
 
 //Delete a task
 export const destroyTask = taskId => dispatch => (
     deleteTask(taskId)
-        .then(() => dispatch (removeTask(taskId)))
+        .then((category) => dispatch(updateCategory(category.data)))
         .catch(err => console.log(err))
 )
 
 //Edit task title
 export const updateTaskTitle = (taskId, data) => dispatch => (
     editTaskTitle(taskId, data)
-        .then(id => dispatch(receiveTask(id.taskId)))
+        .then(cat => dispatch(updateCategory(cat.data)))
         .catch(err => console.log(err))
 )
 
-// //Edit task category
+// //Edit task category DO NOT IMPLEMENT FOR NOW
 export const updateTaskCategory = (taskId, data) => dispatch => (
     editTaskCategory(taskId, data)
-        .then(task => dispatch(receiveNewTask(task)))
+        .then(task => dispatch(updateCategory(task)))
         .catch(err => console.log(err))
 )
