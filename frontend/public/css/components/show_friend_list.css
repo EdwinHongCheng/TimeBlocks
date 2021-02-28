@@ -39,3 +39,7 @@
 .friend-task-list-item h1 {
     cursor: default;
 }
+
+#friend-task-list-container::-webkit-scrollbar {
+    display: none;
+}

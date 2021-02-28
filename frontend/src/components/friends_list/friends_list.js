@@ -26,9 +26,9 @@ class FriendsList extends React.Component {
         })
 
         return (
-            <>
+            <ul className={`friends-dropdown-true`} >
                 {mappedFriends}
-            </>
+            </ul>
         );
     }
 }
