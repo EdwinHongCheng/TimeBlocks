@@ -150,3 +150,7 @@ button#createCategoryButton:hover {
     color: red;
     cursor: pointer;
 }
+
+.task-entry i:hover{
+    color: rgb(248, 94, 94)
+}
