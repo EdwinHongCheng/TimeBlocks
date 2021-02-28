@@ -16,10 +16,14 @@ router.post('/', passport.authenticate('jwt', { session: false }),
                             email: friend.email,
                             name: friend.name
                         }
-                        currentUser.friends.push(friend.id);
-                        currentUser.save()
-                            .then(() => res.json(info))
-                            .catch((errors) => res.json(errors));
+                        if (currentUser.friends.includes(friend.id)) {
+                            res.json({error: "Already your friend!"});
+                        } else {
+                            currentUser.friends.push(friend.id);
+                            currentUser.save()
+                                .then(() => res.json(info))
+                                .catch((errors) => console.log(errors));
+                        }
                     })
                     .catch(() => res.json({error: "user not found"}))
             })
