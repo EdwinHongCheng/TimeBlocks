@@ -3,8 +3,6 @@ import { useDrag } from "react-dnd"
 
 const Task = (props) => {
     const Task = useRef();
-    
-    // console.log(props.task)
 
     const [{isDragging} , drag] = useDrag(() => ({
         item: {type: "TASK", id: props.task._id, color: props.color, title: props.task.title},

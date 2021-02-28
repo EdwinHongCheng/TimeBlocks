@@ -26,6 +26,7 @@ class CategoryCompose extends React.Component {
                   placeholder= "Category title..."
                   value={this.state.title}
                   onChange={this.update('title')}
+                  id="createCategoryTitle"
                 />
                 
                 <input
@@ -33,8 +34,9 @@ class CategoryCompose extends React.Component {
                     placeholder= "Category color..."
                     value={this.state.color}
                     onChange={this.update('color')}
+                    id="createCategoryColor"
                 />
-              <button type='submit'>Create Category</button>
+              <button type='submit' id="createCategoryButton">Create Category</button>
             </form>
           </div>
         );
