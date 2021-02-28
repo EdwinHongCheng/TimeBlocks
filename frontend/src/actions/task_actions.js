@@ -17,21 +17,21 @@ export const receiveTask = taskId => ({
 //Create a task
 export const newTask = data => dispatch => (
     createTask(data)
-        .then(category => dispatch(updateCategory(category)))
+        .then(category => dispatch(updateCategory(category.data)))
         .catch(err => console.log(err))
 )
 
 //Delete a task
 export const destroyTask = taskId => dispatch => (
     deleteTask(taskId)
-        .then((category) => dispatch (updateCategory(category)))
+        .then((category) => dispatch (updateCategory(category.data)))
         .catch(err => console.log(err))
 )
 
 //Edit task title
 export const updateTaskTitle = (taskId, data) => dispatch => (
     editTaskTitle(taskId, data)
-        .then(cat => dispatch(updateCategory(cat)))
+        .then(cat => dispatch(updateCategory(cat.data)))
         .catch(err => console.log(err))
 )
 

@@ -17,8 +17,8 @@ const CategoriesReducer = (state = {}, action) => {
         delete newState[action.catId];
         return newState;
     case UPDATE_CATEGORY:
-        newState[action.category.id] = action.category.data;
-        return newState;
+        // newState[action.category.id] = action.category.data;
+        return Object.assign(newState, { [action.category.id]: action.category});
     default:
         return state;
     }
