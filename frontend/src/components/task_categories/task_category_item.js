@@ -18,7 +18,10 @@ const TaskCategoryItem = (props) => {
           {props.category.tasks.map((task) => {
             return (
                 <div className="task-entry" key={task._id}>
-                    <h1>{task.title}</h1>
+                    <div className="task-icon-title">
+                      <i class="far fa-times-circle"></i>
+                      <h1>{task.title}</h1>
+                    </div>
                     <Task task={task} color={props.category.color} />
                 </div>
             )
