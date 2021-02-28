@@ -76,6 +76,7 @@ class LoginForm extends React.Component {
 
           <img className="logo" src={TimeBlocksLogo} alt="TimeBlocks Logo" />
           <button className= "demoButton" onClick={this.demoLogin}>Demo Log In</button>
+
           <input
             type="text"
             value={this.state.email}
