@@ -12,8 +12,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchCategories: userId => dispatch(fetchCategories(userId)),
-        // deleteCategory: catId => dispatch(destroyCategory(catId))
+        destroyCategory: catId => dispatch(destroyCategory(catId))
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TaskCategories);
+
