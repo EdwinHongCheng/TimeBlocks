@@ -137,3 +137,20 @@ button#createCategoryButton {
 button#createCategoryButton:hover {
     font-weight: bold;
 }
+
+.task-entry .task-icon-title{
+    display: flex;
+    width: 100%;
+    border-bottom: none;
+    align-items: center;
+}
+
+.task-entry i{
+    margin-right: 5px;
+    color: red;
+    cursor: pointer;
+}
+
+.task-entry i:hover{
+    color: rgb(248, 94, 94)
+}

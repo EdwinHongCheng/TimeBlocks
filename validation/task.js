@@ -7,9 +7,9 @@ module.exports = function validateTaskInput(data) {
     data.title = validText(data.title) ? data.title : '';
     data.catId = validText(data.catId) ? data.catId : '';
 
-    // if (!Validator.isLength(data.title, { max: 25 })) {
-    //     errors.title = 'Titles have a max length of 25 characters;';
-    // }
+    if (!Validator.isLength(data.title, { max: 20 })) {
+        errors.title = 'Titles have a max length of 25 characters;';
+    }
 
     if (Validator.isEmpty(data.title)) {
         errors.title = 'Title field is required';
