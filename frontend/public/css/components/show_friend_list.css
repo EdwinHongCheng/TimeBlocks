@@ -2,6 +2,9 @@
     margin-top: 30px;
     width: 322px;
     height: 468px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px #b4ac7c;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;

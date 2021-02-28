@@ -96,7 +96,7 @@ class ProfilePage extends React.Component {
                     </div>
 
                     <div className="prof-page-right">
-                        <p className="user-name">John Wick</p>
+                        <p className="user-name">{this.props.currentUser.name}</p>
 
                         <div className="profile-page-buttons">
                             {thirdButton}
