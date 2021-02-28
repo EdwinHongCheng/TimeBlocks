@@ -121,3 +121,19 @@ button#deleteCategory:hover {
     color: red;
     font-weight: bold;
 }
+
+select#category-color-select {
+    margin-left: 10px;
+}
+
+select#category-color-select {
+    margin-left: 10px;
+}
+
+button#createCategoryButton {
+    margin-top: 5px;
+}
+
+button#createCategoryButton:hover {
+    font-weight: bold;
+}
