@@ -31,7 +31,7 @@ class CategoryCompose extends React.Component {
                 />
                 
                 <select name="colors" id="category-color-select" onChange={this.update('color')}>
-                    <option value="">--Please choose a color--</option>
+                    <option value="">--Choose a color--</option>
                     <option value="#ff3232">Red</option>
                     <option value="#ffd27f">Orangle</option>
                     <option value="#e9f60e">Yellow</option>
