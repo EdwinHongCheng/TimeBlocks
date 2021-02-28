@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 
 import FriendTaskBucketContainer from "../friend_task/friend_task_bucket_container";
 
-// [TEST] copy of "grid.js" (may edit it, change CSS, etc.)
-
+// [WORKS] copy of "grid.js" (may edit it, change CSS, etc.)
 const ShowFriendGrid = (props) => { 
   let tasks = []
   for (let i = 1; i < 25; i++) {
@@ -11,7 +10,7 @@ const ShowFriendGrid = (props) => {
   }
 
   useEffect(() => {
-      props.fetchUserGrids(props.currentUser.id)
+      props.fetchUserGrids(props.currentFriend.id)
   }, [])
 
   return ( 
@@ -25,7 +24,7 @@ const ShowFriendGrid = (props) => {
 
         return (
           <FriendTaskBucketContainer
-            // color={color} 
+            color={color} 
             key={time} 
             time={time} 
           />

@@ -7,7 +7,7 @@ import ShowFriendGrid from "./show_friend_grid";
 // - MUST Change - current user to friend (how?)
 const mapStateToProps = (state, ownProps) => {
     return {
-        currentUser: state.session.user,
+        currentFriend: ownProps.currentFriend,
         grids: state.grids
     }
 }

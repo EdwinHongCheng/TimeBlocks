@@ -29,13 +29,13 @@ class ShowFriend extends React.Component {
         if (this.state.showGridOverList) {
             showGridOrList = (
                 <div onClick={this.handleShowGridOverList}>
-                    <ShowFriendGridContainer/>
+                    <ShowFriendGridContainer currentFriend={this.props.currentFriend}/>
                 </div>
             );
         } else {
             showGridOrList = (
                 <div onClick={this.handleShowGridOverList}>
-                    <ShowFriendListContainer />
+                    <ShowFriendListContainer currentFriend={this.props.currentFriend}/>
                 </div>
             );
         }
