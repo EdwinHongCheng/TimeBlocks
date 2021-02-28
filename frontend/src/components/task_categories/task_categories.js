@@ -14,11 +14,10 @@ const TaskCategories = (props) => {
         <h1>Categories</h1>
       </div>
       <div className="categories-list">
-        {props.categories.map((category) => {
+      {props.categories.map((category) => {
           return <TaskCategoryItem key={category._id} category={category} />;
         })}
         <CategoryComposeContainer/>
-
       </div>
 
     </div>
