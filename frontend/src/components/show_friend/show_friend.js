@@ -17,6 +17,10 @@ class ShowFriend extends React.Component {
         this.handleShowGridOverList = this.handleShowGridOverList.bind(this)
     }
 
+    componentWillMount() {
+        this.props.fetchFriends();
+    }
+
     // [WORKS] Tap -> switches between Friend's Grid + Friend's Task List
     handleShowGridOverList() {
         let newState = !this.state.showGridOverList;
@@ -24,18 +28,26 @@ class ShowFriend extends React.Component {
     }
 
     render() {
+        // [WORKS] can refresh on Friend's Show Page if you are friends with them
+        // [ISSUE] if logged into another account:
+        // -> tries to visit a friend's showpage you don't have access to
+        // -> screen = white (returns null)
+        if (!this.props.currentFriend) { 
+            // this.props.history.push("/profile-page"); 
+            return null;
+        }
 
         let showGridOrList;
         if (this.state.showGridOverList) {
             showGridOrList = (
                 <div onClick={this.handleShowGridOverList}>
-                    <ShowFriendGridContainer/>
+                    <ShowFriendGridContainer currentFriend={this.props.currentFriend}/>
                 </div>
             );
         } else {
             showGridOrList = (
                 <div onClick={this.handleShowGridOverList}>
-                    <ShowFriendListContainer />
+                    <ShowFriendListContainer currentFriend={this.props.currentFriend}/>
                 </div>
             );
         }
@@ -59,7 +71,7 @@ class ShowFriend extends React.Component {
             <div className="show-friend-all">
 
                 <p className="friend-show-header"
-                >Hermione Granger's Profile Page</p>
+                >{this.props.currentFriend.name}'s Profile Page</p>
                 <p className="friend-show-straightline"></p>
 
                 <Link className="show-friend-back-button" to="/profile-page">
