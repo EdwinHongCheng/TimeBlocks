@@ -33,8 +33,10 @@ router.post('/', passport.authenticate('jwt', { session: false }),
 //remove friend
 router.delete('/delete', passport.authenticate('jwt', { session: false }),
     (req, res) => {
+        console.log(req.body)
         User.findById(req.user.id)
             .then(user => {
+                console.log(req.body);
                 const userIdx = user.friends.indexOf(req.body.userId);
                 user.friends.splice(userIdx, 1);
                 user.save()

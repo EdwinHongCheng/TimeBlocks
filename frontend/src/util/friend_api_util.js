@@ -18,7 +18,7 @@ export const createFriend = email => {
 // [WORKS] 
 // [NOTE] MUST write object with key = userId (NOT id)
 export const deleteFriend = friendId => {
-    return axios.delete(`/api/friends/delete`, friendId)
+    return axios.delete(`/api/friends/delete`, {data: friendId})
 }
 
 //Tested and working
