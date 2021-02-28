@@ -12,7 +12,8 @@ const TaskBucket = (props) => {
         props.updateUserGrid(props.time, {
           taskId: item.id,
           title: item.title,
-          color: item.color
+          color: item.color,
+          userId: props.currentUser.id
         })
     },
   }));

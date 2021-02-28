@@ -87,10 +87,12 @@ router.put('/updateGridTask/:hour', passport.authenticate('jwt', { session: fals
     (req, res) => {
         Grid.findOne({hour: req.params.hour})
             .then((grid) => {
+                
+                console.log(grid)
                 if (!grid) {
                     const newGrid = new Grid({
                         taskId: req.body.taskId,
-                        userId: req.user.id,
+                        userId: req.body.userId,
                         hour: req.params.hour
                     })
                     newGrid.save()
