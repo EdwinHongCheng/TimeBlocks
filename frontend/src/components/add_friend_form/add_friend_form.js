@@ -11,9 +11,9 @@ class AddFriendForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    // [WORKS] clears errors
+    // [TEST]
     componentWillUnmount() {
-        this.props.clearErrors();
+        this.props.clearFriendErrors();
     }
 
     update(field) {
@@ -25,7 +25,8 @@ class AddFriendForm extends React.Component {
     // [WORKS BUT BUGGY]
     handleSubmit(e) {
         e.preventDefault();
-        this.props.newFriend(this.state)
+        this.props.clearFriendErrors();
+        this.props.newFriend(this.state);
     }
     
     render() {

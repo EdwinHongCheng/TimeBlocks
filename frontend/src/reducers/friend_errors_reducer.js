@@ -5,10 +5,9 @@ const _nullErrors = [];
 const FriendErrorsReducer = (prevState = _nullErrors, action) => {
     Object.freeze(prevState);
 
-    let nextState = [...prevState];
-
     switch (action.type) {
         case RECEIVE_FRIEND_ERRORS:
+            let nextState = [];
             action.errors.forEach(error => {
                 nextState.push(error)
             }) 
