@@ -85,10 +85,8 @@ parseGrid = async (grid, res) => {
 //if not create grid; if it does then update
 router.put('/updateGridTask/:hour', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Grid.findOne({hour: req.params.hour})
+        Grid.findOne({hour: req.params.hour, id: req.body.userId})
             .then((grid) => {
-                
-                console.log(grid)
                 if (!grid) {
                     const newGrid = new Grid({
                         taskId: req.body.taskId,
