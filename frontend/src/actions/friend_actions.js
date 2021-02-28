@@ -43,10 +43,11 @@ export const newFriend = email => dispatch => {
         .catch(err => console.log(err))
 }
 
-// [NOT WORKING YET - MUST FIX slice of state]
-// 
+// [NOT WORKING YET]
+// - removes for current global slice of state, 
+// -> but doesnt remove from DB (???)
 export const destroyFriend = friendId => dispatch => {
     return FriendApiUtil.deleteFriend(friendId)
-        .then(() => dispatch(removeFriend(friendId)))
+        .then(() => dispatch(removeFriend(friendId.userId)))
         .catch(err => console.log(err))
 }

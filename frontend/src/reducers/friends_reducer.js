@@ -16,9 +16,9 @@ const FriendsReducer = (oldState = {}, action) => {
             return nextState;
 
         // [STILL NEED TO TEST]
-        // case REMOVE_FRIEND:
-        //     delete nextState[action.friendId]
-        //     return nextState;
+        case REMOVE_FRIEND:
+            delete nextState[action.friendId]
+            return nextState;
     
         default:
             return oldState;
