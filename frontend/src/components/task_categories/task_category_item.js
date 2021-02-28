@@ -14,7 +14,8 @@ const TaskCategoryItem = (props) => {
     return (
       <div className="category-container">
         <div className="category-info">
-         <button id= "deleteCategory" onClick={() => props.destroyCategory(props.category._id)}>&#10006;</button>
+        <h2 id="delete-category" onClick={() => props.destroyCategory(props.category._id)}>x</h2>
+         {/* <button className="delete-category" onClick={() => props.destroyCategory(props.category._id)}>&#10006;</button> */}
           <h1>{props.category.title}</h1>
           <h2>{props.category.tasks.length}</h2>
         </div>
@@ -28,7 +29,7 @@ const TaskCategoryItem = (props) => {
                     <div className="task-icon-title">
                       <i onClick={() => handleClick(task._id)}
                       id="remove-task-icon"
-                      class="far fa-times-circle"></i>
+                      className="far fa-times-circle"></i>
                       <h1>{task.title}</h1>
                     </div>
                     <Task task={task} color={props.category.color} />

@@ -67,6 +67,16 @@
     border-radius: 50%;
 }
 
+#delete-category {
+    margin: 20px 10px;
+    line-height: 0.8;
+    cursor: pointer;
+}
+
+#delete-category:hover {
+    background-color: #a99f83;
+}
+
 .category-tasks {
     background-color: ffeeb7;
     border-bottom: 1px solid #cab690;
