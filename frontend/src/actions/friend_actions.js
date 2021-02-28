@@ -4,7 +4,6 @@ export const RECEIVE_FRIENDS = "RECEIVE_FRIENDS";
 export const RECEIVE_FRIEND = "RECEIVE_FRIEND";
 export const REMOVE_FRIEND = "REMOVE_FRIEND";
 
-// [TEST] Action Creators
 const receiveFriends = friends => {
     return {
         type: RECEIVE_FRIENDS,
@@ -26,11 +25,7 @@ const removeFriend = friendId => {
     }
 }
 
-// [TEST] not sure what friend api util requests return 
-// -> best guess (?)
-// [TEST] Thunk Action Creators
-
-// [WORKS] not anymore???
+// [TEST][ALL WORK] Thunk Action Creators 
 export const fetchFriends = () => dispatch => {
     return FriendApiUtil.getFriends()
         .then(data => dispatch(receiveFriends(data.data)))
@@ -43,9 +38,6 @@ export const newFriend = email => dispatch => {
         .catch(err => console.log(err))
 }
 
-// [NOT WORKING YET]
-// - removes for current global slice of state, 
-// -> but doesnt remove from DB (???)
 export const destroyFriend = friendId => dispatch => {
     return FriendApiUtil.deleteFriend(friendId)
         .then(() => dispatch(removeFriend(friendId.userId)))

@@ -7,19 +7,14 @@ const FriendsReducer = (oldState = {}, action) => {
     let nextState = Object.assign({}, oldState);
 
     switch (action.type) {
-        // [WORKS]
         case RECEIVE_FRIENDS:
             return action.friends;
-        // [WORKS]
         case RECEIVE_FRIEND:
             nextState[action.friend.id] = action.friend
             return nextState;
-
-        // [STILL NEED TO TEST]
         case REMOVE_FRIEND:
             delete nextState[action.friendId]
             return nextState;
-    
         default:
             return oldState;
     }
