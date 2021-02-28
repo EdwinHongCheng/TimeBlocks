@@ -24,7 +24,7 @@ export const newTask = data => dispatch => (
 //Delete a task
 export const destroyTask = taskId => dispatch => (
     deleteTask(taskId)
-        .then((category) => dispatch (updateCategory(category.data)))
+        .then((category) => dispatch(updateCategory(category.data)))
         .catch(err => console.log(err))
 )
 

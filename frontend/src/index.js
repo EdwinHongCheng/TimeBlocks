@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
   ///////TEST////
   // window.axios = axios
   // window.fetchCategories = fetchCategories
-  window.newCategory = newCategory
+  // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
-  window.store = store;
-  window.newTask = newTask;
+  // window.store = store;
+  // window.newTask = newTask;
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
   // window.deleteTask = deleteTask
-  window.destroyTask = destroyTask;
-  window.updateTaskTitle = updateTaskTitle;
+  // window.destroyTask = destroyTask;
+  // window.updateTaskTitle = updateTaskTitle;
 
   ReactDOM.render(<Root store={store} />, root);
 });
