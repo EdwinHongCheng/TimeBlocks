@@ -28,7 +28,7 @@ class TaskForm extends React.Component {
                 type="text" onChange={this.handleInput} id="task-input"
                 placeholder="Task Title" value={this.state.title}
                 ></input>
-                <button id="task-button">Add Task</button>
+                <button id="task-button">Add</button>
             </form>
         )
     }
