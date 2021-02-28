@@ -5,7 +5,7 @@ const gridReducer = (prevState={}, action) => {
 
     switch(action.type) {
         case RECEIVE_USER_GRIDS:
-            return Object.assign({}, prevState, action.grids)
+            return Object.assign({}, action.grids)
         case RECEIVE_USER_GRID:
             return Object.assign({}, prevState, action.grid)
         default:

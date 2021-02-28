@@ -12,17 +12,17 @@ const receiveFriends = friends => {
     }
 }
 
-const receiveFriend = friend => {
+const receiveFriend = friends => {
     return {
         type: RECEIVE_FRIEND,
-        friend
+        friends
     }
 }
 
-const removeFriend = friendId => {
+const removeFriend = friends => {
     return {
         type: REMOVE_FRIEND,
-        friendId
+        friends
     }
 }
 
@@ -41,6 +41,8 @@ export const fetchFriend = email => dispatch => {
         .catch(err => console.log(err))
 }
 
+// [NOT WORKING YET - MUST FIX slice of state]
+// 
 export const destroyFriend = friendId => dispatch => {
     return FriendApiUtil.deleteFriend(friendId)
         .then(() => dispatch(removeFriend(friendId)))

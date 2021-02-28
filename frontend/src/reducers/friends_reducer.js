@@ -13,7 +13,7 @@ const FriendsReducer = (oldState = {}, action) => {
         // [JANKY BUT WORKS FOR NOW (edwin)]
         case RECEIVE_FRIEND:
             // [NOTE] as of now, action.friend = object of all current friends
-            return action.friend;
+            return action.friends;
 
         // [STILL NEED TO TEST]
         case REMOVE_FRIEND:
