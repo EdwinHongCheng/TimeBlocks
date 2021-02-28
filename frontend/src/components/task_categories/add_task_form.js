@@ -19,6 +19,7 @@ class TaskForm extends React.Component {
         const data = { title: this.state.title,
                         catId: this.props.catId };
         this.props.newTask(data);
+        this.setState({ title: "" })
     }
 
     render() {
