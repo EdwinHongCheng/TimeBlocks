@@ -7,7 +7,8 @@ TimeBlocks is a user-friendly time management apps that helps you keep track of 
 
 TimeBlocks is a MERN project.
 
-[SCREENSHOT/Gif]
+![alt text](https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/recording%20(1).gif
+ "Basic Layout") 
 
 ## Features
 
