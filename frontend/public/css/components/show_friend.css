@@ -14,10 +14,10 @@
 
     color: black;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .friend-show-straightline {  
@@ -25,7 +25,7 @@
     text-align: center; 
     border-bottom: 1px solid #000; 
     line-height: 0.1em;
-    margin-bottom: 30px; 
+    margin-bottom: 20px; 
 }
 
 .show-friend-back-button {
@@ -38,7 +38,7 @@
     padding: 10px;
     text-align: center;
     background-color: rgb(84, 12, 201);
-    margin-bottom: 30px;
+    margin-bottom: 26px;
 }
 
 .show-friend-back-button:hover {
