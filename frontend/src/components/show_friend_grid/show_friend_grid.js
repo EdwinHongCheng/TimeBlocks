@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import TaskBucketContainer from "../task/task_bucket_container";
+import FriendTaskBucketContainer from "../friend_task/friend_task_bucket_container";
 
 // [TEST] copy of "grid.js" (may edit it, change CSS, etc.)
 
@@ -24,7 +24,7 @@ const ShowFriendGrid = (props) => {
         }
 
         return (
-          <TaskBucketContainer 
+          <FriendTaskBucketContainer
             // color={color} 
             key={time} 
             time={time} 

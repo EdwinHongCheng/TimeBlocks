@@ -4,8 +4,8 @@ import { fetchUserGrids } from "../../actions/grid_actions"
 import ShowFriendGrid from "./show_friend_grid";
 
 // [NOTE] copy of "grid_container.js" - may edit it, etc.
-// - MUST Change - current user to friend
-const mapStateToProps = state => {
+// - MUST Change - current user to friend (how?)
+const mapStateToProps = (state, ownProps) => {
     return {
         currentUser: state.session.user,
         grids: state.grids
