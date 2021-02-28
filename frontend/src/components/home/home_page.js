@@ -61,7 +61,9 @@ class HomePage extends React.Component {
       "task-categories-container"
     ).classList;
 
-    let allowedElements = ["show-categories", "show-tasks", "createCategoryTitle", "createCategoryColor", "createCategoryButton", "deleteCategory", "category-color-select"]
+    let allowedElements = ["show-categories", "show-tasks", "createCategoryTitle",
+                          "createCategoryColor", "createCategoryButton", "deleteCategory",
+                          "category-color-select", "task-input", "task-button"]
     if(allowedElements.includes(e.target.id)) return;
 
     if (taskListContainer.contains("show")) {
