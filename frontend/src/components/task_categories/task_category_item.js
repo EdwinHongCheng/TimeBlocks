@@ -1,10 +1,12 @@
 import React from 'react';
 import Task from "../task/task"
+// import {destroyCategory} from "../../actions/category_actions"
 
 const TaskCategoryItem = (props) => {
     return (
       <div className="category-container">
         <div className="category-info">
+         <button id= "deleteCategory" onClick={() => props.destroyCategory(props.category._id)}>Delete</button>
           <h1>{props.category.title}</h1>
           <h2>{props.category.tasks.length}</h2>
         </div>

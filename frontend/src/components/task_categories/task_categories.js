@@ -15,7 +15,7 @@ const TaskCategories = (props) => {
       </div>
       <div className="categories-list">
       {props.categories.map((category) => {
-          return <TaskCategoryItem key={category._id} category={category} />;
+          return <TaskCategoryItem key={category._id} category={category} destroyCategory = {props.destroyCategory}/>;
         })}
         <CategoryComposeContainer/>
       </div>

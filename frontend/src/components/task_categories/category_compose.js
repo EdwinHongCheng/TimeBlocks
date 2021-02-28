@@ -30,8 +30,8 @@ class CategoryCompose extends React.Component {
                 />
                 
                 <input
-                    type='text'
-                    placeholder= "Category color..."
+                    type='color'
+                    // placeholder= "Category color..."
                     value={this.state.color}
                     onChange={this.update('color')}
                     id="createCategoryColor"
