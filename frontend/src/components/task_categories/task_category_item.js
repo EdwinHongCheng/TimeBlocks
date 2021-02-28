@@ -11,7 +11,7 @@ const TaskCategoryItem = (props) => {
           <h2>{props.category.tasks.length}</h2>
         </div>
         <div className="add-task-button">
-          
+          ADD TASK BUTTON
         </div>
         <div className="category-tasks">
           {props.category.tasks.map((task) => {
