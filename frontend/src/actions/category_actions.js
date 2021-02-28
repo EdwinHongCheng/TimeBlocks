@@ -35,7 +35,7 @@ export const fetchCategories = userId => dispatch => {
 //Create a category
 export const newCategory = data => dispatch => (
     createCategory(data)
-        .then(category => dispatch(receiveNewCategory(category)))
+        .then(category => dispatch(receiveNewCategory(category.data)))
         .catch(err => console.log(err))
 )
 
