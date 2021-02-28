@@ -44,10 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.fetchCategories = fetchCategories
   // window.newCategory = newCategory
   // window.destroyCategory = destroyCategory
-<<<<<<< HEAD
-  // window.store = store;
-  // window.newTask = newTask;
-=======
 
   // friend_api_utils
   // window.getFriends = getFriends;
@@ -60,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.destroyFriend = destroyFriend;
   window.store = store;
   // window.newTask = newTask
->>>>>>> main
   // window.editTaskTitle = editTaskTitle
   // window.editTaskCategory = editTaskCategory
   // window.deleteTask = deleteTask
