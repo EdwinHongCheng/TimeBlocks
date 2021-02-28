@@ -9,11 +9,6 @@ const updateCategory = category => ({
     category
 })
 
-export const receiveTask = taskId => ({
-    type: RECEIVE_TASK,
-    taskId
-}) 
-
 //Create a task
 export const newTask = data => dispatch => (
     createTask(data)
@@ -35,7 +30,7 @@ export const updateTaskTitle = (taskId, data) => dispatch => (
         .catch(err => console.log(err))
 )
 
-// //Edit task category
+// //Edit task category DO NOT IMPLEMENT FOR NOW
 export const updateTaskCategory = (taskId, data) => dispatch => (
     editTaskCategory(taskId, data)
         .then(task => dispatch(updateCategory(task)))
