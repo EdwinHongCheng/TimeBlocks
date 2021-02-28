@@ -5,7 +5,7 @@ import { newFriend, clearFriendErrors } from "../../actions/friend_actions";
 
 const mapStateToProps = (state) => {
     return {
-        errors: state.errors.session,
+        errors: state.errors.friend,
     }
 }
 
