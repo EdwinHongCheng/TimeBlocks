@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require('passport');
 const User = require('../../models/User');
+const arrToObj = require('../../util/methods');
 
 //add friend
 router.post('/', passport.authenticate('jwt', { session: false }),
@@ -53,7 +54,7 @@ router.get('/get', passport.authenticate('jwt', { session: false }),
                             }
                             friendsInfo.push(info);
                         });
-                        res.json(friendsInfo);
+                        res.json(arrToObj(friendsInfo, "_id"));
                     })
                     .catch(errors => res.json(errors));
             })
