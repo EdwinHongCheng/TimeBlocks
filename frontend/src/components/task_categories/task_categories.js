@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import TaskCategoryItem from "./task_category_item"
+import CategoryComposeContainer from "./category_compose_container"
+
 
 const TaskCategories = (props) => {
   useEffect(() => {
@@ -12,9 +14,10 @@ const TaskCategories = (props) => {
         <h1>Categories</h1>
       </div>
       <div className="categories-list">
-        {props.categories.map((category) => {
-          return <TaskCategoryItem key={category._id} category={category} />;
+      {props.categories.map((category) => {
+          return <TaskCategoryItem key={category._id} category={category} destroyCategory = {props.destroyCategory}/>;
         })}
+        <CategoryComposeContainer/>
       </div>
     </div>
   );

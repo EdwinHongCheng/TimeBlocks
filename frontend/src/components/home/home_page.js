@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import TaskCategoriesContainer from "../task_categories/task_categories_container";
 import TaskListContainer from "../task_list/task_list_container";
 
+
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
@@ -60,7 +61,7 @@ class HomePage extends React.Component {
       "task-categories-container"
     ).classList;
 
-    let allowedElements = ["show-categories", "show-tasks"]
+    let allowedElements = ["show-categories", "show-tasks", "createCategoryTitle", "createCategoryColor", "createCategoryButton", "deleteCategory", "category-color-select"]
     if(allowedElements.includes(e.target.id)) return;
 
     if (taskListContainer.contains("show")) {

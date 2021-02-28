@@ -7,6 +7,7 @@ export const getFriends = () => {
 
 //Create a friend
 //email is an object {email: "example@gmail.com"}
+// [TEST] want to return data -> added ".data"
 export const createFriend = email => {
     return axios.post(`/api/friends/`, email)
 }

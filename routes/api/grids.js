@@ -5,6 +5,7 @@ const passport = require('passport');
 const validateGridInput = require('../../validation/grid');
 const Category = require("../../models/Category");
 
+
 router.post('/', passport.authenticate('jwt', { session: false }),
     (req, res) => {
         const { errors, isValid } = validateGridInput(req.body);
@@ -67,26 +68,39 @@ router.get('/allGrids/:userId', (req, res) => {
         .catch(errors => res.json(errors))
 });
 
+parseGrid = async (grid, res) => {
+    const taskId = grid.taskId
+    const cats = await Category.find({"tasks._id": taskId})
+    const taskList = {}
+    cats.forEach(cat => {
+        const task = cat.tasks.id(grid.taskId);
+        if (task) {
+            taskList[grid.hour] = {title: task.title, color: cat.color};
+        }
+    })
+    res.json(taskList)
+}
+
 //Update an existing grid with a new task
 //check for if grid exits at that hour
 //if not create grid; if it does then update
 router.put('/updateGridTask/:hour', passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        Grid.findOne({hour: req.params.hour})
+        Grid.findOne({hour: req.params.hour, id: req.body.userId})
             .then((grid) => {
                 if (!grid) {
                     const newGrid = new Grid({
                         taskId: req.body.taskId,
-                        userId: req.user.id,
+                        userId: req.body.userId,
                         hour: req.params.hour
                     })
                     newGrid.save()
-                        .then((grid) => res.json(grid))
+                        .then((grid) => parseGrid(grid, res))
                         .catch((errors) => res.json(errors));
                 } else {
                     grid.taskId = req.body.taskId;
                     grid.save()
-                        .then(grid => res.json(grid))
+                        .then(grid => parseGrid(grid, res))
                         .catch(errors => res.json(errors));
                 }
             })
