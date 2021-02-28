@@ -59,7 +59,7 @@ class ShowFriend extends React.Component {
             <div className="show-friend-all">
 
                 <p className="friend-show-header"
-                >Hermione Granger's Profile Page</p>
+                >{this.props.currentFriend.name}'s Profile Page</p>
                 <p className="friend-show-straightline"></p>
 
                 <Link className="show-friend-back-button" to="/profile-page">
