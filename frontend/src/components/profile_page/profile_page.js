@@ -15,6 +15,8 @@ class ProfilePage extends React.Component {
         this.logoutUser = this.logoutUser.bind(this);
         // [WORKS] show Confirm Clear
         this.handleConfirmClear = this.handleConfirmClear.bind(this)
+        // [TEST] hard-delete grid
+        this.hardDeleteGrid = this.hardDeleteGrid.bind(this)
     }
 
     logoutUser(e) {
@@ -27,6 +29,12 @@ class ProfilePage extends React.Component {
     handleConfirmClear() {
         let newState = !this.state.showConfirmClear;
         this.setState({ showConfirmClear: newState });
+    }
+
+    // [TEST] clear grid (hard-delete)
+    hardDeleteGrid() {
+        this.props.destroyUserGrid(this.props.currentUserId);
+        this.handleConfirmClear();
     }
 
     render() {
@@ -44,8 +52,8 @@ class ProfilePage extends React.Component {
             secondButton = (
                 <>
                     <p className="confirm-clear-button" 
-                        onClick={ () => {console.log("Grid Cleared!"); this.handleConfirmClear()} }
-                    >Confirm Clear !!!</p>
+                        onClick={ () => {this.hardDeleteGrid()} }
+                    >Confirm Clear</p>
 
                     <p className="dont-clear-button" 
                         onClick={ () => {this.handleConfirmClear()} }
