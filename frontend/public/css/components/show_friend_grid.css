@@ -12,6 +12,8 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin-top: 30px;
+
+    cursor: pointer;
 }
 
 .show-friend-grid::-webkit-scrollbar {
