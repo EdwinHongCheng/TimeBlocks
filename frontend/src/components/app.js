@@ -18,7 +18,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/profile-page" component={ProfilePageContainer} />
       {/* [TEST] Show Friend page */}
-      <ProtectedRoute exact path="/friends/:friendEmail" component={ShowFriendContainer} />
+      <ProtectedRoute exact path="/friends/:friendId" component={ShowFriendContainer} />
       <ProtectedRoute path="/" component={HomePage} />
     </Switch>
   </div>

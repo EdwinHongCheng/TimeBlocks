@@ -13,7 +13,7 @@ class FriendsList extends React.Component {
                 <div key={idx} className="friend-and-delete-button">
                     <li>
                         <Link className="friend-link" 
-                            to={`/friends/${friend.email}`}
+                            to={`/friends/${friend.id}`}
                         >{friend.name}</Link>
                     </li>
                     <p className="friend-delete-button" 

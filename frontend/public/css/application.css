@@ -17,4 +17,6 @@
 @import "./components/friends_list.css";
 @import "./components/show_friend.css";
 @import "./components/show_friend_list.css";
+@import "./components/show_friend_grid.css";
+@import "./components/friend_task.css";
 @import "./components/add_task_form.css";
