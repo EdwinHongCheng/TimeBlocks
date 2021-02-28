@@ -1,5 +1,5 @@
 import { 
-    RECEIVE_FRIENDS, RECEIVE_FRIEND, REMOVE_FRIEND 
+    RECEIVE_FRIENDS, RECEIVE_FRIEND, REMOVE_FRIEND, CLEAR_FRIENDS
 } from "../actions/friend_actions";
 
 const FriendsReducer = (oldState = {}, action) => {
@@ -15,6 +15,8 @@ const FriendsReducer = (oldState = {}, action) => {
         case REMOVE_FRIEND:
             delete nextState[action.friendId]
             return nextState;
+        case CLEAR_FRIENDS:
+            return {};
         default:
             return oldState;
     }

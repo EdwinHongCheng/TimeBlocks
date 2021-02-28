@@ -25,6 +25,7 @@ class ProfilePage extends React.Component {
 
     logoutUser(e) {
         e.preventDefault();
+        this.props.clearFriends();
         this.props.logout();
         return (<Link to={"/"}/>)
     }

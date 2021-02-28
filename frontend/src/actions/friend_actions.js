@@ -3,6 +3,7 @@ import * as FriendApiUtil from "../util/friend_api_util";
 export const RECEIVE_FRIENDS = "RECEIVE_FRIENDS";
 export const RECEIVE_FRIEND = "RECEIVE_FRIEND";
 export const REMOVE_FRIEND = "REMOVE_FRIEND";
+export const CLEAR_FRIENDS = "CLEAR_FRIENDS"
 
 const receiveFriends = friends => {
     return {
@@ -22,6 +23,13 @@ const removeFriend = friendId => {
     return {
         type: REMOVE_FRIEND,
         friendId
+    }
+}
+
+// [NOTE] use to clear session of friends once logged out
+export const clearFriends = () => {
+    return {
+        type: CLEAR_FRIENDS
     }
 }
 

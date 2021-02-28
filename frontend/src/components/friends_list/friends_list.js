@@ -7,7 +7,6 @@ class FriendsList extends React.Component {
     }
 
     render() {
-        // [BUG] delete friend works BUT doesn't rerender friends list?
         let mappedFriends = this.props.friends.map((friend, idx) => {
             let x = { userId: friend.id };
             return (
