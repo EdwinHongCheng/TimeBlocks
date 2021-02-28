@@ -126,7 +126,7 @@
 
     display: inline-block;
     text-align: center;
-    background-color:black;
+    background-color:red;
     padding: 10px;
     margin: 10px;
 
@@ -134,7 +134,7 @@
 }
 
 .logout-button:hover {
-    background-color: red;
+    background-color: rgb(253, 110, 110);
 }
 
 /* [WIP] Friends List (used to be Dropdown) -----------------------------> */
