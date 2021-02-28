@@ -1,0 +1,13 @@
+.add-task-container {
+    border-right: 1px solid #cab690;
+    border-left: 1px solid #cab690;
+    width: 100%;
+    
+}
+
+.task-form {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}

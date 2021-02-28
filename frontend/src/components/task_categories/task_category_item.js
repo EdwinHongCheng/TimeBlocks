@@ -11,7 +11,7 @@ const TaskCategoryItem = (props) => {
           <h1>{props.category.title}</h1>
           <h2>{props.category.tasks.length}</h2>
         </div>
-        <div className="add-task-button">
+        <div className="add-task-container">
           <TaskFormContainer catId={props.category._id}/>
         </div>
         <div className="category-tasks">

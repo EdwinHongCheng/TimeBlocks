@@ -23,7 +23,7 @@ class TaskForm extends React.Component {
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form className="task-form" onSubmit={this.handleSubmit}>
                 <input
                 type="text" onChange={this.handleInput} id="task-input"
                 placeholder="Task Title" value={this.state.title}
