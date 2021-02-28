@@ -57,16 +57,6 @@ router.delete('/:id',
                     });
             })
             .catch(errors => console.log(errors));
-
-        // Category.find({'tasks._id': req.params.id}, {"tasks.$": true})
-        //     .then( catArr => {
-        //         Category.findById(catArr[0].id).then(cat => {
-        //             const task = cat.tasks.id(req.params.id);
-        //             task.remove();
-        //             cat.save().then(category => res.json(category));
-        //         })
-        //     })
-        //     .catch((errors) => res.json(errors));
     }
 );
 
