@@ -19,7 +19,6 @@ const TaskCategories = (props) => {
         })}
         <CategoryComposeContainer/>
       </div>
-
     </div>
   );
 }

@@ -36,8 +36,13 @@ class CategoryCompose extends React.Component {
                     onChange={this.update('color')}
                     id="createCategoryColor"
                 />
+
               <button type='submit' id="createCategoryButton">Create Category</button>
+              
             </form>
+
+
+            
           </div>
         );
       }
@@ -45,4 +50,3 @@ class CategoryCompose extends React.Component {
      
     export default CategoryCompose;
     
-
