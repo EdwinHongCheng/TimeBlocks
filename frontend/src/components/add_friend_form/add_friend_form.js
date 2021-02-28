@@ -11,7 +11,6 @@ class AddFriendForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    // [TEST]
     componentWillUnmount() {
         this.props.clearFriendErrors();
     }
@@ -22,21 +21,23 @@ class AddFriendForm extends React.Component {
         };
     };
 
-    // [WORKS BUT BUGGY]
+    // [WORKS]
     handleSubmit(e) {
         e.preventDefault();
         this.props.clearFriendErrors();
-        this.props.newFriend(this.state);
+        let friendEmail = this.state;
+        this.setState({ email: "" })
+        this.props.newFriend(friendEmail);
     }
     
     render() {
         // [NOTE] "Return/Enter" -> form is submitted
-        // let enterSubmitsForm = this.handleSubmit;
-        // document.onkeydown = function(e) {
-        //     if (e.keyCode === 13) {
-        //       enterSubmitsForm(e)
-        //     }
-        // };
+        let enterSubmitsForm = this.handleSubmit;
+        document.onkeydown = function(e) {
+            if (e.keyCode === 13) {
+              enterSubmitsForm(e)
+            }
+        };
 
         let addFriendForm = (
             <>
@@ -57,8 +58,7 @@ class AddFriendForm extends React.Component {
                 </div>
                 
                 <p className="add-friend-error">
-                  {this.props.errors.email}
-                  {/* Placeholder Error */}
+                  {this.props.errors[0]}
                 </p>
             </>
         )
