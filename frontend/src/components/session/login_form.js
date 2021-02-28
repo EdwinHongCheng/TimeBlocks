@@ -75,8 +75,6 @@ class LoginForm extends React.Component {
         <form className="login-form" onSubmit={this.handleSubmit}>
 
           <img className="logo" src={TimeBlocksLogo} alt="TimeBlocks Logo" />
-          <button className= "demoButton" onClick={this.demoLogin}>Demo Log In</button>
-
           <input
             type="text"
             value={this.state.email}
@@ -105,6 +103,8 @@ class LoginForm extends React.Component {
           <p className="submit-button" onClick={this.handleSubmit}>Log In</p>
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
+
+        <button className= "demoButton" onClick={this.demoLogin}>Demo Log In</button>
       </div>
     );
   }

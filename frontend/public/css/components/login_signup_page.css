@@ -9,7 +9,7 @@
     flex-direction: column;
     align-items: center;
 
-    /* height: 280px; */
+    height: 280px;
 }
 
 .signup-form input[type=text],
