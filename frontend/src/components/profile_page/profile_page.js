@@ -19,8 +19,13 @@ class ProfilePage extends React.Component {
         this.hardDeleteGrid = this.hardDeleteGrid.bind(this)
     }
 
+    componentDidMount() {
+        this.props.fetchFriends()
+    }
+
     logoutUser(e) {
         e.preventDefault();
+        this.props.clearFriends();
         this.props.logout();
         return (<Link to={"/"}/>)
     }
@@ -84,7 +89,7 @@ class ProfilePage extends React.Component {
                             >Friends List</p>
                             <ul className={`friends-dropdown-true`} >
                                 {/* [WIP] Friends List */}
-                                <FriendsListContainer />
+                                <FriendsListContainer friends={this.props.friends}/>
                             </ul>
                         </div>
                         {/* [WIP][can let rest right now] Add Friend Form */}

@@ -1,15 +1,16 @@
 import { connect } from 'react-redux';
 import FriendsList from "./friends_list";
+import { destroyFriend } from "../../actions/friend_actions";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
     return {
-        // [WIP]
+        friends: Object.values(ownProps.friends)
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        // [WIP]
+        destroyFriend: friendId => dispatch(destroyFriend(friendId))
     }
 }
 

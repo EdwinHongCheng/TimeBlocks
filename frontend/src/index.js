@@ -11,7 +11,7 @@ import {newTask, updateTaskTitle, destroyTask} from "./actions/task_actions"
 import {newCategory} from "./actions/category_actions"
 // [TEST]
 import { getFriends, createFriend, deleteFriend } from "./util/friend_api_util";
-import { fetchFriends, fetchFriend, destroyFriend } from "./actions/friend_actions";
+import { fetchFriends, newFriend, destroyFriend } from "./actions/friend_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // window.destroyCategory = destroyCategory
 
   // friend_api_utils
-  // window.getFriends = getFriends;
+  window.getFriends = getFriends;
   window.createFriend = createFriend;
   window.deleteFriend = deleteFriend;
   // friend_actions - thunk action creators [
   // [TEST RESULTS SO FAR] fetchFriends works. fetchFriend = works but weird
   window.fetchFriends = fetchFriends;
-  window.fetchFriend = fetchFriend;
+  window.newFriend = newFriend;
   window.destroyFriend = destroyFriend;
   window.store = store;
   // window.newTask = newTask
