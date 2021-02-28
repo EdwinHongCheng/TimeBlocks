@@ -62,7 +62,7 @@ class ShowFriend extends React.Component {
         }
 
         if (!this.props.currentFriend) { 
-            this.props.history.push("/profile-page");
+            // this.props.history.push("/profile-page");
             return null;
         } else {
             return (
