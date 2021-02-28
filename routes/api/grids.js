@@ -26,28 +26,6 @@ router.post('/', passport.authenticate('jwt', { session: false }),
     }
 );
 
-//Get a specific grid hour - currently sends back task name
-// router.get() = (hour) => {
-//     Grid.findOne({hour})
-//         .then(grid => {
-//             if (!grid) {
-//                 res.json({error: "No task for this hour"})
-//             } else {
-//                 Category.find({ 'tasks._id': grid.taskId }, { "tasks.$": true })
-//                     .then(catArr => {
-//                         Category.findById(catArr[0].id).then(cat => {
-//                             const task = cat.tasks.id(grid.taskId)
-//                             return ({ [hour] : {
-//                                 task: task.title,
-//                                 color: cat.color
-//                             }});
-//                         })
-//                     })
-//                     .catch((errors) => res.json(errors));
-//             }
-//         })
-// };
-
 //Get all of a user's grids
 router.get('/allGrids/:userId', (req, res) => {
     Grid.find({userId: req.params.userId})
