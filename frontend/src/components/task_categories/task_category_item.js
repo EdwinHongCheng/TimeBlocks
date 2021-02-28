@@ -1,5 +1,6 @@
 import React from 'react';
-import Task from "../task/task"
+import Task from "../task/task";
+import TaskFormContainer from './task_form_container';
 // import {destroyCategory} from "../../actions/category_actions"
 
 const TaskCategoryItem = (props) => {
@@ -11,7 +12,7 @@ const TaskCategoryItem = (props) => {
           <h2>{props.category.tasks.length}</h2>
         </div>
         <div className="add-task-button">
-          ADD TASK BUTTON
+          <TaskFormContainer catId={props.category._id}/>
         </div>
         <div className="category-tasks">
           {props.category.tasks.map((task) => {
