@@ -6,7 +6,7 @@ const ShowFriendListItem = (props) => {
     }
 
     return(
-        <div className="task-list-item">
+        <div className="show-friend-list-item">
             <div style={style} className="task-list-color">
                 <h1>{props.task.hour}</h1>
             </div>

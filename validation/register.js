@@ -13,6 +13,11 @@ module.exports = function validateRegisterInput(data) {
         errors.name = 'Name field is required';
     }
 
+    // [WORKS] limit username to a max ammount of chars
+    if (!Validator.isLength(data.name, { max: 20 })) {
+        errors.name = 'Name cannot be more than 20 characters';
+    }
+
     if (Validator.isEmpty(data.email)) {
         errors.email = 'Email field is required';
     }

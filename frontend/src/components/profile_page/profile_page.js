@@ -89,15 +89,14 @@ class ProfilePage extends React.Component {
                         <div className="friends-dropdown-parent">
                             <p className="friends-dropdown-title"
                             >Friends List</p>
-                            <ul className={`friends-dropdown-true`} >
-                                <FriendsListContainer friends={this.props.friends}/>
-                            </ul>
+
+                            <FriendsListContainer friends={this.props.friends}/>
                         </div>
                         <AddFriendFormContainer />
                     </div>
 
                     <div className="prof-page-right">
-                        <p className="user-name">John Wick</p>
+                        <p className="user-name">{this.props.currentUser.name}</p>
 
                         <div className="profile-page-buttons">
                             {thirdButton}

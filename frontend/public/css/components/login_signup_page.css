@@ -50,3 +50,19 @@
     display: flex;
     justify-content: center;
 }
+
+.demoButton {
+    background-color: rgb(84, 12, 201);
+    margin-bottom: 32px;
+    width: 260px;
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.demoButton:hover {
+    background-color: rgb(123, 74, 202); 
+}
