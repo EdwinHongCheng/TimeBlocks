@@ -8,20 +8,20 @@ class FriendsList extends React.Component {
 
     render() {
         let mappedFriends = this.props.friends.map((friend, idx) => {
-            let x = { userId: friend.id };
             return (
-                <div key={idx} className="friend-and-delete-button">
-                    <li>
+                <li key={friend.id} className="friend-and-delete-button">
+                    <p>
                         <Link className="friend-link" 
                             to={`/friends/${friend.id}`}
                         >{friend.name}</Link>
-                    </li>
+                    </p>
                     <p className="friend-delete-button" 
                         onClick={() => {
-                            this.props.destroyFriend(x);
-                            this.props.clearFriendErrors();}
+                            this.props.destroyFriend({ userId: friend.id });
+                            this.props.clearFriendErrors();
+                        }
                         }>x</p>
-                </div>
+                </li>
             );
         })
 

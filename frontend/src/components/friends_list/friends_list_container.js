@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         destroyFriend: friendId => dispatch(destroyFriend(friendId)),
-        // [TEST] want to clear friend errors after any "action" user does
-        clearFriendErrors: () => dispatch(clearFriendErrors())
+        // [WORKS] want to clear friend errors after any "action" user does
+        clearFriendErrors: () => dispatch(clearFriendErrors()),
     }
 }
 
