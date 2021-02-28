@@ -20,7 +20,8 @@ class CategoryCompose extends React.Component {
     render() {
         return (
           <div>
-            <form onSubmit={this.handleSubmit}>     
+            <form onSubmit={this.handleSubmit}>
+              <div className="categoryForm">    
                 <input
                   type='text'
                   placeholder= "Category title..."
@@ -28,14 +29,6 @@ class CategoryCompose extends React.Component {
                   onChange={this.update('title')}
                   id="createCategoryTitle"
                 />
-                
-                {/* <input
-                    type='color'
-                    // placeholder= "Category color..."
-                    value={this.state.color}
-                    onChange={this.update('color')}
-                    id="createCategoryColor"
-                /> */}
                 
                 <select name="colors" id="category-color-select" onChange={this.update('color')}>
                     <option value="">--Please choose a color--</option>
@@ -50,6 +43,7 @@ class CategoryCompose extends React.Component {
                     <option value="#d29494">Brown</option>
                     <option value="#f8f8ff">White</option>
                 </select>
+              </div>
 
               <button type='submit' id="createCategoryButton">Create Category</button>
               

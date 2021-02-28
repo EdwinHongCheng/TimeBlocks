@@ -111,3 +111,13 @@
     overflow: hidden;
     }
 }
+
+button#deleteCategory {
+    margin-left: 5px;
+    background-color: beige;
+}
+
+button#deleteCategory:hover {
+    color: red;
+    font-weight: bold;
+}
