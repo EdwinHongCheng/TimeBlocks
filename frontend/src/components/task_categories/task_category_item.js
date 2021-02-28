@@ -19,7 +19,9 @@ const TaskCategoryItem = (props) => {
             return (
                 <div className="task-entry" key={task._id}>
                     <div className="task-icon-title">
-                      <i class="far fa-times-circle"></i>
+                      <i onClick={() => props.destroyTask(task._id)}
+                      id="remove-task-icon"
+                      class="far fa-times-circle"></i>
                       <h1>{task.title}</h1>
                     </div>
                     <Task task={task} color={props.category.color} />
