@@ -12,32 +12,34 @@ const receiveFriends = friends => {
     }
 }
 
-const receiveFriend = friends => {
+const receiveFriend = friend => {
     return {
         type: RECEIVE_FRIEND,
-        friends
+        friend
     }
 }
 
-const removeFriend = friends => {
+const removeFriend = friendId => {
     return {
         type: REMOVE_FRIEND,
-        friends
+        friendId
     }
 }
 
 // [TEST] not sure what friend api util requests return 
 // -> best guess (?)
 // [TEST] Thunk Action Creators
+
+// [WORKS] not anymore???
 export const fetchFriends = () => dispatch => {
     return FriendApiUtil.getFriends()
-        .then(friends => dispatch(receiveFriends(friends.data)))
+        .then(data => dispatch(receiveFriends(data.data)))
         .catch(err => console.log(err))
 }
 
-export const fetchFriend = email => dispatch => {
+export const newFriend = email => dispatch => {
     return FriendApiUtil.createFriend(email)
-        .then(friends => dispatch(receiveFriend(friends.data)))
+        .then(data => dispatch(receiveFriend(data.data)))
         .catch(err => console.log(err))
 }
 
