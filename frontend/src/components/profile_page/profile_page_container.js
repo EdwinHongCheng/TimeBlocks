@@ -5,6 +5,8 @@ import { logout } from "../../actions/session_actions";
 import { destroyUserGrid } from "../../actions/grid_actions";
 // [TEST] fetch Friends when visiting profile page
 import { fetchFriends, clearFriends } from "../../actions/friend_actions";
+// [TEST]
+import { clearFriendErrors } from "../../actions/friend_actions";
 
 const mapStateToProps = (state) => {
     return {
@@ -18,7 +20,9 @@ const mapDispatchToProps = dispatch => {
         logout: () => dispatch(logout()),
         destroyUserGrid: userId => dispatch(destroyUserGrid(userId)),
         fetchFriends: () => dispatch(fetchFriends()),
-        clearFriends: () => dispatch(clearFriends())
+        clearFriends: () => dispatch(clearFriends()),
+        // [TEST] want to clear friend errors after any "action" user does
+        clearFriendErrors: () => dispatch(clearFriendErrors())
     }
 }
 

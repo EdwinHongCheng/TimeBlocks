@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AddFriendForm from "./add_friend_form";
-// [TEST] add friend action
+// [WORKS]
 import { newFriend, clearFriendErrors } from "../../actions/friend_actions";
 
 const mapStateToProps = (state) => {

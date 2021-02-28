@@ -32,6 +32,8 @@ class ProfilePage extends React.Component {
 
     // [WORKS] Toggles "Confirm Clear" + "Don't Clear" buttons
     handleConfirmClear() {
+        // adding clearFriendErrors -> want to clear after every user "action"
+        this.props.clearFriendErrors();
         let newState = !this.state.showConfirmClear;
         this.setState({ showConfirmClear: newState });
     }

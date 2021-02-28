@@ -17,7 +17,10 @@ class FriendsList extends React.Component {
                         >{friend.name}</Link>
                     </li>
                     <p className="friend-delete-button" 
-                        onClick={() => this.props.destroyFriend(x)}>x</p>
+                        onClick={() => {
+                            this.props.destroyFriend(x);
+                            this.props.clearFriendErrors();}
+                        }>x</p>
                 </div>
             );
         })
