@@ -15,8 +15,6 @@ const TaskList = (props) => {
     grids.push(gridItem)
   }
 
-  console.log(grids)
-
   return (
     <div id="task-list-container" className="hide">
       <div className="task-list-title">

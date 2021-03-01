@@ -168,3 +168,13 @@ button#createCategoryButton:hover {
 .category-form-container {
     border-top: 1px solid #e4cca2;
 }
+
+.category-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .categoryForm {
+    display: flex;
+    justify-content: space-around;
+} */
