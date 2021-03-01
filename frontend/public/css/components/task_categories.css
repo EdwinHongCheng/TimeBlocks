@@ -158,6 +158,8 @@ button#createCategoryButton:hover {
     display: flex;
     border-bottom: none;
     align-items: center;
+
+    white-space: nowrap;
 }
 
 .task-entry i{
