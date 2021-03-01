@@ -1,4 +1,6 @@
-![alt text](https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/logo.png "TimeBlocks Logo") 
+![alt text](https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/image%20(1).png "Logo")
+
+
 # TimeBlocks
 
 [Timeblocks Live Link](https://time-blocks.herokuapp.com/#/)

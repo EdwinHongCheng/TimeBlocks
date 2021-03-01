@@ -4,6 +4,13 @@ import TaskFormContainer from './task_form_container';
 // import {destroyCategory} from "../../actions/category_actions"
 
 const TaskCategoryItem = (props) => {
+    const handleClick = (taskId) => {
+      props.destroyTask(taskId)
+        .then(() =>
+          props.fetchUserGrids(props.currentId)
+        )
+    }
+
     return (
       <div className="category-container">
         <div className="category-info">
@@ -18,7 +25,12 @@ const TaskCategoryItem = (props) => {
           {props.category.tasks.map((task) => {
             return (
                 <div className="task-entry" key={task._id}>
-                    <h1>{task.title}</h1>
+                    <div className="task-icon-title">
+                      <i onClick={() => handleClick(task._id)}
+                      id="remove-task-icon"
+                      class="far fa-times-circle"></i>
+                      <h1>{task.title}</h1>
+                    </div>
                     <Task task={task} color={props.category.color} />
                 </div>
             )
