@@ -61,10 +61,16 @@
     margin: 10px;
 }
 
+.category-info h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .category-info h2 {
     background-color: #ecdfb9;
     padding: 2px 5px;
     border-radius: 50%;
+    /* width: 30px */
 }
 
 #delete-category {
@@ -126,8 +132,8 @@ select#category-color-select {
     margin-left: 10px;
 }
 
-select#category-color-select {
-    margin-left: 10px;
+#createCategoryTitle {
+    width:  10px;
 }
 
 button#createCategoryButton {
