@@ -32,8 +32,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 3px;
-    /* margin: 10px; */
-    background-color: #fff4b7;
 }
 
 @media (min-width: 992px) {
