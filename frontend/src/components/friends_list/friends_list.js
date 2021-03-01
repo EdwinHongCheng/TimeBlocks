@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class FriendsList extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         let mappedFriends = this.props.friends.map((friend, idx) => {
             return (

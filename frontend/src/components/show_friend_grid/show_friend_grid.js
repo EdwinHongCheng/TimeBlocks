@@ -11,7 +11,7 @@ const ShowFriendGrid = (props) => {
 
   useEffect(() => {
       props.fetchUserGrids(props.currentFriend.id)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return ( 
     <div className="show-friend-grid">

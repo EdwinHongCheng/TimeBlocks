@@ -154,7 +154,7 @@ button#createCategoryButton:hover {
     background-color: rgb(123, 74, 202);
 }
 
-.task-entry .task-icon-title{
+.task-entry .task-icon-title {
     display: flex;
     border-bottom: none;
     align-items: center;

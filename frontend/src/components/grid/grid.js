@@ -10,7 +10,7 @@ const Grid = (props) => {
 
   useEffect(() => {
       props.fetchUserGrids(props.currentUser.id)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return ( 
     <div className="grid">
