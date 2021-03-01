@@ -132,16 +132,26 @@ select#category-color-select {
     margin-left: 10px;
 }
 
-#createCategoryTitle {
-    width:  10px;
+#createCategoryTitle {    
+    background-color: #d8c999;
+    border: none;
+    font-family: inherit;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 60%;
 }
 
 button#createCategoryButton {
     margin-top: 5px;
+    background-color:rgb(84, 12, 201);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 button#createCategoryButton:hover {
-    font-weight: bold;
+    background-color: rgb(123, 74, 202);
 }
 
 .task-entry .task-icon-title{
@@ -168,15 +178,16 @@ button#createCategoryButton:hover {
 }
 
 .category-form-container form {
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    width: 100%;
+    height: 100%; 
 }
 
 .categoryForm {
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
