@@ -90,3 +90,13 @@
   background:rgb(255, 244, 183);; 
   padding:0 8px; 
 }
+
+@media (max-width: 768px) {
+    .demo-button {
+        width: 100px;
+    }  
+
+    .demo-straight-line {
+        width: 120px; 
+    } 
+}
