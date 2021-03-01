@@ -51,18 +51,42 @@
     justify-content: center;
 }
 
-.demoButton {
+/* [WIP] Demo Button ----------------- >*/
+
+.demo-button-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.demo-button {
     background-color: rgb(84, 12, 201);
     margin-bottom: 32px;
-    width: 260px;
+    width: 240px;
     font-size: 16px;
     color: white;
     display: inline-block;
     padding: 10px;
     text-align: center;
     border-radius: 4px;
+    cursor: pointer;
+    outline: none;
 }
 
-.demoButton:hover {
+.demo-button:hover {
     background-color: rgb(123, 74, 202); 
+}
+
+/* Straight Line (for the "or" in Demo Log In Button (session_form.jsx) */
+.demo-straight-line {
+  width: 260px; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 20px 0 10px; 
+} 
+
+.demo-straight-line span { 
+  background:rgb(255, 244, 183);; 
+  padding:0 8px; 
 }

@@ -104,7 +104,13 @@ class LoginForm extends React.Component {
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 
-        <button className= "demoButton" onClick={this.demoLogin}>Demo Log In</button>
+        <div className="demo-button-parent">
+          <p className="demo-straight-line">
+            <span>or</span>
+          </p>
+          <br/>
+          <p className= "demo-button" onClick={this.demoLogin}>Demo Log In</p>
+        </div>
       </div>
     );
   }
