@@ -19,8 +19,8 @@ const TaskCategories = (props) => {
           currentId={props.currentUser.id} fetchUserGrids={props.fetchUserGrids}
           destroyCategory = {props.destroyCategory} destroyTask={props.destroyTask}/>;
         })}
-        <CategoryComposeContainer/>
       </div>
+        <CategoryComposeContainer/>
     </div>
   );
 }

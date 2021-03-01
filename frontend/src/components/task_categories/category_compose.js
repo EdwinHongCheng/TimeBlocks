@@ -19,7 +19,7 @@ class CategoryCompose extends React.Component {
     
     render() {
         return (
-          <div>
+          <div className="category-form-container">
             <form onSubmit={this.handleSubmit}>
               <div className="categoryForm">    
                 <input

@@ -8,9 +8,9 @@
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;
-    border-right: 1px solid #ffe6b7;
+    border-right: 1px solid #a99777;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 50px 1fr 80px;
 }
 
 #task-categories-container.hide {
@@ -28,7 +28,7 @@
     align-items: center;
     font-size: 20px;
     color: #bb8a3b;
-    border-bottom: 1px solid #e6cfa4;
+    border-bottom: 1px solid #e4cca2;
 }
 
 .categories-list {
@@ -163,4 +163,8 @@ button#createCategoryButton:hover {
 
 .task-entry i:hover{
     color: rgb(248, 94, 94)
+}
+
+.category-form-container {
+    border-top: 1px solid #e4cca2;
 }
