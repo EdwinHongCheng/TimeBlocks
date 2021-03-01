@@ -40,7 +40,7 @@ On each user's profle page, a Friends List is shown displaying all of the user's
 
 ## Future Plans
 * Allow users to further expand the hour blocks into minute blocks 
-* Create weeks, montly, and yearly calendar views
+* Create weekly, monthly, and yearly calendar views
 * Allow users to be able to invite friends to join them in their planned tasks
 * Allow users to be able to create both public and private grids
 
