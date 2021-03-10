@@ -8,9 +8,9 @@
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;
-    border-right: 1px solid #ffe6b7;
+    border-right: 1px solid #a99777;
     display: grid;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 50px 1fr 80px;
 }
 
 #task-categories-container.hide {
@@ -28,7 +28,7 @@
     align-items: center;
     font-size: 20px;
     color: #bb8a3b;
-    border-bottom: 1px solid #e6cfa4;
+    border-bottom: 1px solid #e4cca2;
 }
 
 .categories-list {
@@ -61,10 +61,26 @@
     margin: 10px;
 }
 
+.category-info h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .category-info h2 {
     background-color: #ecdfb9;
     padding: 2px 5px;
     border-radius: 50%;
+    /* width: 30px */
+}
+
+#delete-category {
+    margin: 20px 10px;
+    line-height: 0.8;
+    cursor: pointer;
+}
+
+#delete-category:hover {
+    color: red;
 }
 
 .category-tasks {
@@ -112,37 +128,38 @@
     }
 }
 
-button#deleteCategory {
-    margin-left: 5px;
-    background-color: beige;
-}
-
-button#deleteCategory:hover {
-    color: red;
-    font-weight: bold;
-}
-
 select#category-color-select {
     margin-left: 10px;
 }
 
-select#category-color-select {
-    margin-left: 10px;
+#createCategoryTitle {    
+    background-color: #d8c999;
+    border: none;
+    font-family: inherit;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 60%;
 }
 
 button#createCategoryButton {
     margin-top: 5px;
+    background-color:rgb(84, 12, 201);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 button#createCategoryButton:hover {
-    font-weight: bold;
+    background-color: rgb(123, 74, 202);
 }
 
-.task-entry .task-icon-title{
+.task-entry .task-icon-title {
     display: flex;
-    width: 100%;
     border-bottom: none;
     align-items: center;
+
+    white-space: nowrap;
 }
 
 .task-entry i{
@@ -153,4 +170,26 @@ button#createCategoryButton:hover {
 
 .task-entry i:hover{
     color: rgb(248, 94, 94)
+}
+
+.category-form-container {
+    border-top: 1px solid #e4cca2;
+    width: 100;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+.category-form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+}
+
+.categoryForm {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

@@ -13,7 +13,6 @@
     display: inline-block;
 
     color: black;
-    /* font-family: "Helvetica Neue"; */
     font-weight: bold;
     font-size: 28px;
 
@@ -141,7 +140,7 @@
     background-color: rgb(253, 110, 110);
 }
 
-/* [WIP] Friends List (used to be Dropdown) -----------------------------> */
+/* [WORKS] Friends List (used to be Dropdown) -----------------------------> */
 .friends-dropdown-parent {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -168,6 +167,7 @@
 .friends-dropdown-true {
     position: relative;
     background-color: white;
+    /* background-color: #ffeeb7; */
     border: 1px solid white;
 
     /* [WORKS] Scrollable List */

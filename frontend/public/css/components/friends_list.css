@@ -9,7 +9,9 @@
 }
 
 .friend-link {
-    color: rgb(0, 196, 0);
+    /* color: rgb(0, 196, 0); */
+    /* color: black; */
+    color: rgb(84, 12, 201);
 }
 
 .friend-delete-button {

@@ -8,7 +8,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #ffeeb7;
-    border-left: 1px solid #ffe6b7;
+    border-left: 1px solid #a99777;
     display: grid;
     grid-template-rows: 50px 1fr;
     z-index: 1000;
@@ -19,7 +19,7 @@
 }
 
 #task-list-container.hide {
-    transform: translate3d(70vw, 0, 0);
+    transform: translate3d(71vw, 0, 0);
 }
 
 .task-list-title {
@@ -29,7 +29,7 @@
     align-items: center;
     color: #bb8a3b;
     justify-content: center;
-    border-bottom: 1px solid #e6cfa4;
+    border-bottom: 1px solid #e4cca2;
 }
 
 .task-list-title h1 {

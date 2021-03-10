@@ -5,7 +5,6 @@ import CategoryCompose from './category_compose';
 const mapStateToProps = (state) => {
   return {
     currentUser: state.session.user,
-    // newCategory: state.categories.new
     category: {
       title: "",
       color: ""

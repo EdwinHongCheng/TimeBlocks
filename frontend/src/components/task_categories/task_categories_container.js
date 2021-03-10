@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import TaskCategories from "./task_categories";
-import {fetchCategories, newCategory, destroyCategory} from "../../actions/category_actions"
+import {fetchCategories, destroyCategory} from "../../actions/category_actions"
 import {destroyTask} from '../../actions/task_actions';
 import { fetchUserGrids } from "../../actions/grid_actions"
 

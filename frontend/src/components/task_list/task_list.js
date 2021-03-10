@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import TaskListItem from "./task_list_item";
 
@@ -14,8 +14,6 @@ const TaskList = (props) => {
     }
     grids.push(gridItem)
   }
-
-  console.log(grids)
 
   return (
     <div id="task-list-container" className="hide">

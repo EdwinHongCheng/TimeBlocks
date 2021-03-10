@@ -6,7 +6,7 @@ import CategoryComposeContainer from "./category_compose_container"
 const TaskCategories = (props) => {
   useEffect(() => {
     props.fetchCategories(props.currentUser.id)
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div id="task-categories-container" className="hide">
@@ -19,8 +19,8 @@ const TaskCategories = (props) => {
           currentId={props.currentUser.id} fetchUserGrids={props.fetchUserGrids}
           destroyCategory = {props.destroyCategory} destroyTask={props.destroyTask}/>;
         })}
-        <CategoryComposeContainer/>
       </div>
+        <CategoryComposeContainer/>
     </div>
   );
 }
