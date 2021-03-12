@@ -96,3 +96,9 @@
 .signup-button:hover, .login-button:hover, .back-to-splash-button:hover, .submit-button:hover {
     background-color: rgb(123, 74, 202); 
 }
+
+.splash-icon {
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+}
