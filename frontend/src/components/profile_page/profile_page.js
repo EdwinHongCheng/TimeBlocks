@@ -81,6 +81,7 @@ class ProfilePage extends React.Component {
                 <div className="profile-header-parent">
                     <p className="profile-header">Your Profile Page</p>
                     <p className="straightline"></p>
+                    <p className="tap-social-notice">Click a friend's name to see their Time Grid!</p>
                 </div>
 
                 <div className="profile-page-body">
@@ -88,7 +89,7 @@ class ProfilePage extends React.Component {
                     <div className="prof-page-left">
                         <div className="friends-dropdown-parent">
                             <p className="friends-dropdown-title"
-                            >Friends List</p>
+                            >Friends List ({Object.values(this.props.friends).length})</p>
 
                             <FriendsListContainer friends={this.props.friends}/>
                         </div>
