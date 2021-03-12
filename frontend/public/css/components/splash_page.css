@@ -97,10 +97,12 @@
     background-color: rgb(123, 74, 202); 
 }
 
+/* [NOTE] .splash-icon: margin-top: 116px matches
+.login-icon: margin-top: 0; */
 .splash-icon {
     font-size: 50px;
     text-align: center;
-    margin: 20px;
+    margin-top: 126px; 
 }
 
 .splash-icon a {

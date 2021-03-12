@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .friend-and-delete-button:hover {
@@ -12,6 +13,10 @@
     /* color: rgb(0, 196, 0); */
     /* color: black; */
     color: rgb(84, 12, 201);
+}
+
+.friend-link:hover {
+    color: rgb(141, 70, 255);
 }
 
 .friend-delete-button {

@@ -15,7 +15,7 @@ class ProfilePage extends React.Component {
         this.logoutUser = this.logoutUser.bind(this);
         // [WORKS] show Confirm Clear
         this.handleConfirmClear = this.handleConfirmClear.bind(this)
-        // [TEST] hard-delete grid
+        // [WORKS] hard-delete grid
         this.hardDeleteGrid = this.hardDeleteGrid.bind(this)
     }
 
@@ -38,7 +38,7 @@ class ProfilePage extends React.Component {
         this.setState({ showConfirmClear: newState });
     }
 
-    // [TEST] clear grid (hard-delete)
+    // [WORKS] clear grid (hard-delete)
     hardDeleteGrid() {
         this.props.destroyUserGrid(this.props.currentUserId);
         this.handleConfirmClear();

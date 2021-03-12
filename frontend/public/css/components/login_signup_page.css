@@ -101,9 +101,12 @@
     } 
 }
 
+/* [NOTE] .splash-icon: margin-top: 116px matches
+.login-icon: margin-top: 0; */
 .login-icon {
     font-size: 50px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .login-icon a {
