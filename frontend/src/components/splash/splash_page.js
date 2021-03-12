@@ -25,7 +25,7 @@ class SplashPage extends React.Component {
         </div>
         <FirstButtonsContainer />
         <div className="splash-icon">
-          <a href="https://github.com/EdwinHongCheng/TimeBlocks"><i className="fab fa-github"></i></a>
+          <a href="https://github.com/EdwinHongCheng/TimeBlocks" target="_blank"><i className="fab fa-github"></i></a>
         </div>
       </div>
     );
