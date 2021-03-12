@@ -114,6 +114,9 @@ class SignupForm extends React.Component {
           <Link className="back-to-splash-button" to={"/"}>Back</Link>
         </div>
 
+        <div className="splash-icon">
+          <a href="https://github.com/EdwinHongCheng/TimeBlocks"><i className="fab fa-github"></i></a>
+        </div>
       </div>
     );
   }
