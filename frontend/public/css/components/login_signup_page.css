@@ -100,3 +100,17 @@
         width: 120px; 
     } 
 }
+
+.login-icon {
+    font-size: 50px;
+    text-align: center;
+}
+
+.login-icon a {
+    color: rgb(84, 12, 201);
+}
+
+.login-icon a:hover {
+    color: rgb(123, 74, 202);
+    cursor: pointer;
+}

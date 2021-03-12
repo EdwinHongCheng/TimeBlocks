@@ -24,6 +24,9 @@ class SplashPage extends React.Component {
           <img className="splash-image" src={TimeBlocksLogo} alt="TimeBlocks Logo" />
         </div>
         <FirstButtonsContainer />
+        <div className="splash-icon">
+          <a href="https://github.com/EdwinHongCheng/TimeBlocks"><i className="fab fa-github"></i></a>
+        </div>
       </div>
     );
   }
