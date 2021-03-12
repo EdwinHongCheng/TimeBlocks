@@ -14,6 +14,10 @@
     color: rgb(84, 12, 201);
 }
 
+.friend-link:hover {
+    color: rgb(141, 70, 255);
+}
+
 .friend-delete-button {
     font-size: 18px;
     font-weight: lighter;
