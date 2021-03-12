@@ -111,6 +111,10 @@ class LoginForm extends React.Component {
           <br/>
           <p className= "demo-button" onClick={this.demoLogin}>Demo Log In</p>
         </div>
+
+        <div className="login-icon">
+          <a href="https://github.com/EdwinHongCheng/TimeBlocks"><i className="fab fa-github"></i></a>
+        </div>
       </div>
     );
   }
