@@ -35,6 +35,15 @@ const seedUser = (user) => {
             catSeed.tasks.push(task2);
             catSeed.save();
         })
+
+    catSeed3.save()
+        .then(catSeed => {
+            const task1 = { title: "Sleep" };
+            const task2 = { title: "Meditate" };
+            catSeed.tasks.push(task1);
+            catSeed.tasks.push(task2);
+            catSeed.save();
+        })
 }
 
 module.exports = seedUser;
