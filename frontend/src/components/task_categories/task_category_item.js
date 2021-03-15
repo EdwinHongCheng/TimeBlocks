@@ -14,8 +14,11 @@ const TaskCategoryItem = (props) => {
     return (
       <div className="category-container">
         <div className="category-info">
-        <h2 id="delete-category" onClick={() => props.destroyCategory(props.category._id)}>x</h2>
-          <h1>{props.category.title}</h1>
+          <h2 id="delete-category" onClick={() => props.destroyCategory(props.category._id)}>x</h2>
+          <div className="category-combo">
+            <div className="category-title-color" style={{backgroundColor: props.category.color}}></div>
+            <h1>{props.category.title}</h1>
+          </div>
           <h2>{props.category.tasks.length}</h2>
         </div>
         <div className="add-task-container">
