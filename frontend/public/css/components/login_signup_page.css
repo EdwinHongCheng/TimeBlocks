@@ -91,16 +91,6 @@
   padding:0 8px; 
 }
 
-@media (max-width: 768px) {
-    .demo-button {
-        width: 100px;
-    }  
-
-    .demo-straight-line {
-        width: 120px; 
-    } 
-}
-
 /* [NOTE] .splash-icon: margin-top: 116px matches
 .login-icon: margin-top: 0; */
 .login-icon {
@@ -117,3 +107,20 @@
     color: rgb(123, 74, 202);
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .demo-button {
+        width: 100px;
+    }  
+
+    .demo-straight-line {
+        width: 120px; 
+    } 
+
+    /* [NOTE] .splash-icon: margin-top: 100px matches
+    .login-icon: margin-top: -16px; */
+    .login-icon {
+        margin-top: -16px;
+    }
+}
+
