@@ -5,7 +5,7 @@
 
 [TimeBlocks Live Link](https://time-blocks.herokuapp.com/#/)
 
-TimeBlocks is a user-friendly time management app that helps you keep track of daily tasks. Visually-appealing slots on a grid are used to represent the hours of the day, and customizable tasks can be dragged to fill any slot. Tasks are grouped within category containers, and the category they belong to determines their time block color. These colored time blocks make it easy for a user to determine both their hours of free and reserved times with a quick glance. TimeBlocks is both computer and mobile friendly, utilizing both clickable and draggable methods for moving tasks. 
+TimeBlocks is a user-friendly time management app that helps you keep track of daily tasks. 24 slots on a grid are used to represent the hours of the day, and customizable tasks can be dragged to fill any slot. Tasks are grouped within category containers, and the category they belong to determines their time block color. These colored time blocks make it easy for a user to determine both their hours of free and reserved times with a quick glance. TimeBlocks is both computer and mobile friendly, utilizing both clickable and draggable methods for moving tasks. 
 
 TimeBlocks is a MERN project.
 
