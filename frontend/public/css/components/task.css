@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: grab;
 }
 
 .task-time {
@@ -32,6 +33,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 3px;
+}
+
+.task-time h1 {
+    cursor: default;
+    user-select: none;
 }
 
 @media (min-width: 992px) {

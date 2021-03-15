@@ -70,7 +70,13 @@
     background-color: #ecdfb9;
     padding: 2px 5px;
     border-radius: 50%;
-    /* width: 30px */
+    cursor: default;
+}
+
+.category-combo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #delete-category {
@@ -83,8 +89,15 @@
     color: red;
 }
 
+.category-title-color {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cab690;
+    border-radius: 5px;
+}
+
 .category-tasks {
-    background-color: ffeeb7;
+    background-color: #ffeeb7;
     border-bottom: 1px solid #cab690;
     border-right: 1px solid #cab690;
     border-left: 1px solid #cab690;
@@ -95,7 +108,6 @@
     flex-direction: column;
     align-items: center;
     overflow-wrap: normal;
-    /* justify-content: flex-start; */
 }
 
 .task-entry {
