@@ -85,23 +85,26 @@ class HomePage extends React.Component {
         <TaskListContainer />
 
         <div className="panel-buttons">
-          <input
+
+          <p id="show-categories" onClick={this.openCategories}>Categories</p>
+          {/* <input
             id="show-categories"
             type="button"
             onClick={this.openCategories}
             value="Categories"
-          />
+          /> */}
 
           <Link className="prof-page-button" to="/profile-page">
             Profile Page
           </Link>
 
-          <input
+          <p id="show-tasks" onClick={this.openTaskList}>Task List</p>
+          {/* <input
             id="show-tasks"
             type="button"
             onClick={this.openTaskList}
             value="Task List"
-          />
+          /> */}
         </div>
         <GridContainer />
       </div>

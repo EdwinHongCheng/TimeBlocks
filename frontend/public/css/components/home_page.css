@@ -37,13 +37,26 @@
     margin-top: 0;
 }
 
-#show-categories,
+/* #show-categories,
 #show-tasks {
     height: 35px;
     cursor: pointer;
     border: none;
     background-color:rgb(84, 12, 201);
     color: white;
+} */
+
+#show-categories, #show-tasks {
+    width: 80px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(84, 12, 201);
+
+    margin-top: 20px;
 }
 
 #show-categories:hover,
