@@ -12,6 +12,11 @@ const seedUser = (user) => {
         userId: user.id,
         color: "#33FFEC"
     });
+    const catSeed3 = newCategory({
+        title: "Lifestyle",
+        userId: user.id,
+        color: "#0288E4"
+    });
 
     catSeed1.save()
         .then(catSeed => {
