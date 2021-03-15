@@ -22,7 +22,38 @@ Users are given 24 blocks in a 4x6 grid to represent the hours of the day. Tasks
 
 In order for a task to be re-assigned to a different category, the task's title is saved into a different variable, and then the original task object is removed from the current category. The new variable containing the original task's data is then pushed into the category it is being re-assigned to.
 
-<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/code_snapshotv3.png" alt="coding" width="500" height="500"/>
+```js
+//routes/api/tasks.js
+
+//Update tasks category
+router.post('/updateCategory/:id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        
+        Category.find({ 'tasks._id': req.params.id }, { "tasks.$": true })
+            .then(catArr => {
+                return Category.findById(catArr[0].id).then(cat => {
+                    const task = cat.tasks.id(req.params.id);
+                    //task's title is saved into a different variable
+                    const newTask = {title: task.title};
+                    //original task object is removed from the current category
+                    task.remove();
+                    cat.save();
+                    return newTask;
+                })
+            }).then((newTask) => {
+                Category.findById(req.body.catId).then(category => {
+                    //new variable containing the original task's data is pushed into updated category
+                    category.tasks.push(newTask);
+                    category.save()
+                        .then((category) => res.json(category))
+                        .catch(errors => res.json(errors))
+                })
+            })
+            .catch(errors => res.json(errors));
+    }
+);
+```
 
 ### Slidable Menus
 
