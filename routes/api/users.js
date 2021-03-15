@@ -55,11 +55,11 @@ router.post('/register', (req, res) => {
                                     });
                                 });
 
-                                return user;
-                            })
-                            .then(user => {
                                 seedUser(user);
+                                // return user;
                             })
+                            // .then(user => {
+                            // })
                             .catch(err => console.log(err));
                     });
                 });
