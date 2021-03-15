@@ -12,6 +12,11 @@ const seedUser = (user) => {
         userId: user.id,
         color: "#33FFEC"
     });
+    const catSeed3 = new Category({
+        title: "Lifestyle",
+        userId: user.id,
+        color: "#645AF7"
+    });
 
     const cat1task1 = { title: "30 min Run" };
     const cat1task2 = { title: "Morning Yoga" };
@@ -24,7 +29,12 @@ const seedUser = (user) => {
     catSeed2.tasks.push(cat2task1);
     catSeed2.tasks.push(cat2task2);
     catSeed2.save();
-    
+
+    const cat3task1 = { title: "Sleep" };
+    const cat3task2 = { title: "Meditate" };
+    catSeed3.tasks.push(cat3task1);
+    catSeed3.tasks.push(cat3task2);
+    catSeed3.save();
 }
 
 module.exports = seedUser;
