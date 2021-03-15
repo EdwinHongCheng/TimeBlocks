@@ -59,6 +59,23 @@
     justify-content: center;
 }
 
+/* [NOTE] .splash-icon: margin-top: 116px matches
+.login-icon: margin-top: 0; */
+.splash-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 126px; 
+}
+
+.splash-icon a {
+    color: rgb(84, 12, 201);
+}
+
+.splash-icon a:hover {
+    color: rgb(123, 74, 202);
+    cursor: pointer;
+}
+
 /* iPad width: around 768px + */
 @media (max-width: 768px) {
     .first-buttons {
@@ -77,6 +94,12 @@
 
         margin-top: 0px;
     }   
+
+    /* [NOTE] .splash-icon: margin-top: 100px matches
+    .login-icon: margin-top: -16px; */
+    .splash-icon {
+        margin-top: 100px; 
+    }
 }
 
 .signup-button, .login-button, .back-to-splash-button, .submit-button {
@@ -97,19 +120,4 @@
     background-color: rgb(123, 74, 202); 
 }
 
-/* [NOTE] .splash-icon: margin-top: 116px matches
-.login-icon: margin-top: 0; */
-.splash-icon {
-    font-size: 50px;
-    text-align: center;
-    margin-top: 126px; 
-}
 
-.splash-icon a {
-    color: rgb(84, 12, 201);
-}
-
-.splash-icon a:hover {
-    color: rgb(123, 74, 202);
-    cursor: pointer;
-}
