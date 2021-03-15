@@ -64,9 +64,9 @@
     cursor: default;
 }
 
-.task-list-item:hover {
+/* .task-list-item:hover {
     background-color: #f1e1ad;
-}
+} */
 
 @media (min-width: 992px) {
     #task-list-container {
