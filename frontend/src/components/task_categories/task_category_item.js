@@ -15,7 +15,6 @@ const TaskCategoryItem = (props) => {
       <div className="category-container">
         <div className="category-info">
         <h2 id="delete-category" onClick={() => props.destroyCategory(props.category._id)}>x</h2>
-         {/* <button className="delete-category" onClick={() => props.destroyCategory(props.category._id)}>&#10006;</button> */}
           <h1>{props.category.title}</h1>
           <h2>{props.category.tasks.length}</h2>
         </div>
