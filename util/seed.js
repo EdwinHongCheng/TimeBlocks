@@ -13,23 +13,18 @@ const seedUser = (user) => {
         color: "#33FFEC"
     });
 
-    // catSeed1.save()
-    //     .then(catSeed => {
-            const task1 = { title: "Sleep" };
-            const task2 = { title: "Morning Yoga" };
-            catSeed.tasks.push(task1);
-            catSeed.tasks.push(task2);
-            catSeed.save();
-        // })
+    const cat1task1 = { title: "30 min Run" };
+    const cat1task2 = { title: "Morning Yoga" };
+    catSeed1.tasks.push(cat1task1);
+    catSeed1.tasks.push(cat1task2);
+    catSeed1.save();
+  
+    const cat2task1 = { title: "Clean the Dishes" };
+    const cat2task2 = { title: "Take out the trash" };
+    catSeed2.tasks.push(cat2task1);
+    catSeed2.tasks.push(cat2task2);
+    catSeed2.save();
     
-    catSeed2.save()
-        .then(catSeed => {
-            const task1 = { title: "Clean the Dishes" };
-            const task2 = { title: "Take out the trash" };
-            catSeed.tasks.push(task1);
-            catSeed.tasks.push(task2);
-            catSeed.save();
-        })
 }
 
 module.exports = seedUser;
