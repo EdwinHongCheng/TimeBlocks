@@ -139,6 +139,8 @@ select#category-color-select {
     border-radius: 5px;
     padding-left: 5px;
     width: 60%;
+
+    height: 24px;
 }
 
 button#createCategoryButton {
