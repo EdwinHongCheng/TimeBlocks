@@ -7,9 +7,6 @@
     box-shadow: 0 0 10px #b4ac7c;
     border-radius: 5px;
     width: 20em;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-    -ms-overflow-style: none;
     scrollbar-width: none;
     margin-top: 30px;
 }
