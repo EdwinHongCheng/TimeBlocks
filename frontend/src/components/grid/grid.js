@@ -15,14 +15,17 @@ const Grid = (props) => {
   return ( 
     <div className="grid">
       {tasks.map(time => {
-        let color = "#fff4b7";
+        let grid = {
+          color: "#fff4b7",
+          title: ""
+        }
 
         if (props.grids[time] !== undefined) {
-          color = props.grids[time].color
+          grid = props.grids[time]
         }
 
         return (
-          <TaskBucketContainer color={color} key={time} time={time} />
+          <TaskBucketContainer grid={grid} key={time} time={time} />
         );
       })}
     </div>
