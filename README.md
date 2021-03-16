@@ -65,7 +65,7 @@ On the right side of the screen, when the "Task List" button is clicked, a list 
 
 ### Friends List
 
-On each user's "Profle Page", a "Friends List" is shown displaying all of the user's friends. Users are able to remove existing friends from their list, and add new friends by entering their email addresses. Users are able to view a friend's TimeBlock grid by clicking on their name in the "Friends List".   
+On each user's "Profile Page", a "Friends List" is shown displaying all of the user's friends. Users are able to remove existing friends from their list, and add new friends by entering their email addresses. Users are able to view a friend's TimeBlock grid by clicking on their name in the "Friends List".   
 
 <img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/4.%20friends.gif" alt="social" width="355" height="653"/>
 
