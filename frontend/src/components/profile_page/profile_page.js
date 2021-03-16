@@ -81,6 +81,7 @@ class ProfilePage extends React.Component {
                 <div className="profile-header-parent">
                     <p className="profile-header">Your Profile Page</p>
                     <p className="straightline"></p>
+                    <Link className="back-to-home-button" to="/home">Back to Homepage</Link>
                     <p className="tap-social-notice">Click a friend's name to see their Time Grid!</p>
                 </div>
 
@@ -102,7 +103,6 @@ class ProfilePage extends React.Component {
                         <div className="profile-page-buttons">
                             {thirdButton}
                             {secondButton}
-                            <Link className="back-to-home-button" to="/home">Back</Link>
                         </div>
                     </div>
 
