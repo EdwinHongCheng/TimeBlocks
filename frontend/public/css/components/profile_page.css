@@ -32,7 +32,7 @@
 .tap-social-notice {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px; 
+    margin-bottom: 16px; 
 }
 
 /* ----------------------------------------------------------------> */
@@ -110,7 +110,7 @@
 
 /* [WORKS] Back Button */
 .back-to-home-button {
-    width: 50px;
+    width: 140px;
     font-size: 16px;
 
     border-radius: 4px;
@@ -119,11 +119,12 @@
 
     display: inline-block;
     padding: 10px;
-    margin: 10px;
+    margin-bottom: 26px;
+    /* margin: 10px; */
     text-align: center;
     background-color: rgb(84, 12, 201);
-    margin-top: 60px;
-    margin-left: 76px;
+    /* margin-top: 60px;
+    margin-left: 76px; */
 }
 
 .logout-button {
