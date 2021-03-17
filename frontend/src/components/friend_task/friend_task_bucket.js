@@ -30,7 +30,6 @@ const FriendTaskBucket = (props) => {
           </div>
       </div>
       <TaskBucketTooltip message={tooltip} showing={tooltipShowing} />
-      {/* <span className="tooltip">{tooltip}</span> */}
     </div>
   );
 };
