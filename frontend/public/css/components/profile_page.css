@@ -158,32 +158,37 @@
     align-items: center;
 }
 
+/* [WIP] Profile Page Header Fix */
 .friends-dropdown-title {
     width: 168px;
-    font-size: 16px;
-
-    /* border-radius: 4px; */
-    color: white;
-    background-color: rgb(84, 12, 201);
+    font-size: 18px;
+    font-weight: bold;
+    color: #bb8a3b;
+    /* background-color: rgb(84, 12, 201); */
 
     display: inline-block;
-    padding: 10px;
+    /* padding: 10px; */
+    margin-bottom: 14px;
     text-align: center;
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
+
+/* [WIP] Profile Page Header Fix */
 /* Scrollable List */
 .friends-dropdown-true {
     position: relative;
     background-color: white;
     /* background-color: #ffeeb7; */
-    border: 1px solid white;
-    
+    /* border: 1px solid white; */
+    /* border: 1px solid rgb(84, 12, 201); */
+    border: 1px solid #e4cca2;
+
     width: 180px;
     height: 220px;
     overflow: hidden; 
     overflow-y: scroll;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .friends-dropdown-parent ul li {
