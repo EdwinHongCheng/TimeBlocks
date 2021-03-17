@@ -61,7 +61,7 @@
     user-select: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 800px) {
     .task {
         width: 5em;
         height: 5em;
