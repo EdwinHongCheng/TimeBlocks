@@ -9,7 +9,7 @@ TimeBlocks is a user-friendly time management app that helps you keep track of d
 
 TimeBlocks is a MERN project.
 
-<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/01.layout.gif" alt="basic layout" width="937" height="724"/>
+<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/01.layout.gif" alt="basic layout"/>
 
 ## Features
 
@@ -17,7 +17,7 @@ TimeBlocks is a MERN project.
 
 Users are given 24 slots on a 4x6 grid to represent the 24 hours of the day. Tasks can be dragged and dropped into each slot to assign them to a specific hour of the day. The grid's slot changes color based on the task's category color. Tasks are able to be reassigned to different categories as well as different time slots. Additional categories and tasks can be added and removed. 
 
-<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/02.%20grid.gif" alt="grid" width="929" height="721"/>
+<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/02.%20grid.gif" alt="grid"/>
 
 
 In order for a task to be re-assigned to a different category, the task's title is saved into a different variable, and then the original task object is removed from the current category. The new variable containing the original task's data is then pushed into the category it is being re-assigned to.
@@ -61,13 +61,13 @@ On the left side of the screen, when the "Categories" button is clicked, a list 
 
 On the right side of the screen, when the "Task List" button is clicked, a list of tasks currently placed on the hours grid is shown. The task name is displayed, along with its corresponding hour of the day. The tasks are sorted by the earliest hour. 
 
-<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/03.%20menus.gif" alt="menu" width="931" height="727"/>
+<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/03.%20menus.gif" alt="menu"/>
 
 ### Friends List
 
 On each user's "Profile Page", a "Friends List" is shown displaying all of the user's friends. Users are able to remove existing friends from their list, and add new friends by entering their email addresses. Users are able to view a friend's TimeBlock grid by clicking on their name in the "Friends List".   
 
-<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/04.%20social.gif" alt="social" width="933" height="720"/>
+<img src="https://github.com/EdwinHongCheng/TimeBlocks/blob/main/images/04.%20social.gif" alt="social"/>
 
 ## Future Plans
 * Allow users to further expand the hour blocks into minute blocks 
