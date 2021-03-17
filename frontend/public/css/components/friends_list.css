@@ -1,8 +1,10 @@
+/* [WIP] Profile Page Header Fix */
 .friend-and-delete-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgb(84, 12, 201);
+    /* border-bottom: 1px solid rgb(84, 12, 201); */
+    border-bottom: 1px solid #e4cca2;
 }
 
 .friend-and-delete-button:hover {
