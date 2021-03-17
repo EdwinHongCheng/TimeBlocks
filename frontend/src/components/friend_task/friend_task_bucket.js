@@ -22,7 +22,7 @@ const FriendTaskBucket = (props) => {
   let hideTooltip = () => setTooltipShowing(false)
 
   return (
-    <div ref={drop} className="friend-bucket"
+    <div className="friend-bucket"
       onClick={toggleTooltip}
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
