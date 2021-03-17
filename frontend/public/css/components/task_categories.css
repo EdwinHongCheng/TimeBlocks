@@ -10,7 +10,7 @@
     background-color: #ffeeb7;
     border-right: 1px solid #a99777;
     display: grid;
-    grid-template-rows: 50px 1fr 80px;
+    grid-template-rows: 50px 1fr 120px;
     z-index: 10;
 }
 
@@ -157,7 +157,7 @@ select#category-color-select {
 }
 
 button#createCategoryButton {
-    margin-top: 5px;
+    margin-top: 20px;
     background-color:rgb(84, 12, 201);
     border: none;
     color: white;
@@ -192,11 +192,14 @@ button#createCategoryButton:hover {
     width: 100;
     overflow-x: hidden;
     align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .category-form-container form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%; 

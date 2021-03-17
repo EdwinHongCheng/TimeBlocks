@@ -38,7 +38,6 @@ const TaskBucket = (props) => {
 
   let showTooltip = () => setTooltipShowing(true)
   let hideTooltip = () => setTooltipShowing(false)
-  // let showTooltip = () => console.log("test")
 
   return (
     <div ref={drop} className="bucket" 
