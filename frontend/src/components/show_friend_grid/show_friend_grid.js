@@ -16,15 +16,18 @@ const ShowFriendGrid = (props) => {
   return ( 
     <div className="show-friend-grid">
       {tasks.map(time => {
-        let color = "#fff4b7";
+        let grid = {
+          color: "#fff4b7",
+          title: ""
+        }
 
         if (props.grids[time] !== undefined) {
-          color = props.grids[time].color
+          grid = props.grids[time]
         }
 
         return (
           <FriendTaskBucketContainer
-            color={color} 
+            grid={grid} 
             key={time} 
             time={time} 
           />
