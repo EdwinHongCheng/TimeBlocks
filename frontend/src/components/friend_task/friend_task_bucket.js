@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import TaskBucketTooltip from "../task/task_bucket_tooltip";
+
 const FriendTaskBucket = (props) => {
   const [color, setColor] = useState(props.grid.color);
   const [tooltip, setTooltip] = useState(props.grid.title);
@@ -8,14 +10,10 @@ const FriendTaskBucket = (props) => {
   useEffect(() => {
     setColor(props.grid.color)
     setTooltip(props.grid.title)
-  }, [props.grid])
+  }, [props])
 
   let style = {
       backgroundColor: color
-  }
-
-  let toggleTooltip = () => {
-    setTooltip(!tooltipShowing);
   }
 
   let showTooltip = () => setTooltipShowing(true)
@@ -23,7 +21,6 @@ const FriendTaskBucket = (props) => {
 
   return (
     <div className="friend-bucket"
-      onClick={toggleTooltip}
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
     >
@@ -32,6 +29,7 @@ const FriendTaskBucket = (props) => {
             <h1>{props.time}</h1>
           </div>
       </div>
+      <TaskBucketTooltip message={tooltip} showing={tooltipShowing} />
     </div>
   );
 };

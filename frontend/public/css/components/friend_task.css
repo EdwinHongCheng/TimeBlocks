@@ -4,6 +4,12 @@
     margin: 1em;
     border: 3px solid #d2c999;
     border-radius: 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.friend-bucket:hover .tooltip {
+    visibility: visible;
 }
 
 .friend-bucket-background {
