@@ -78,5 +78,5 @@ On each user's "Profile Page", a "Friends List" is shown displaying all of the u
 ## Contributors
 * [Edwin Cheng](https://github.com/EdwinHongCheng/): Team Lead
 * [Bryce DeGuzman](https://github.com/bcdguz): Backend Lead
-* [Samuel Dubner](https://github.com/IsoVoyd): Frontend Lead
+* [Samuel Dubner](https://github.com/samdubner): Frontend Lead
 * [Michelle Ha](https://github.com/michelle-ha): Flex
